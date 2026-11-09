@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/images/logos/main%20logo.webp" type="image/webp" />
+  <title>Home | The Baller League — Season 02</title>
+  <meta name="description" content="The Baller League Season 2 by Knuckleball — real players, real clubs, real amateur football competition in Bengaluru. Fixtures, results, standings, squads and match highlights." />
+  <link rel="canonical" href="https://www.theballerleague.in/index.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Knuckleball" />
+  <meta property="og:title" content="Home | The Baller League — Season 02" />
+  <meta property="og:description" content="The Baller League Season 2 by Knuckleball — real players, real clubs, real amateur football competition in Bengaluru. Fixtures, results, standings, squads and match highlights." />
+  <meta property="og:url" content="https://www.theballerleague.in/index.html" />
+  <meta property="og:image" content="https://www.theballerleague.in/assets/images/graphics/Home%20Page/hero%20image%20in%20home%20page%20optimised.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@knuckleball.in" />
+  <meta name="twitter:title" content="Home | The Baller League — Season 02" />
+  <meta name="twitter:description" content="The Baller League Season 2 by Knuckleball — real players, real clubs, real amateur football competition in Bengaluru." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <!-- Swiper.js (browser CDN, pinned version) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Preload shared navigation assets -->
+  <link rel="preload" as="image" href="assets/images/logos/main%20logo.webp" />
+  <link rel="preload" as="image" href="assets/images/graphics/Navigation/navigation%20background.webp" />
+  <!-- Preload only the first hero slide (the other two load lazily) -->
+  <link rel="preload" as="image" href="assets/images/graphics/Home%20Page/hero%20image%20in%20home%20page%20optimised.webp" />
+</head>
+<body>
+
+  <!-- Baller League Season 2 Y2K navigation toolbar (reused from players.html) -->
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner">
+      <button class="navbar-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navbarMenu">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+      </button>
+
+      <div class="navbar-brand" aria-label="Baller League">
+        <a href="index.html" class="brand-link">
+          <img class="navbar-logo" src="assets/images/logos/main%20logo.webp" alt="Baller League" />
+          <span class="s02-label">S02 / 026</span>
+        </a>
+      </div>
+
+      <ul class="navbar-menu" id="navbarMenu" role="menubar">
+        <li role="none"><a href="index.html" class="nav-link active" role="menuitem" aria-current="page">Home</a></li>
+        <li role="none"><a href="competition.html" class="nav-link" role="menuitem">Competition</a></li>
+        <li role="none"><a href="players.html" class="nav-link" role="menuitem">Players</a></li>
+        <li role="none"><a href="shop.html" class="nav-link" role="menuitem">Shop</a></li>
+        <li role="none"><a href="blog.html" class="nav-link" role="menuitem">Blog</a></li>
+        <li role="none"><a href="media.html" class="nav-link" role="menuitem">Media</a></li>
+      </ul>
+
+      <div class="navbar-actions">
+        <a href="players.html" class="nav-cta" aria-label="Join the League">JOIN THE LEAGUE ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol class="breadcrumb-list">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+    </ol>
+  </nav>
+
+  <main class="container">
+
+    <!-- 1. Cinematic hero carousel (Swiper.js) -->
+    <header class="hero hero-carousel">
+      <div class="swiper hero-swiper">
+        <div class="swiper-wrapper">
+          <!-- Slide 1 — Season campaign -->
+          <div class="swiper-slide hero-slide">
+            <div class="hero-image-wrap">
+              <img
+                src="assets/images/graphics/Home%20Page/hero%20image%20in%20home%20page%20optimised.webp"
+                alt="Players in blue and white kits competing on an outdoor pitch"
+                class="hero-slide-img"
+                width="2000"
+                height="1333"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+              />
+              <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+              <span class="hero-eyebrow">BENGALURU · AMATEUR FOOTBALL REIMAGINED</span>
+              <h1 class="hero-title">
+                <span class="hero-word hero-word--white">BALLER</span>
+                <span class="hero-word hero-word--neon">LEAGUE</span>
+              </h1>
+              <span class="hero-season">SEASON 02 / 2026</span>
+              <p class="hero-dek">REAL PLAYERS. REAL CLUBS. REAL COMPETITION.</p>
+              <div class="hero-ctas">
+                <a href="players.html" class="btn btn-primary hero-cta-primary">JOIN THE LEAGUE ↗</a>
+                <a href="competition.html" class="btn btn-outline hero-cta-secondary">EXPLORE COMPETITION</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 — Competition spotlight -->
+          <div class="swiper-slide hero-slide">
+            <div class="hero-image-wrap">
+              <img
+                src="assets/images/graphics/Home%20Page/hero%20image%202%20in%20home%20page.webp"
+                alt="Baller League player on the pitch in front of a NewAge sponsor board"
+                class="hero-slide-img"
+                width="2048"
+                height="1365"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+              <span class="hero-eyebrow">THE COMPETITION</span>
+              <h1 class="hero-title">
+                <span class="hero-word hero-word--white">EVERY MATCH</span>
+                <span class="hero-word hero-word--neon">MATTERS.</span>
+              </h1>
+              <p class="hero-dek">Rivalries. Pressure. One competition.</p>
+              <div class="hero-ctas">
+                <a href="competition.html" class="btn btn-primary hero-cta-primary">VIEW COMPETITION ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 — Player spotlight -->
+          <div class="swiper-slide hero-slide">
+            <div class="hero-image-wrap">
+              <img
+                src="assets/images/graphics/Home%20Page/hero%20image%203%20in%20home%20page.webp"
+                alt="Player in a pink knuckleball. kit in front of the goal net"
+                class="hero-slide-img"
+                width="2048"
+                height="1365"
+                loading="lazy"
+                decoding="async"
+              />
+              <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+              <span class="hero-eyebrow">THE PLAYERS</span>
+              <h1 class="hero-title">
+                <span class="hero-word hero-word--white">BUILT TO</span>
+                <span class="hero-word hero-word--neon">COMPETE.</span>
+              </h1>
+              <p class="hero-dek">Meet the players shaping the league.</p>
+              <div class="hero-ctas">
+                <a href="players.html" class="btn btn-primary hero-cta-primary">EXPLORE PLAYERS ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Swiper navigation -->
+        <div class="swiper-pagination hero-pagination"></div>
+        <div class="swiper-button-prev hero-button-prev"></div>
+        <div class="swiper-button-next hero-button-next"></div>
+      </div>
+    </header>
+
+    <!-- 2. Competition dashboard -->
+    <section class="dashboard reveal">
+      <div class="dashboard-panel dashboard-panel--upcoming">
+        <div class="panel-badge">UPCOMING MATCH</div>
+        <p class="panel-match-label">GROUP A · TBC</p>
+        <div class="dashboard-panel-matchup">
+          <div class="dashboard-panel-team">
+            <img src="assets/images/logos/First%20Draft%20FC.webp" alt="First Draft FC crest" class="panel-crest" loading="lazy" />
+            <span class="panel-team-name">First Draft FC</span>
+          </div>
+          <span class="panel-vs">VS</span>
+          <div class="dashboard-panel-team">
+            <img src="assets/images/logos/main%20logo.webp" alt="Opponent to be confirmed" class="panel-crest" loading="lazy" />
+            <span class="panel-team-name">TBD</span>
+          </div>
+        </div>
+        <p class="panel-empty-note">First Draft FC's opener — opponent and kick-off to be confirmed.</p>
+        <a href="competition.html" class="panel-view-report">
+          <span class="panel-report-icon">FIXTURES</span>
+          Open the match centre
+          <span class="panel-report-arrow">→</span>
+        </a>
+      </div>
+
+      <div class="dashboard-panel dashboard-panel--result">
+        <div class="panel-badge">LATEST RESULT</div>
+        <p class="panel-match-label">GROUP B · FULL TIME</p>
+        <div class="panel-score">
+          <div class="dashboard-panel-team">
+            <img src="assets/images/logos/Passion%20FC.webp" alt="Passion FC crest" class="panel-crest" loading="lazy" />
+            <span class="panel-team-name">Passion FC</span>
+          </div>
+          <div class="panel-score-center">
+            <div class="panel-score-value">4 – 3</div>
+            <span class="panel-match-status">FULL TIME</span>
+          </div>
+          <div class="dashboard-panel-team">
+            <img src="assets/images/logos/Veltrix%20United.webp" alt="Veltrix United crest" class="panel-crest" loading="lazy" />
+            <span class="panel-team-name">Veltrix United</span>
+          </div>
+        </div>
+        <a href="competition.html" class="panel-view-report">
+          <span class="panel-report-icon">TABLE</span>
+          Open the match centre
+          <span class="panel-report-arrow">→</span>
+        </a>
+      </div>
+
+      <div class="dashboard-panel dashboard-panel--standings">
+        <div class="panel-header">
+          <div class="panel-badge">LEAGUE STANDINGS</div>
+          <a href="competition.html" class="panel-view-table">VIEW FULL TABLE ↗</a>
+        </div>
+        <div class="standings-scroll">
+          <table class="standings-table">
+          <thead>
+            <tr><th>#</th><th>TEAM</th><th>P</th><th>W</th><th>D</th><th>L</th><th>PTS</th></tr>
+          </thead>
+          <tbody>
+            <tr class="standings-group"><td colspan="7">Group A</td></tr>
+            <tr><td>1</td><td><img src="assets/images/logos/United 4th Phase.webp" alt="United 4th Phase crest" class="standings-crest" /><span>United 4th Phase</span></td><td>2</td><td>2</td><td>0</td><td>0</td><td class="standings-pts">6</td></tr>
+            <tr><td>2</td><td><img src="assets/images/logos/Bangalore Grafters FC.webp" alt="Bangalore Grafters FC crest" class="standings-crest" /><span>Bangalore Grafters FC</span></td><td>2</td><td>1</td><td>0</td><td>1</td><td class="standings-pts">3</td></tr>
+            <tr><td>3</td><td><img src="assets/images/logos/NEXUS FC.webp" alt="NEXUS FC crest" class="standings-crest" /><span>NEXUS FC</span></td><td>1</td><td>1</td><td>0</td><td>0</td><td class="standings-pts">3</td></tr>
+            <tr><td>4</td><td><img src="assets/images/logos/WLWG FC.webp" alt="WLWG FC crest" class="standings-crest" /><span>WLWG FC</span></td><td>2</td><td>1</td><td>0</td><td>1</td><td class="standings-pts">3</td></tr>
+            <tr><td>5</td><td><img src="assets/images/logos/GRVTY FC.webp" alt="GRVTY FC crest" class="standings-crest" /><span>GRVTY FC</span></td><td>1</td><td>0</td><td>0</td><td>1</td><td class="standings-pts">0</td></tr>
+            <tr><td>6</td><td><img src="assets/images/logos/Walkalone FC.webp" alt="Walkalone FC crest" class="standings-crest" /><span>Walkalone FC</span></td><td>2</td><td>0</td><td>0</td><td>2</td><td class="standings-pts">0</td></tr>
+            <tr><td>7</td><td><img src="assets/images/logos/First Draft FC.webp" alt="First Draft FC crest" class="standings-crest" /><span>First Draft FC</span></td><td>0</td><td>0</td><td>0</td><td>0</td><td class="standings-pts">0</td></tr>
+            <tr><td>8</td><td><span>TBD</span></td><td>0</td><td>0</td><td>0</td><td>0</td><td class="standings-pts">0</td></tr>
+            <tr class="standings-group"><td colspan="7">Group B</td></tr>
+            <tr><td>1</td><td><img src="assets/images/logos/Legacy FFA.webp" alt="Legacy FFA crest" class="standings-crest" /><span>Legacy FFA</span></td><td>2</td><td>2</td><td>0</td><td>0</td><td class="standings-pts">6</td></tr>
+            <tr><td>2</td><td><img src="assets/images/logos/Passion FC.webp" alt="Passion FC crest" class="standings-crest" /><span>Passion FC</span></td><td>2</td><td>2</td><td>0</td><td>0</td><td class="standings-pts">6</td></tr>
+            <tr><td>3</td><td><img src="assets/images/logos/First Touch FC.webp" alt="First Touch FC crest" class="standings-crest" /><span>First Touch FC</span></td><td>2</td><td>1</td><td>0</td><td>1</td><td class="standings-pts">3</td></tr>
+            <tr><td>4</td><td><img src="assets/images/logos/United 5's.webp" alt="United 5's crest" class="standings-crest" /><span>United 5's</span></td><td>2</td><td>1</td><td>0</td><td>1</td><td class="standings-pts">3</td></tr>
+            <tr><td>5</td><td><img src="assets/images/logos/Crescents FC.webp" alt="Crescents FC crest" class="standings-crest" /><span>Crescents FC</span></td><td>2</td><td>1</td><td>0</td><td>1</td><td class="standings-pts">3</td></tr>
+            <tr><td>6</td><td><img src="assets/images/logos/NBFC.webp" alt="NBFC crest" class="standings-crest" /><span>NBFC</span></td><td>2</td><td>1</td><td>0</td><td>1</td><td class="standings-pts">3</td></tr>
+            <tr><td>7</td><td><img src="assets/images/logos/Veltrix United.webp" alt="Veltrix United crest" class="standings-crest" /><span>Veltrix United</span></td><td>2</td><td>0</td><td>0</td><td>2</td><td class="standings-pts">0</td></tr>
+            <tr><td>8</td><td><img src="assets/images/logos/Falcons FC.webp" alt="Falcons FC crest" class="standings-crest" /><span>Falcons FC</span></td><td>2</td><td>0</td><td>0</td><td>2</td><td class="standings-pts">0</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p class="standings-note">Group A and Group B · 13 results in · First Draft FC and TBD yet to play.</p>
+      </div>
+    </section>
+
+    <!-- 3. Teams carousel -->
+    <section class="teams-section reveal">
+      <div class="teams-header">
+        <h2 class="teams-title">TEAMS</h2>
+        <a href="competition.html" class="teams-view-all">VIEW ALL TEAMS ↗</a>
+      </div>
+      <div class="teams-carousel">
+        <button class="carousel-btn carousel-btn--prev" aria-label="Previous team">‹</button>
+        <div class="teams-track">
+          <!-- Club names are read from the supplied crest artwork. -->
+          <a href="competition.html" class="team-card">
+            <img src="assets/images/logos/Bangalore Grafters FC.webp" alt="Bangalore Grafters FC crest" class="team-logo" width="520" height="480" loading="lazy" />
+            <span class="team-name">BANGALORE GRAFTERS FC</span>
+          </a>
+          <a href="competition.html" class="team-card">
+            <img src="assets/images/logos/Crescents FC.webp" alt="Crescents FC crest" class="team-logo" width="1040" height="1080" loading="lazy" />
+            <span class="team-name">CRESCENTS FC</span>
+          </a>
+          <a href="competition.html" class="team-card">
+            <img src="assets/images/logos/Falcons FC.webp" alt="Falcons FC crest" class="team-logo" width="1536" height="1536" loading="lazy" />
+            <span class="team-name">FALCONS FC</span>
+          </a>
+          <a href="competition.html" class="team-card">
+            <img src="assets/images/logos/First Draft FC.webp" alt="First Draft FC crest" class="team-logo" width="1080" height="1080" loading="lazy" />
+            <span class="team-name">FIRST DRAFT FC</span>
+          </a>
+          <a href="competition.html" class="team-card">
+            <img src="assets/images/logos/First Touch FC.webp" alt="First Touch FC crest" class="team-logo" width="1080" height="1080" loading="lazy" />
+            <span class="team-name">FIRST TOUCH FC</span>
+          </a>
+          <a href="competition.html" class="team-card">
+            <img src="assets/images/logos/GRVTY FC.webp" alt="GRVTY FC crest" class="team-logo" width="1024" height="1024" loading="lazy" />
+            <span class="team-name">GRVTY FC</span>
+          </a>
+          <a href="competition.html" class="team-card">
+            <img src="assets/images/logos/Legacy FFA.webp" alt="Legacy FFA crest" class="team-logo" width="1620" height="2048" loading="lazy" />
+            <span class="team-name">LEGACY FFA</span>
+          </a>
+          <a href="competition.html" class="team-card">
+            <img src="assets/images/logos/NBFC.webp" alt="NBFC crest" class="team-logo" width="520" height="480" loading="lazy" />
+            <span class="team-name">NBFC</span>
+          </a>
+          <a href="competition.html" class="team-card">
+            <img src="assets/images/logos/NEXUS FC.webp" alt="NEXUS FC crest" class="team-logo" width="1040" height="1080" loading="lazy" />
+            <span class="team-name">NEXUS FC</span>
+          </a>
+          <a href="competition.html" class="team-card">
+            <img src="assets/images/logos/Passion FC.webp" alt="Passion FC crest" class="team-logo" width="1536" height="1536" loading="lazy" />
+            <span class="team-name">PASSION FC</span>
+          </a>
+          <a href="competition.html" class="team-card">
+            <img src="assets/images/logos/United 4th Phase.webp" alt="United 4th Phase crest" class="team-logo" width="1080" height="1080" loading="lazy" />
+            <span class="team-name">UNITED 4TH PHASE</span>
+          </a>
+          <a href="competition.html" class="team-card">
+            <img src="assets/images/logos/United 5's.webp" alt="United 5's crest" class="team-logo" width="1024" height="1024" loading="lazy" />
+            <span class="team-name">UNITED 5'S</span>
+          </a>
+          <a href="competition.html" class="team-card">
+            <img src="assets/images/logos/Veltrix United.webp" alt="Veltrix United crest" class="team-logo" width="1620" height="2048" loading="lazy" />
+            <span class="team-name">VELTRIX UNITED</span>
+          </a>
+          <a href="competition.html" class="team-card">
+            <img src="assets/images/logos/Walkalone FC.webp" alt="Walkalone FC crest" class="team-logo" width="520" height="480" loading="lazy" />
+            <span class="team-name">WALKALONE FC</span>
+          </a>
+          <a href="competition.html" class="team-card">
+            <img src="assets/images/logos/WLWG FC.webp" alt="WLWG FC crest" class="team-logo" width="1040" height="1080" loading="lazy" />
+            <span class="team-name">WLWG FC</span>
+          </a>
+        </div>
+        <button class="carousel-btn carousel-btn--next" aria-label="Next team">›</button>
+      </div>
+    </section>
+
+
+
+    <!-- 6. Partners and sponsors -->
+    <section class="partners-section reveal">
+      <div class="partners-header">
+        <h2 class="partners-title">OUR PARTNERS</h2>
+        <div class="partners-divider"></div>
+      </div>
+      <div class="partners-grid">
+        <div class="partner-item"><img src="assets/images/graphics/Home%20Page/Partner%20logos/newage.webp" alt="New Age World School logo" class="partner-logo" loading="lazy" /></div>
+        <div class="partner-item"><img src="assets/images/graphics/Home%20Page/Partner%20logos/sharepal.webp" alt="Sharepal logo" class="partner-logo" loading="lazy" /></div>
+        <div class="partner-item"><img src="assets/images/graphics/Home%20Page/Partner%20logos/streetplay.webp" alt="Streetplay.ai logo" class="partner-logo" loading="lazy" /></div>
+        <div class="partner-item"><img src="assets/images/graphics/Home%20Page/Partner%20logos/kridah labs.webp" alt="Kridah Labs logo" class="partner-logo" loading="lazy" /></div>
+        <div class="partner-item"><img src="assets/images/graphics/Home%20Page/Partner%20logos/knuckleball.webp" alt="Knuckleball logo" class="partner-logo" loading="lazy" /></div>
+      </div>
+    </section>
+
+    <!-- 7. Final registration CTA -->
+    <section class="cta-banner reveal">
+      <div class="cta-inner">
+        <div class="cta-content">
+          <span class="cta-eyebrow">SEASON 02 / 2026</span>
+          <h2 class="cta-headline">BE PART OF SEASON 2</h2>
+          <p class="cta-dek">CLUBS. PLAYERS. SPONSORS. CREATORS.</p>
+        </div>
+        <div class="cta-buttons">
+          <a href="players.html" class="btn btn-primary cta-primary">JOIN THE LEAGUE ↗</a>
+          <a href="shop.html#booking" class="btn btn-outline cta-secondary">GET IN TOUCH</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/logos/main%20logo.webp" alt="Baller League" class="footer-logo" />
+        <span class="footer-s02">S02 / 026</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="competition.html">Competition</a>
+        <a href="players.html">Players</a>
+        <a href="shop.html">Shop</a>
+        <a href="blog.html">Blog</a>
+        <a href="media.html">Media</a>
+      </nav>
+      <div class="footer-copy">
+        <p>&copy; 2026 Baller League Season 2. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle (reused behaviour from players.html)
+    const toggle = document.querySelector('.navbar-toggle');
+    const menu = document.getElementById('navbarMenu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const open = menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+    }
+
+    // Carousel controls
+    function initCarousel(trackSelector, prevSelector, nextSelector) {
+      const track = document.querySelector(trackSelector);
+      const prevBtn = document.querySelector(prevSelector);
+      const nextBtn = document.querySelector(nextSelector);
+      if (!track || !prevBtn || !nextBtn) return;
+
+      let scrollAmount = 0;
+      const getCardWidth = () => {
+        const firstCard = track.querySelector('.team-card, .player-card');
+        return firstCard ? firstCard.getBoundingClientRect().width + 16 : 300;
+      };
+
+      prevBtn.addEventListener('click', () => {
+        scrollAmount = Math.max(0, scrollAmount - getCardWidth());
+        track.scrollBy({ left: -getCardWidth(), behavior: 'smooth' });
+      });
+
+      nextBtn.addEventListener('click', () => {
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        scrollAmount = Math.min(maxScroll, scrollAmount + getCardWidth());
+        track.scrollBy({ left: getCardWidth(), behavior: 'smooth' });
+      });
+    }
+
+    initCarousel('.teams-track', '.teams-carousel .carousel-btn--prev', '.teams-carousel .carousel-btn--next');
+
+    // Reveal-on-scroll animation
+    const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+    // Swiper hero carousel initialization.
+    // If the CDN is blocked or fails, fall back to a single static slide
+    // instead of leaving all three slides stacked on top of each other.
+    const heroEl = document.querySelector('.hero-carousel');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (typeof Swiper === 'undefined') {
+      heroEl.classList.add('is-static');
+    } else {
+      try {
+        new Swiper('.hero-swiper', {
+          effect: 'fade',
+          crossFade: true,
+          speed: 800,
+          // Autoplay is off for visitors who ask for reduced motion (WCAG 2.2.2).
+          autoplay: reduceMotion ? false : {
+            delay: 7000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
+          loop: true,
+          pagination: {
+            el: '.hero-pagination',
+            clickable: true,
+          },
+          navigation: {
+            prevEl: '.hero-button-prev',
+            nextEl: '.hero-button-next',
+          },
+          a11y: {
+            prevSlideMessage: 'Previous slide',
+            nextSlideMessage: 'Next slide',
+            paginationLabel: 'Slide {{index}} of {{length}}',
+          },
+        });
+      } catch (err) {
+        heroEl.classList.add('is-static');
+      }
+    }
+
+    // Pause autoplay when document is hidden (tab switch)
+    document.addEventListener('visibilitychange', () => {
+      const swiperInstance = document.querySelector('.hero-swiper').swiper;
+      if (!swiperInstance) return;
+      if (document.hidden) {
+        swiperInstance.autoplay.stop();
+      } else {
+        swiperInstance.autoplay.start();
+      }
+    });
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.theballerleague.in/#organization",
+        "name": "Knuckleball",
+        "legalName": "Knuckleball Global Pvt Ltd",
+        "url": "https://www.theballerleague.in/",
+        "logo": "https://www.theballerleague.in/assets/images/logos/main%20logo.webp",
+        "description": "Knuckleball is a sports ecosystem developing football competitions, communities and experiences in India. It is the parent organisation of The Baller League and Baller Club.",
+        "sameAs": [
+          "https://www.instagram.com/knuckleball.in/",
+          "https://www.youtube.com/@knuckleball-in"
+        ]
+      },
+      {
+        "@type": "SportsOrganization",
+        "@id": "https://www.theballerleague.in/#baller-league",
+        "name": "The Baller League",
+        "url": "https://www.theballerleague.in/competition.html",
+        "parentOrganization": { "@id": "https://www.theballerleague.in/#organization" },
+        "sport": "Football",
+        "description": "The Baller League is the flagship competitive football league organised by Knuckleball, operating in Bengaluru, India."
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.theballerleague.in/index.html",
+        "url": "https://www.theballerleague.in/index.html",
+        "name": "Home | The Baller League — Season 02",
+        "isPartOf": { "@id": "https://www.theballerleague.in/#website" },
+        "primaryContentOfPage": { "@id": "https://www.theballerleague.in/#baller-league" },
+        "about": { "@id": "https://www.theballerleague.in/#organization" },
+        "inLanguage": "en-IN",
+        "datePublished": "2026-11-06",
+        "reviewedBy": { "@id": "https://www.theballerleague.in/#organization" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.theballerleague.in/#website",
+        "url": "https://www.theballerleague.in/",
+        "name": "Knuckleball — The Baller League",
+        "publisher": { "@id": "https://www.theballerleague.in/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.theballerleague.in/blog.html?q={search_term}",
+          "query-input": "required name=search_term"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.theballerleague.in/index.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.theballerleague.in/index.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</body>
+</html>
+
+
+

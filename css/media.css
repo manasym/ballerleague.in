@@ -1,0 +1,1117 @@
+/* --------------------------------------------------------------
+   Knuckleball Media — match archive, originals, photography
+   Black-dominant editorial. Neon yellow + magenta used sparingly.
+   Reuses style.css (container, navbar, footer, buttons)
+   and the same palette tokens as competition.css.
+   -------------------------------------------------------------- */
+
+/* ---------- Media page tokens ---------- */
+:root {
+  --media-neon-yellow: #E8FF00;
+  --media-neon-magenta: #FF00A3;
+  --media-off-white: #F4F1E9;
+  --media-charcoal: #111111;
+  --media-surface: #0a111f;
+  --media-divider: rgba(255, 255, 255, 0.08);
+  --media-dim: #7a879b;
+}
+
+/* One rule so the `hidden` attribute always wins over layout rules */
+[hidden] {
+  display: none !important;
+}
+
+.media-page {
+  background: var(--near-black);
+  /* body colour is a dark ink tone for the light pages */
+  color: var(--text-white);
+}
+
+/* ---------- Shared section furniture ---------- */
+.media-section {
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--charcoal);
+}
+
+.media-section:last-of-type {
+  border-bottom: 0;
+}
+
+.media-section-head {
+  margin-bottom: 1.5rem;
+}
+
+.media-section-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+  color: var(--text-white);
+  margin: 0 0 0.4rem;
+  padding-left: 0.65rem;
+  border-left: 4px solid var(--media-neon-yellow);
+}
+
+/* Section accents keep each block visually distinct */
+.media-section--rail .media-section-title,
+.media-section--clips .media-section-title {
+  border-left-color: var(--media-neon-magenta);
+}
+
+.media-section-dek {
+  font-size: 0.85rem;
+  color: var(--media-dim);
+  margin: 0;
+  max-width: 58ch;
+  padding-left: 0.65rem;
+}
+
+.media-section-note {
+  margin-top: 1rem;
+}
+
+.media-section-dek a {
+  color: var(--media-neon-yellow);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.media-subhead {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--text-white);
+  margin: 2rem 0 0.9rem;
+  padding-left: 0.65rem;
+}
+
+.media-subhead:first-of-type {
+  margin-top: 0;
+}
+
+/* ---------- Section 01 — Cinematic hero ---------- */
+.media-hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  min-height: min(76vh, 620px);
+  padding: 3rem 0 2.25rem;
+  background: var(--near-black);
+  border-bottom: 1px solid var(--charcoal);
+}
+
+.media-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 32%;
+  opacity: 0.42;
+  z-index: 0;
+}
+
+.media-hero-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 8, 8, 0.55) 0%,
+    rgba(8, 8, 8, 0.74) 42%,
+    var(--near-black) 98%
+  );
+}
+
+.media-hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.media-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--media-neon-yellow);
+  margin: 0;
+}
+
+.media-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2.75rem, 11vw, 6.5rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--text-white);
+  margin: 0;
+}
+
+.media-title em {
+  font-style: normal;
+  color: var(--media-neon-magenta);
+}
+
+.media-dek {
+  font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+  line-height: 1.55;
+  color: var(--media-off-white);
+  max-width: 54ch;
+  margin: 0;
+}
+
+.media-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.35rem;
+}
+
+.media-hero-status {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--media-dim);
+  margin: 0.25rem 0 0;
+}
+
+/* ---------- Buttons (dark identity variants) ---------- */
+.media-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.35rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--media-neon-yellow);
+  background: var(--media-neon-yellow);
+  color: var(--near-black);
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 200ms ease, color 200ms ease, border-color 200ms ease;
+}
+
+.media-cta:hover {
+  background: transparent;
+  color: var(--media-neon-yellow);
+}
+
+.media-cta--outline {
+  background: transparent;
+  color: var(--text-white);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.media-cta--outline:hover {
+  background: transparent;
+  border-color: var(--media-neon-yellow);
+  color: var(--media-neon-yellow);
+}
+
+.media-cta:focus-visible,
+.competition-chip:focus-visible {
+  outline: 2px solid var(--media-neon-magenta);
+  outline-offset: 2px;
+}
+
+/* ---------- Section 02 — Featured ---------- */
+.media-featured {
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--charcoal);
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: var(--media-surface);
+  border: 1px solid var(--media-divider);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.feature-media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #05080f;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  cursor: pointer;
+  display: block;
+}
+
+.feature-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.feature-label {
+  align-self: flex-start;
+}
+
+.feature-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.4rem, 4vw, 2.15rem);
+  font-weight: 400;
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: var(--text-white);
+  margin: 0;
+}
+
+.feature-desc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--media-dim);
+  margin: 0;
+}
+
+.feature-meta {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--media-dim);
+  margin: 0;
+}
+
+/* ---------- Badges ---------- */
+.media-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.22rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.media-badge--full {
+  background: var(--media-neon-yellow);
+  color: var(--near-black);
+}
+
+.media-badge--clip {
+  background: var(--media-neon-magenta);
+  color: var(--near-black);
+}
+
+.media-badge--type {
+  background: var(--media-charcoal);
+  color: var(--media-off-white);
+  border: 1px solid var(--media-divider);
+}
+
+/* ---------- Cards (shared by grid + rails + lists) ---------- */
+.media-card {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  background: var(--media-surface);
+  border: 1px solid var(--media-divider);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 200ms ease;
+}
+
+.media-card:hover {
+  border-color: rgba(232, 255, 0, 0.45);
+}
+
+.media-card:focus-visible {
+  outline: 2px solid var(--media-neon-magenta);
+  outline-offset: 2px;
+}
+
+/* Non-playable placeholder: never looks clickable */
+.media-card--placeholder {
+  cursor: default;
+  border-style: dashed;
+}
+
+.media-card--placeholder:hover {
+  border-color: var(--media-divider);
+}
+
+.media-card-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #05080f;
+}
+
+.media-card--clip .media-card-thumb {
+  aspect-ratio: 9 / 16;
+}
+
+.media-card-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media-card-thumb--empty {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  text-align: center;
+  background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 8px,
+      rgba(255, 255, 255, 0.03) 8px,
+      rgba(255, 255, 255, 0.03) 16px
+    ),
+    var(--media-surface);
+}
+
+.media-card-thumb--empty span {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--media-dim);
+}
+
+.media-card-badges {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  right: 0.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  z-index: 2;
+}
+
+.media-card-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 2px solid var(--media-neon-yellow);
+  background: rgba(8, 8, 8, 0.5);
+  display: grid;
+  place-items: center;
+  z-index: 2;
+}
+
+.media-card-play::after {
+  content: "";
+  width: 0;
+  height: 0;
+  margin-left: 4px;
+  border-left: 12px solid var(--media-neon-yellow);
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+
+.media-card-body {
+  padding: 0.85rem 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.media-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text-white);
+  margin: 0;
+}
+
+.media-card-sub {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--media-dim);
+  margin: 0;
+}
+
+.media-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--media-dim);
+  margin: 0;
+}
+
+.media-card-meta > * + *::before {
+  content: "·";
+  margin-right: 0.6rem;
+  color: var(--media-divider);
+}
+
+.media-card-score {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--media-neon-yellow);
+}
+
+.media-card-action {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--media-neon-yellow);
+  margin: 0;
+}
+
+/* ---------- Section 03 — Full matches archive ---------- */
+.archive-toolbar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.6rem;
+  padding: 0.9rem;
+  margin-bottom: 1.25rem;
+  background: var(--media-charcoal);
+  border: 1px solid var(--media-divider);
+  border-radius: var(--radius-sm);
+}
+
+.archive-search input,
+.archive-field select {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  background: var(--near-black);
+  border: 1px solid var(--media-divider);
+  border-radius: var(--radius-sm);
+  color: var(--text-white);
+  font-family: inherit;
+  font-size: 0.8rem;
+}
+
+.archive-search input::placeholder {
+  color: var(--media-dim);
+}
+
+.archive-search input:focus,
+.archive-field select:focus {
+  outline: none;
+  border-color: var(--media-neon-yellow);
+}
+
+.archive-field select {
+  cursor: pointer;
+}
+
+.archive-count {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--media-dim);
+}
+
+.archive-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.archive-more-wrap {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------- Rails (highlights + clips) ---------- */
+.rail,
+.clip-rail {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  padding-bottom: 0.85rem;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+}
+
+.rail > *,
+.clip-rail > * {
+  flex: 0 0 84%;
+  scroll-snap-align: start;
+}
+
+.clip-rail > * {
+  flex-basis: 46%;
+}
+
+/* Holds the single layout-preview card while a rail has no titles */
+.rail-preview {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  max-width: 760px;
+}
+
+.media-section--clips .rail-preview {
+  max-width: 240px;
+}
+
+.rail:focus-visible,
+.clip-rail:focus-visible {
+  outline: 2px solid var(--media-neon-magenta);
+  outline-offset: 4px;
+}
+
+.rail::-webkit-scrollbar,
+.clip-rail::-webkit-scrollbar {
+  height: 6px;
+}
+
+.rail::-webkit-scrollbar-thumb,
+.clip-rail::-webkit-scrollbar-thumb {
+  background: var(--media-charcoal);
+  border-radius: 3px;
+}
+
+/* ---------- Section 06 — Player features ---------- */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.features-grid .media-card-thumb {
+  aspect-ratio: 4 / 5;
+}
+
+/* Player-feature videos are landscape YouTube uploads — keep them rectangular. */
+#featuresGrid .media-card-thumb {
+  aspect-ratio: 16 / 9;
+}
+
+.media-card--feature .media-card-body {
+  padding: 1rem 1.1rem 1.2rem;
+}
+
+/* ---------- Section 07 — Behind the game (wide rows) ---------- */
+.behind-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ---------- Section 08 — Photo stories ---------- */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7rem;
+}
+
+.photo-tile {
+  position: relative;
+  padding: 0;
+  border: 1px solid var(--media-divider);
+  border-radius: var(--radius-sm);
+  background: var(--media-surface);
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.photo-tile img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+  transition: transform 400ms var(--ease-smooth);
+}
+
+.photo-tile:hover img {
+  transform: scale(1.02);
+}
+
+.photo-tile:focus-visible {
+  outline: 2px solid var(--media-neon-magenta);
+  outline-offset: 2px;
+}
+
+/* ---------- Section 09 — Browse by competition ---------- */
+.competition-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.competition-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background: var(--media-charcoal);
+  border: 1px solid var(--media-divider);
+  border-radius: var(--radius-pill);
+  color: var(--text-white);
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: border-color 200ms ease;
+}
+
+.competition-chip:hover {
+  border-color: var(--media-neon-yellow);
+}
+
+.competition-chip-copy {
+  color: var(--media-dim);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+}
+
+/* ---------- Empty / placeholder states ---------- */
+.media-empty {
+  padding: 2rem 1.25rem;
+  text-align: center;
+  background: var(--media-charcoal);
+  border: 1px dashed var(--media-divider);
+  border-radius: var(--radius-sm);
+}
+
+.media-empty-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.25rem, 3.5vw, 1.75rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: var(--text-white);
+  margin: 0 0 0.4rem;
+}
+
+.media-empty-copy {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: var(--media-dim);
+  max-width: 54ch;
+  margin: 0 auto;
+}
+
+.media-empty .media-cta {
+  margin-top: 1.1rem;
+}
+
+.media-empty--inline {
+  padding: 1.5rem 1.25rem;
+}
+
+/* ---------- Section 10 — Closing ---------- */
+.media-closing {
+  padding: var(--space-8) 0;
+  background: var(--media-surface);
+  border-top: 1px solid var(--charcoal);
+  text-align: center;
+}
+
+.media-closing-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.9rem, 6vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.02;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--text-white);
+  margin: 0 0 1.25rem;
+}
+
+/* ---------- Video modal ---------- */
+.media-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.media-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 4, 4, 0.92);
+}
+
+.media-modal-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(1100px, 100%, 148vh);
+  max-height: 92vh;
+  overflow-y: auto;
+  padding: 1rem;
+  background: var(--media-surface);
+  border: 1px solid var(--media-divider);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* The one route to the video that survives a refused embed: a page with no
+   web origin (opened from disk) or embedding switched off by the owner. */
+.media-modal-note {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--media-off-white);
+}
+
+.media-modal-note a {
+  color: var(--media-neon-yellow);
+  font-weight: 700;
+}
+
+.media-modal-close {
+  align-self: flex-end;
+  padding: 0.45rem 0.9rem;
+  background: transparent;
+  border: 1px solid var(--media-divider);
+  border-radius: var(--radius-pill);
+  color: var(--text-white);
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+
+.media-modal-close:hover {
+  border-color: var(--media-neon-yellow);
+  color: var(--media-neon-yellow);
+}
+
+.media-modal-close:focus-visible {
+  outline: 2px solid var(--media-neon-magenta);
+  outline-offset: 2px;
+}
+
+.media-player {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.media-player video,
+.media-player iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.media-player video {
+  object-fit: contain;
+  background: #000;
+}
+
+.media-player-error {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--media-dim);
+}
+
+.media-modal-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.3rem, 4vw, 1.9rem);
+  font-weight: 400;
+  line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: var(--text-white);
+  margin: 0;
+}
+
+.media-modal-meta {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--media-dim);
+  margin: 0;
+}
+
+/* Scroll lock while a dialog is open */
+html.media-locked,
+html.media-locked body {
+  overflow: hidden;
+}
+
+/* ---------- Photo lightbox ---------- */
+.photo-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 320;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  padding: 1.25rem;
+  background: rgba(6, 6, 6, 0.96);
+}
+
+.photo-lightbox img {
+  max-width: min(1200px, 100%);
+  max-height: 74vh;
+  width: auto;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+}
+
+.photo-lightbox-cap {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--media-off-white);
+  max-width: 70ch;
+  margin: 0;
+}
+
+.photo-lightbox-bar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.photo-lightbox-btn {
+  padding: 0.45rem 0.9rem;
+  background: transparent;
+  border: 1px solid var(--media-divider);
+  border-radius: var(--radius-pill);
+  color: var(--text-white);
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+
+.photo-lightbox-btn:hover {
+  border-color: var(--media-neon-yellow);
+  color: var(--media-neon-yellow);
+}
+
+.photo-lightbox-btn:focus-visible {
+  outline: 2px solid var(--media-neon-magenta);
+  outline-offset: 2px;
+}
+
+.photo-lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (min-width: 641px) {
+  .media-hero {
+    min-height: min(72vh, 640px);
+    padding: 4rem 0 3rem;
+  }
+
+  .archive-toolbar {
+    grid-template-columns: minmax(0, 1.7fr) repeat(3, minmax(0, 1fr)) minmax(0, 1fr);
+    align-items: center;
+  }
+
+  .archive-count {
+    grid-column: 1 / -1;
+  }
+
+  .archive-grid,
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rail > * {
+    flex-basis: 46%;
+  }
+
+  .clip-rail > * {
+    flex-basis: 26%;
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 901px) {
+  .feature {
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .feature-media {
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 380px;
+  }
+
+  .feature-body {
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .media-card--behind {
+    display: grid;
+    grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .media-card--behind .media-card-thumb {
+    aspect-ratio: 21 / 9;
+    height: 100%;
+  }
+
+  .media-card--behind .media-card-body {
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  /* Editorial photography: first frame runs double */
+  .photo-grid.is-editorial {
+    grid-auto-rows: 190px;
+  }
+
+  .photo-grid.is-editorial .photo-tile:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .photo-grid.is-editorial .photo-tile img {
+    aspect-ratio: auto;
+    height: 100%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .archive-grid,
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .rail > * {
+    flex-basis: 31%;
+  }
+
+  .clip-rail > * {
+    flex-basis: 15.5%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .media-cta,
+  .media-card,
+  .competition-chip,
+  .photo-tile img {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .photo-tile:hover img {
+    transform: none;
+  }
+}
+
+/* Mobile: long grids become swipeable carousels */
+@media (max-width: 640px) {
+  .archive-grid,
+  .photo-grid,
+  #igPostsGrid {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: 0.6rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .archive-grid::-webkit-scrollbar,
+  .photo-grid::-webkit-scrollbar,
+  #igPostsGrid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .archive-grid > * {
+    flex: 0 0 86%;
+    scroll-snap-align: center;
+  }
+
+  .photo-grid > * {
+    flex: 0 0 82%;
+    scroll-snap-align: center;
+  }
+
+  #igPostsGrid > * {
+    flex: 0 0 78%;
+    scroll-snap-align: center;
+  }
+}

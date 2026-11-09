@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Knuckleball — The Baller League Blog</title>
+    <link>https://www.theballerleague.in/blog.html</link>
+    <description>Stories, match reports and features from The Baller League — organised by Knuckleball.</description>
+    <language>en-in</language>
+    <lastBuildDate>2026-11-09T09:00:00+05:30</lastBuildDate>
+    <atom:link href="https://www.theballerleague.in/rss.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>editor@knuckleball.in (Knuckleball Editorial)</managingEditor>
+    <webMaster>webmaster@knuckleball.in</webMaster>
+    <item>
+      <title>Baller League Matchday 1 recap: results, scorers and Group A standings</title>
+      <link>https://www.theballerleague.in/news-matchday-1-recap.html</link>
+      <description>Every supplied result and scorer from Group A's opening round, plus the early standings and top-scorers list.</description>
+      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <guid isPermaLink="false">https://www.theballerleague.in/news-matchday-1-recap.html</guid>
+    </item>
+    <item>
+      <title>WLWG FC 4-2 Walkalone FC: the 2-0 comeback that shook Group A</title>
+      <link>https://www.theballerleague.in/news-wlwg-comeback.html</link>
+      <description>Walkalone led 2-0. Daniel scored twice as WLWG replied with four to complete the comeback.</description>
+      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <guid isPermaLink="false">https://www.theballerleague.in/news-wlwg-comeback.html</guid>
+    </item>
+    <item>
+      <title>Bangalore Grafters 10-2 Walkalone: Adnan hits four</title>
+      <link>https://www.theballerleague.in/news-bangalore-grafters-10-2.html</link>
+      <description>Adnan scored four and Fazil three as Bangalore Grafters produced Group A's biggest scoreline so far.</description>
+      <pubDate>Mon, 09 Nov 2026 09:00:00 +0530</pubDate>
+      <guid isPermaLink="false">https://www.theballerleague.in/news-bangalore-grafters-10-2.html</guid>
+    </item>
+    <item>
+      <title>Baller League Season 2 — matchday archive opens</title>
+      <link>https://www.theballerleague.in/media.html</link>
+      <description>The Season 2 matchday archive is live: full match replays, extended highlights, goals and player features from the Knuckleball Originals archive.</description>
+      <pubDate>Sun, 08 Nov 2026 00:00:00 +0530</pubDate>
+      <guid isPermaLink="false">https://www.theballerleague.in/media.html</guid>
+    </item>
+  </channel>
+</rss>

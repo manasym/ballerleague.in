@@ -1,0 +1,33 @@
+# llms.txt — experimental content directory for AI discovery platforms.
+# Canonical domain: https://www.theballerleague.in/
+
+# Knuckleball / The Baller League
+
+> Knuckleball (Knuckleball Global Pvt Ltd) is a sports ecosystem that develops football competitions, communities and experiences in India. It is the parent organisation of The Baller League (flagship competitive football league) and Baller Club (football community and learning initiative).
+
+## Core pages
+
+- [Home](/index.html) — The Baller League Season 2: competition overview, teams, standings and registration.
+- [Competition](/competition.html) — Match centre, fixtures, results and league standings for Baller League Season 2.
+- [Players](/players.html) — All Baller League Season 2 team squads and player profiles.
+- [Media](/media.html) — Match highlights, full-match replays, photography and social feeds from @knuckleball.in.
+- [Shop](/shop.html) — Baller League content services: highlight edits, player portraits, team films and editions.
+- [Blog](/blog.html) — Season 2 stories, match reports and editorial content.
+- [Matchday 1 recap](/news-matchday-1-recap.html) — Every Group A result and scorer, standings and top scorers after the opening round.
+- [WLWG FC 4-2 Walkalone](/news-wlwg-comeback.html) — Match report on WLWG's comeback from 2-0 down.
+- [Bangalore Grafters 10-2 Walkalone](/news-bangalore-grafters-10-2.html) — Adnan's four-goal match report and Group A table impact.
+
+## Brand
+
+- [Knuckleball Global Pvt Ltd](/about.html) — Parent company identity, mission and leadership (page to be published).
+- [The Baller League](/baller-league.html) — Competition format, history and how to participate (page to be published).
+- [Baller Club](/baller-club.html) — Football community and learning initiative (page to be published).
+
+## Official social profiles
+
+- Instagram: https://www.instagram.com/knuckleball.in/
+- YouTube: https://www.youtube.com/@knuckleball-in
+
+## Contact
+
+- Shop enquiries: /shop.html#booking

@@ -1,0 +1,1345 @@
+/* --------------------------------------------------------------
+   Baller League Season 2 — Competition Page
+   Matchday Control Centre
+   Premium editorial design, black-dominant, neon-yellow + magenta
+   -------------------------------------------------------------- */
+
+/* ---------- Competition page tokens ---------- */
+:root {
+  --comp-neon-yellow: #E8FF00;
+  --comp-neon-magenta: #FF00A3;
+  --comp-off-white: #F4F1E9;
+  --comp-charcoal: #111111;
+  --comp-surface: #0a111f;
+  --comp-divider: rgba(255, 255, 255, 0.08);
+  --comp-card-bg: #0a111f;
+}
+
+/* ---------- Competition page shell ---------- */
+.competition-page {
+  background: var(--near-black);
+}
+
+/* ---------- Section 01 — Compact Competition Hero ---------- */
+.comp-hero {
+  position: relative;
+  background: var(--near-black);
+  border-bottom: 1px solid var(--charcoal);
+  padding: 2rem var(--space-2) 1.5rem;
+  overflow: hidden;
+}
+
+.comp-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/images/graphics/Navigation/navigation background.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.comp-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.comp-matchday {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--comp-neon-yellow);
+  margin: 0;
+}
+
+.comp-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  color: var(--text-white);
+  margin: 0;
+}
+
+.comp-dek {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-faint);
+  margin: 0;
+}
+
+.comp-venue {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* ---------- Section 02 — Live Match Centre ---------- */
+.match-centre {
+  padding: var(--space-6) 0 1rem;
+  border-bottom: 1px solid var(--charcoal);
+}
+
+.match-centre-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.match-centre-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--text-white);
+  margin: 0;
+}
+
+.pitch-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pitch-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--comp-charcoal);
+  border: 1px solid var(--charcoal);
+  border-radius: var(--radius-pill);
+  color: var(--text-white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  transition: all 200ms ease;
+  white-space: nowrap;
+}
+
+.pitch-filter:hover {
+  border-color: var(--comp-neon-yellow);
+}
+
+.pitch-filter.active {
+  background: var(--comp-neon-yellow);
+  color: var(--near-black);
+  border-color: var(--comp-neon-yellow);
+}
+
+.matches-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.match-card {
+  position: relative;
+  background: var(--comp-card-bg);
+  border: 1px solid var(--charcoal);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 250ms var(--ease-smooth), border-color 250ms var(--ease-smooth);
+}
+
+.match-card:hover {
+  border-color: var(--comp-neon-yellow);
+  transform: translateY(-2px);
+}
+
+.match-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem 0.5rem;
+  gap: 1rem;
+}
+
+.match-pitch {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--comp-neon-yellow);
+  background: rgba(232, 255, 0, 0.1);
+  border: 1px solid rgba(232, 255, 0, 0.2);
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+}
+
+.match-status-badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid var(--charcoal);
+  background: rgba(8, 8, 8, 0.6);
+  color: var(--text-white);
+}
+
+.match-status-badge--live {
+  color: var(--comp-neon-magenta);
+  border-color: var(--comp-neon-magenta);
+  background: rgba(255, 0, 163, 0.1);
+  animation: compPulse 2s infinite;
+}
+
+@keyframes compPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.match-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--comp-divider);
+  border-bottom: 1px solid var(--comp-divider);
+}
+
+.match-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 110px;
+}
+
+.match-crest {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+  background: #080808;
+  border: 1px solid var(--charcoal);
+}
+
+.match-team-name {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-white);
+  text-align: center;
+  line-height: 1.1;
+}
+
+.match-score-value {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--comp-neon-yellow);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .match-team {
+    min-width: 88px;
+  }
+  .match-score {
+    gap: 0.6rem;
+  }
+}
+
+.match-vs {
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--text-faint);
+  line-height: 1;
+}
+
+.match-clock {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+}
+
+.match-clock--live {
+  color: var(--comp-neon-magenta);
+}
+
+.match-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem 1rem;
+  border-top: 1px solid var(--comp-divider);
+}
+
+.match-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.match-view {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--comp-neon-yellow);
+  text-decoration: none;
+}
+
+.match-view:hover {
+  text-decoration: underline;
+}
+
+.match-view-arrow {
+  font-size: 0.65rem;
+}
+
+/* Empty state for match centre */
+.match-centre-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-muted);
+}
+
+.match-centre-empty p {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+}
+
+/* ---------- Section 03 — Matchday Fixtures ---------- */
+.matchday-fixtures {
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--charcoal);
+}
+
+.fixtures-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.fixtures-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--text-white);
+  margin: 0;
+}
+
+.matchweek-selector {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--comp-charcoal);
+  border: 1px solid var(--charcoal);
+  border-radius: var(--radius-pill);
+  padding: 0.25rem 0.5rem;
+}
+
+.matchweek-selector label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.matchweek-selector select {
+  background: transparent;
+  border: none;
+  color: var(--text-white);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  outline: none;
+}
+
+.matchweek-selector select:focus {
+  outline: 2px solid var(--comp-neon-yellow);
+}
+
+.fixtures-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Empty state for fixtures (mirrors .match-centre-empty) */
+.fixtures-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-muted);
+}
+
+.fixtures-empty p {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+}
+
+.fixture-row {
+  display: grid;
+  grid-template-columns: 48px 70px 1fr 1fr 90px auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: var(--comp-card-bg);
+  border: 1px solid var(--charcoal);
+  border-radius: var(--radius-card);
+  transition: border-color 200ms ease;
+}
+
+.fixture-row:hover {
+  border-color: var(--comp-neon-yellow);
+}
+
+.fixture-id {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--comp-neon-yellow);
+}
+
+.fixture-time {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-white);
+  text-align: center;
+}
+
+.fixture-pitch {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.fixture-teams {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.fixture-team {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.fixture-crest {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+  background: #080808;
+  border: 1px solid var(--charcoal);
+  flex-shrink: 0;
+}
+
+.fixture-team-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fixture-vs {
+  font-size: 0.7rem;
+  font-weight: 900;
+  color: var(--text-faint);
+  line-height: 1;
+  padding: 0 0.2rem;
+}
+
+.fixture-score {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--comp-neon-yellow);
+  text-align: right;
+}
+
+.fixture-vs-placeholder {
+  font-size: 0.7rem;
+  font-weight: 900;
+  color: var(--text-faint);
+  text-align: right;
+}
+
+.fixture-status {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: right;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid var(--charcoal);
+  background: rgba(8, 8, 8, 0.6);
+  color: var(--text-white);
+  white-space: nowrap;
+}
+
+.fixture-status--live {
+  color: var(--comp-neon-magenta);
+  border-color: var(--comp-neon-magenta);
+  background: rgba(255, 0, 163, 0.1);
+}
+
+.fixture-status--fulltime {
+  color: var(--text-white);
+  border-color: var(--charcoal);
+}
+
+.fixture-status--upcoming {
+  color: var(--text-muted);
+}
+
+/* ---------- Section 04 — League Standings ---------- */
+.league-standings {
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--charcoal);
+}
+
+.standings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.standings-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--text-white);
+  margin: 0;
+}
+
+.standings-scroll {
+  width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.standings-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.standings-scroll::-webkit-scrollbar-thumb {
+  background: var(--charcoal);
+  border-radius: 3px;
+}
+
+.standings-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  min-width: 600px;
+}
+
+.standings-table th {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  text-align: left;
+  padding: 0.75rem 0.5rem;
+  border-bottom: 2px solid var(--comp-divider);
+  color: var(--comp-neon-yellow);
+}
+
+.standings-table td {
+  padding: 0.75rem 0.5rem;
+  color: var(--text-white);
+  border-bottom: 1px solid var(--comp-divider);
+}
+
+.standings-table tr:last-child td {
+  border-bottom: none;
+}
+
+.standings-table tr:hover td {
+  background: rgba(232, 255, 0, 0.03);
+}
+
+.standings-pos {
+  font-weight: 800;
+  color: var(--comp-neon-yellow);
+  width: 30px;
+}
+
+.standings-team {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-width: 0;
+}
+
+.standings-crest {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+  background: #080808;
+  border: 1px solid var(--charcoal);
+  flex-shrink: 0;
+}
+
+.standings-team-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--text-white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.standings-stat {
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.standings-pts {
+  text-align: right;
+  font-weight: 800;
+  color: var(--comp-neon-yellow);
+  font-variant-numeric: tabular-nums;
+}
+
+.standings-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.standings-view-full {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--comp-neon-yellow);
+  text-decoration: none;
+  border: 1px solid var(--comp-neon-yellow);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  background: transparent;
+}
+
+.standings-view-full:hover {
+  background: var(--comp-neon-yellow);
+  color: var(--near-black);
+}
+
+.standings-note {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+}
+
+/* ---------- Section 05 — Matchday Event Feed ---------- */
+.matchday-events {
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--charcoal);
+}
+
+.events-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.events-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--text-white);
+  margin: 0;
+}
+
+.event-filter {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.event-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  background: var(--comp-charcoal);
+  border: 1px solid var(--charcoal);
+  border-radius: var(--radius-pill);
+  color: var(--text-white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.35rem 0.8rem;
+  cursor: pointer;
+  transition: all 200ms ease;
+  white-space: nowrap;
+}
+
+.event-filter-btn:hover {
+  border-color: var(--comp-neon-yellow);
+}
+
+.event-filter-btn.active {
+  background: var(--comp-neon-yellow);
+  color: var(--near-black);
+  border-color: var(--comp-neon-yellow);
+}
+
+.event-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.event-item {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: var(--comp-card-bg);
+  border: 1px solid var(--charcoal);
+  border-left: 3px solid var(--comp-divider);
+  border-radius: 0 var(--radius-card) var(--radius-card) 0;
+  transition: border-color 200ms ease;
+}
+
+.event-item:hover {
+  border-color: var(--comp-neon-yellow);
+}
+
+.event-item--goal {
+  border-left-color: var(--comp-neon-yellow);
+}
+
+.event-item--card {
+  border-left-color: var(--comp-neon-magenta);
+}
+
+.event-item--announcement {
+  border-left-color: var(--text-faint);
+}
+
+.event-time {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--comp-neon-yellow);
+  text-align: center;
+}
+
+.event-time--ft {
+  color: var(--text-white);
+}
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.event-player {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-white);
+}
+
+.event-team {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.event-type {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--comp-neon-yellow);
+  background: rgba(232, 255, 0, 0.1);
+  border: 1px solid rgba(232, 255, 0, 0.15);
+  border-radius: 4px;
+  padding: 0.15rem 0.5rem;
+  display: inline-block;
+  width: fit-content;
+}
+
+.event-type--card {
+  color: var(--comp-neon-magenta);
+  background: rgba(255, 0, 163, 0.1);
+  border-color: rgba(255, 0, 163, 0.15);
+}
+
+.event-score {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-align: right;
+  white-space: nowrap;
+}
+
+.event-feed-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-muted);
+}
+
+.event-feed-empty p {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+}
+
+/* ---------- Section 06 — Player of the Day ---------- */
+.player-of-the-day {
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--charcoal);
+}
+
+.player-of-the-day-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+.player-portrait-wrap {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  background: #000;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  border: 1px solid var(--charcoal);
+}
+
+.player-portrait-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.9;
+}
+
+.player-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.player-name {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--text-white);
+  margin: 0;
+}
+
+.player-team {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--comp-neon-yellow);
+  margin: 0;
+}
+
+.player-position {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-white);
+  margin: 0;
+}
+
+.player-stats {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--comp-divider);
+}
+
+.player-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.player-stat-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.player-stat-value {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--text-white);
+  font-variant-numeric: tabular-nums;
+}
+
+.player-of-the-day-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1rem;
+  background: var(--comp-charcoal);
+  border: 1px solid var(--charcoal);
+  border-radius: var(--radius-card);
+  color: var(--text-muted);
+}
+
+.player-of-the-day-empty p {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Section 07 — Next Up ---------- */
+.next-up {
+  position: relative;
+  padding: var(--space-6) 0;
+}
+
+.next-up-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--comp-charcoal);
+  border: 1px solid var(--charcoal);
+  border-radius: var(--radius-card);
+  padding: var(--space-5);
+  overflow: hidden;
+}
+
+.next-up::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--comp-neon-yellow), var(--comp-neon-magenta));
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.next-up-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.next-up-tag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--comp-neon-yellow);
+}
+
+.next-up-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--text-white);
+  margin: 0;
+}
+
+.next-up-matchup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.next-up-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.next-up-crest {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+  background: #080808;
+  border: 1px solid var(--charcoal);
+}
+
+.next-up-team-name {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-white);
+  text-align: center;
+  line-height: 1.1;
+}
+
+.next-up-vs {
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--text-faint);
+  line-height: 1;
+  padding: 0 0.5rem;
+  flex-shrink: 0;
+}
+
+.next-up-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.next-up-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-white);
+}
+
+.next-up-detail span {
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.next-up-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--comp-neon-yellow);
+  text-decoration: none;
+  border: 1px solid var(--comp-neon-yellow);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.next-up-cta:hover {
+  background: var(--comp-neon-yellow);
+  color: var(--near-black);
+}
+
+/* ---------- Responsive: Competition page ---------- */
+
+/* The 6-child fixture row cannot fit 6 columns below ~900px
+   (the score and status were clipped), so stack it instead. */
+@media (max-width: 900px) {
+  .fixture-row {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "id    time    status"
+      "teams teams   teams"
+      "pitch pitch   score";
+    gap: 0.5rem 0.75rem;
+  }
+
+  .fixture-id {
+    grid-area: id;
+  }
+
+  .fixture-time {
+    grid-area: time;
+    text-align: left;
+  }
+
+  .fixture-status {
+    grid-area: status;
+    justify-self: end;
+  }
+
+  .fixture-teams {
+    grid-area: teams;
+  }
+
+  .fixture-pitch {
+    grid-area: pitch;
+    text-align: left;
+  }
+
+  .fixture-score,
+  .fixture-vs-placeholder {
+    grid-area: score;
+    justify-self: end;
+  }
+}
+
+@media (min-width: 641px) {
+  .comp-hero {
+    padding: 2.5rem var(--space-2) 2rem;
+  }
+
+  .matches-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .player-of-the-day-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .player-portrait-wrap {
+    height: 380px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .comp-hero {
+    padding: 3rem var(--space-2) 2rem;
+  }
+
+  .matches-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .match-card-header {
+    padding: 1.25rem 1.25rem 0.5rem;
+  }
+
+  .match-score {
+    padding: 1rem 1.25rem;
+  }
+
+  .match-card-footer {
+    padding: 1rem 1.25rem 1.25rem;
+  }
+
+  .fixture-row {
+    padding: 1rem 1.25rem;
+  }
+
+  .event-item {
+    padding: 1rem 1.25rem;
+  }
+
+  .next-up-inner {
+    flex-direction: row;
+    padding: var(--space-6);
+  }
+
+  .next-up-header {
+    flex-shrink: 0;
+  }
+
+  .next-up-matchup {
+    flex: 1;
+  }
+
+  .next-up-details {
+    flex-shrink: 0;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .next-up-cta {
+    align-self: flex-start;
+  }
+
+  .player-of-the-day-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .player-portrait-wrap {
+    height: 420px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .match-card {
+    transition: none !important;
+  }
+
+  .fixture-row {
+    transition: none !important;
+  }
+
+  .event-item {
+    transition: none !important;
+  }
+
+  .match-status-badge--live {
+    animation: none !important;
+  }
+}
+
+/* Mobile: long match and fixture lists become swipeable carousels */
+@media (max-width: 640px) {
+  .matches-grid,
+  .fixtures-list {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: 0.6rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .matches-grid::-webkit-scrollbar,
+  .fixtures-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .matches-grid > * {
+    flex: 0 0 86%;
+    scroll-snap-align: center;
+  }
+
+  .fixtures-list > * {
+    flex: 0 0 88%;
+    scroll-snap-align: center;
+  }
+}
+
+/* ---------- Top scorers ---------- */
+.top-scorers-table {
+  min-width: 520px;
+}
+
+.top-scorer-name {
+  font-weight: 700;
+  color: var(--text-white);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.top-scorer-team {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.top-scorer-goals {
+  text-align: right;
+  font-weight: 800;
+  color: var(--comp-neon-yellow);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Match card scorers ---------- */
+.match-scorers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0 0.25rem 0.75rem;
+  font-size: 0.68rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.match-scorers strong {
+  color: var(--text-white);
+  font-weight: 700;
+}

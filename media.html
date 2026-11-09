@@ -1,0 +1,1944 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- YouTube rejects embeds without a usable Referer (error 153). -->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="icon" href="assets/images/logos/main%20logo.webp" type="image/webp" />
+  <title>Media | The Baller League — Matchday Archive</title>
+  <meta name="description" content="Knuckleball Originals — the matchday archive by Knuckleball. Full match replays, extended highlights, goals, player features, behind-the-scenes films and photography from The Baller League." />
+  <link rel="canonical" href="https://www.theballerleague.in/media.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Knuckleball" />
+  <meta property="og:title" content="Media | The Baller League — Matchday Archive" />
+  <meta property="og:description" content="Knuckleball Originals — the matchday archive. Full match replays, extended highlights, goals, player features, behind-the-scenes films and photography." />
+  <meta property="og:url" content="https://www.theballerleague.in/media.html" />
+  <meta property="og:image" content="https://www.theballerleague.in/assets/images/graphics/Home%20Page/hero%20image%20in%20home%20page%20optimised.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@knuckleball.in" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/media.css" />
+  <!-- Toolbar artwork, same set every page preloads -->
+  <link rel="preload" as="image" href="assets/images/logos/main%20logo.webp" />
+  <link rel="preload" as="image" href="assets/images/graphics/Navigation/navigation%20background.webp" />
+</head>
+<body>
+
+  <!-- Baller League Season 2 Y2K navigation toolbar -->
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner">
+      <button class="navbar-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navbarMenu">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+      </button>
+
+      <div class="navbar-brand" aria-label="Baller League">
+        <a href="index.html" class="brand-link">
+          <img class="navbar-logo" src="assets/images/logos/main%20logo.webp" alt="Baller League" />
+          <span class="s02-label">S02 / 026</span>
+        </a>
+      </div>
+
+      <ul class="navbar-menu" id="navbarMenu" role="menubar">
+        <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+        <li role="none"><a href="competition.html" class="nav-link" role="menuitem">Competition</a></li>
+        <li role="none"><a href="players.html" class="nav-link" role="menuitem">Players</a></li>
+        <li role="none"><a href="shop.html" class="nav-link" role="menuitem">Shop</a></li>
+        <li role="none"><a href="blog.html" class="nav-link" role="menuitem">Blog</a></li>
+        <li role="none"><a href="media.html" class="nav-link active" role="menuitem" aria-current="page">Media</a></li>
+      </ul>
+
+      <div class="navbar-actions">
+        <a href="players.html" class="nav-cta" aria-label="Join the League">JOIN THE LEAGUE ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol class="breadcrumb-list">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item"><span aria-current="page">Media</span></li>
+    </ol>
+  </nav>
+
+  <main class="media-page">
+
+    <!-- ============ Section 01 — Cinematic hero ============ -->
+    <header class="media-hero">
+      <img class="media-hero-bg" src="assets/images/graphics/Home%20Page/hero%20image%20in%20home%20page%20optimised.webp" alt="" fetchpriority="high" decoding="async" />
+      <div class="media-hero-scrim"></div>
+      <div class="media-hero-inner">
+        <p class="media-eyebrow">Knuckleball Originals / Matchday Archive</p>
+        <h1 class="media-title">The game.<br />Frame by <em>frame.</em></h1>
+        <p class="media-dek">Every match has a story. Relive the full game, the decisive moments, the goals, and everything that happens around the pitch.</p>
+        <div class="media-hero-ctas">
+          <a class="media-cta" href="#full-matches">Watch matches</a>
+        </div>
+        <p class="media-hero-status" id="heroStatus"></p>
+      </div>
+    </header>
+
+    <!-- ============ Section 02 — Featured ============ -->
+    <section class="media-featured" aria-labelledby="featuredTitle">
+      <div class="container">
+        <div class="media-section-head">
+          <h2 class="media-section-title" id="featuredTitle">Featured</h2>
+          <p class="media-section-dek">The one to watch first.</p>
+        </div>
+        <div id="featuredSlot"></div>
+      </div>
+    </section>
+
+    <!-- ============ Section 03 — Full matches ============ -->
+    <section class="media-section media-section--archive" id="full-matches" aria-labelledby="fullMatchesTitle">
+      <div class="container">
+        <div class="media-section-head">
+          <h2 class="media-section-title" id="fullMatchesTitle">Full matches</h2>
+          <p class="media-section-dek">Every minute. Every decision. Watch it back.</p>
+        </div>
+
+        <div class="archive-toolbar" id="archiveToolbar" hidden>
+          <div class="archive-search">
+            <label class="visually-hidden" for="archiveSearch">Search the archive</label>
+            <input id="archiveSearch" type="search" placeholder="Search team, competition or title" autocomplete="off" />
+          </div>
+          <div class="archive-field">
+            <label class="visually-hidden" for="archiveCompetition">Filter by competition</label>
+            <select id="archiveCompetition" title="Competition"></select>
+          </div>
+          <div class="archive-field">
+            <label class="visually-hidden" for="archiveSeason">Filter by season</label>
+            <select id="archiveSeason" title="Season"></select>
+          </div>
+          <div class="archive-field">
+            <label class="visually-hidden" for="archiveTeam">Filter by team</label>
+            <select id="archiveTeam" title="Team"></select>
+          </div>
+          <div class="archive-field">
+            <label class="visually-hidden" for="archiveSort">Sort matches</label>
+            <select id="archiveSort" title="Sort">
+              <option value="newest">Newest first</option>
+              <option value="oldest">Oldest first</option>
+            </select>
+          </div>
+          <p class="archive-count" id="archiveCount" role="status" aria-live="polite"></p>
+        </div>
+
+        <div class="archive-grid" id="archiveGrid"></div>
+        <div id="archiveEmpty"></div>
+
+        <div class="archive-more-wrap">
+          <button class="media-cta media-cta--outline" id="archiveMore" type="button" hidden>Load more matches</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Section 05 — Goals and short clips ============ -->
+    <section class="media-section media-section--clips" id="clips" aria-labelledby="clipsTitle">
+      <div class="container">
+        <div class="media-section-head">
+          <h2 class="media-section-title" id="clipsTitle">No looking away.</h2>
+          <p class="media-section-dek">The goals, saves, celebrations, and moments worth another watch.</p>
+        </div>
+        <div class="clip-rail" id="clipsRail" tabindex="0" role="group" aria-label="Short clips" hidden></div>
+        <div class="rail-preview" id="clipsPreview"></div>
+        <p class="media-section-dek media-section-note" id="clipsNote"></p>
+      </div>
+    </section>
+
+    <!-- ============ Section 06 — Player features ============ -->
+    <section class="media-section" id="player-features" aria-labelledby="featuresTitle">
+      <div class="container">
+        <div class="media-section-head">
+          <h2 class="media-section-title" id="featuresTitle">Beyond the scoreline.</h2>
+          <p class="media-section-dek">Interviews, profiles, skill breakdowns and the stories behind the shirt.</p>
+        </div>
+        <div class="features-grid" id="featuresGrid"></div>
+        <p class="media-section-dek media-section-note" id="featuresNote"></p>
+      </div>
+    </section>
+
+    <!-- ============ Section 08 — Photo stories ============ -->
+    <section class="media-section" id="photos" aria-labelledby="photosTitle">
+      <div class="container">
+        <div class="media-section-head">
+          <h2 class="media-section-title" id="photosTitle">Still in motion.</h2>
+          <p class="media-section-dek">Photography from the Knuckleball archive — teams, players, tournament days.</p>
+        </div>
+        <div class="photo-grid" id="photoGrid"></div>
+      </div>
+    </section>
+
+    <!-- ============ Section 09 — Instagram ============ -->
+    <section class="media-section" id="instagram" aria-labelledby="instagramTitle">
+      <div class="container">
+        <div class="media-section-head">
+          <h2 class="media-section-title" id="instagramTitle">Fresh off the feed.</h2>
+          <p class="media-section-dek">The newest reels and posts from <a href="https://www.instagram.com/knuckleball.in/" target="_blank" rel="noopener">@knuckleball.in</a>. Each card opens on Instagram.</p>
+        </div>
+        <h3 class="media-subhead">Latest reels</h3>
+        <div class="clip-rail" id="igReelsRail" tabindex="0" role="group" aria-label="Instagram reels"></div>
+        <h3 class="media-subhead">Latest posts</h3>
+        <div class="features-grid" id="igPostsGrid"></div>
+        <p class="media-section-dek media-section-note" id="instagramNote"></p>
+      </div>
+    </section>
+
+    <!-- ============ Section 10 — Browse by competition ============ -->
+    <section class="media-section" id="competitions" aria-labelledby="competitionsTitle">
+      <div class="container">
+        <div class="media-section-head">
+          <h2 class="media-section-title" id="competitionsTitle">Browse by competition</h2>
+          <p class="media-section-dek">Every competition in the archive, with its seasons.</p>
+        </div>
+        <div class="competition-chips" id="competitionChips"></div>
+        <p class="media-section-dek media-section-note" id="competitionsNote"></p>
+      </div>
+    </section>
+
+    <!-- ============ Section 11 — Closing ============ -->
+    <section class="media-closing">
+      <div class="container">
+        <h2 class="media-closing-title">The next moment is always coming.</h2>
+        <a class="media-cta" href="#full-matches">Explore the archive</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/logos/main%20logo.webp" alt="Baller League" class="footer-logo" />
+        <span class="footer-s02">S02 / 026</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="competition.html">Competition</a>
+        <a href="players.html">Players</a>
+        <a href="shop.html">Shop</a>
+        <a href="blog.html">Blog</a>
+        <a href="media.html">Media</a>
+      </nav>
+      <div class="footer-copy">
+        <p>&copy; 2026 Baller League Season 2. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Video player modal (built on demand — nothing loads until a card is opened) -->
+  <div class="media-modal" id="mediaModal" role="dialog" aria-modal="true" aria-labelledby="mediaModalTitle" hidden>
+    <div class="media-modal-backdrop" data-close="1"></div>
+    <div class="media-modal-dialog">
+      <button class="media-modal-close" id="mediaModalClose" type="button">Close</button>
+      <div class="media-player" id="mediaPlayer"></div>
+      <h2 class="media-modal-title" id="mediaModalTitle"></h2>
+      <p class="media-modal-meta" id="mediaModalMeta"></p>
+      <p class="media-modal-note" id="mediaModalNote" hidden></p>
+    </div>
+  </div>
+
+  <!-- Photo lightbox -->
+  <div class="photo-lightbox" id="photoLightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button class="photo-lightbox-btn photo-lightbox-close" id="photoClose" type="button">Close</button>
+    <img id="photoLightboxImg" src="" alt="" />
+    <p class="photo-lightbox-cap" id="photoLightboxCap"></p>
+    <div class="photo-lightbox-bar">
+      <button class="photo-lightbox-btn" id="photoPrev" type="button">Previous</button>
+      <button class="photo-lightbox-btn" id="photoNext" type="button">Next</button>
+    </div>
+  </div>
+
+  <script>
+  (function () {
+    "use strict";
+
+    /* ============================================================
+       CONTENT LAYER
+       One object per published video. Nothing is invented here:
+       no URLs, scores, dates, durations, teams or players. Any
+       field you leave out is simply not rendered.
+
+       SOURCE: every record below is a real upload from the club's
+       own channel, youtube.com/@knuckleball-in. Titles, running
+       times and thumbnails come straight from those videos.
+         - competition is read from the video's own title ("KPL" /
+           "Playoffs" / "Match N" -> Knuckleball Pro League;
+           "The Baller League SZN 02" -> Baller League / Season 2)
+         - teams are only parsed where the title opens "A vs B |"
+         - no score is set anywhere, because this archive has no
+           verified scoreline; the score chip stays empty
+         - no date is set: YouTube only gives relative ages ("8
+           months ago"), which is not a date, so sorting falls back
+           to the order of this array (the channel's newest first)
+       Replace these with the real Baller League fixtures as they
+       are published, or add to them.
+
+       Record shape:
+         id          unique slug
+         type        "full-match" | "highlights" | "short-clip"
+                     | "player-feature" | "behind-the-scenes"
+         title       headline for the card / player
+         competition e.g. "Baller League"
+         season      e.g. "Season 2"
+         homeTeam / awayTeam
+         homeScore / awayScore   omit until the result is confirmed
+         date        "YYYY-MM-DD"
+         duration    e.g. "1h 42m"
+         thumbnail   path to a 16:9 still (portrait for short clips)
+         videoUrl    direct file (.mp4/.webm) or a YouTube URL
+         platform    "file" (default) or "youtube"
+         description long copy for the featured slot
+         tags        array of short labels
+         featured    true -> takes the featured slot
+         available   false -> listed as upcoming, not playable
+
+       Empty example:
+         { id: "md1-full", type: "full-match", title: "…",
+           competition: "Baller League", season: "Season 2",
+           homeTeam: "…", awayTeam: "…", date: "2026-10-12",
+           duration: "1h 42m", thumbnail: "assets/images/graphics/…jpg",
+           videoUrl: "Videos/md1-full.mp4", available: true }
+       ============================================================ */
+    var MEDIA = [
+      {
+        "id": "yt-2ftpEFlBK_A",
+        "type": "full-match",
+        "title": "Passion FC vs Crescents FC | Match 8 | The Baller League SZN 02 | Knuckleball x Bhanuvara League",
+        "videoUrl": "https://www.youtube.com/watch?v=2ftpEFlBK_A",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/2ftpEFlBK_A/hq720.jpg",
+        "available": true,
+        "duration": "25:48",
+        "homeTeam": "Passion FC",
+        "awayTeam": "Crescents FC",
+        "competition": "Baller League",
+        "season": "Season 2",
+        "tags": [
+          "Match 8"
+        ],
+        "featured": true
+      },
+      {
+        "id": "yt-5cKAfi_V7Zc",
+        "type": "full-match",
+        "title": "First Touch FC vs Crescents FC | Match 12 | The Baller League SZN 2 | Knuckleball x Bhanuvara League",
+        "videoUrl": "https://www.youtube.com/watch?v=5cKAfi_V7Zc",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/5cKAfi_V7Zc/hq720.jpg",
+        "available": true,
+        "duration": "22:20",
+        "homeTeam": "First Touch FC",
+        "awayTeam": "Crescents FC",
+        "competition": "Baller League",
+        "season": "Season 2",
+        "tags": [
+          "Match 12"
+        ]
+      },
+      {
+        "id": "yt-624qKC5iUYg",
+        "type": "full-match",
+        "title": "First Touch FC vs Veltrix United | Match 9 | Baller League SZN 02 | Knuckleball x Bhanuvara League",
+        "videoUrl": "https://www.youtube.com/watch?v=624qKC5iUYg",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/624qKC5iUYg/hq720.jpg",
+        "available": true,
+        "duration": "24:34",
+        "homeTeam": "First Touch FC",
+        "awayTeam": "Veltrix United",
+        "competition": "Baller League",
+        "season": "Season 2",
+        "tags": [
+          "Match 9"
+        ]
+      },
+      {
+        "id": "yt-BHTlLCYYVwU",
+        "type": "full-match",
+        "title": "NBFC vs Legacy FC | Match 7 | Baller League SZN 02 | Knuckleball x Bhanuvara League",
+        "videoUrl": "https://www.youtube.com/watch?v=BHTlLCYYVwU",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/BHTlLCYYVwU/hq720.jpg",
+        "available": true,
+        "duration": "24:49",
+        "homeTeam": "NBFC",
+        "awayTeam": "Legacy FC",
+        "competition": "Baller League",
+        "season": "Season 2",
+        "tags": [
+          "Match 7"
+        ]
+      },
+      {
+        "id": "yt-Bi_t9PZFuDc",
+        "type": "full-match",
+        "title": "NBFC vs Falcons FC | Match 10 | Baller League SZN 02 | Knuckleball x Bhanuvara League",
+        "videoUrl": "https://www.youtube.com/watch?v=Bi_t9PZFuDc",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/Bi_t9PZFuDc/hq720.jpg",
+        "available": true,
+        "duration": "22:09",
+        "homeTeam": "NBFC",
+        "awayTeam": "Falcons FC",
+        "competition": "Baller League",
+        "season": "Season 2",
+        "tags": [
+          "Match 10"
+        ]
+      },
+      {
+        "id": "yt-sAQX89gVvBw",
+        "type": "full-match",
+        "title": "United 4th Phase vs. Hermes FC | Playoffs 4",
+        "videoUrl": "https://www.youtube.com/watch?v=sAQX89gVvBw",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/sAQX89gVvBw/hq720.jpg",
+        "available": true,
+        "duration": "49:44",
+        "homeTeam": "United 4th Phase",
+        "awayTeam": "Hermes FC",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "Playoffs 4"
+        ]
+      },
+      {
+        "id": "yt-NGzytWcNFyU",
+        "type": "full-match",
+        "title": "Ascend FC vs. Underdogs FC | Playoffs 3",
+        "videoUrl": "https://www.youtube.com/watch?v=NGzytWcNFyU",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/NGzytWcNFyU/hq720.jpg",
+        "available": true,
+        "duration": "54:08",
+        "homeTeam": "Ascend FC",
+        "awayTeam": "Underdogs FC",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "Playoffs 3"
+        ]
+      },
+      {
+        "id": "yt-shGANeHSLbs",
+        "type": "full-match",
+        "title": "Kitsune FC vs. Mini Soccer Academy | Playoffs 1",
+        "videoUrl": "https://www.youtube.com/watch?v=shGANeHSLbs",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/shGANeHSLbs/hq720.jpg",
+        "available": true,
+        "duration": "49:02",
+        "homeTeam": "Kitsune FC",
+        "awayTeam": "Mini Soccer Academy",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "Playoffs 1"
+        ]
+      },
+      {
+        "id": "yt-fCXkWwjd0Ug",
+        "type": "full-match",
+        "title": "Ragnarok FC vs. Mini Soccer Academy (B) | KPL Match 1 (Group B)",
+        "videoUrl": "https://www.youtube.com/watch?v=fCXkWwjd0Ug",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/fCXkWwjd0Ug/hq720.jpg",
+        "available": true,
+        "duration": "52:33",
+        "homeTeam": "Ragnarok FC",
+        "awayTeam": "Mini Soccer Academy (B)",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "KPL Match 1 (Group B)"
+        ]
+      },
+      {
+        "id": "yt-KUa0sc9oxuE",
+        "type": "full-match",
+        "title": "Kitsue FC vs. Demigods FC | Match 19",
+        "videoUrl": "https://www.youtube.com/watch?v=KUa0sc9oxuE",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/KUa0sc9oxuE/hq720.jpg",
+        "available": true,
+        "duration": "48:48",
+        "homeTeam": "Kitsue FC",
+        "awayTeam": "Demigods FC",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "Match 19"
+        ]
+      },
+      {
+        "id": "yt-J_2z2bjxq_g",
+        "type": "full-match",
+        "title": "United 4th Phase vs. Hermes FC | KPL Match 18",
+        "videoUrl": "https://www.youtube.com/watch?v=J_2z2bjxq_g",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/J_2z2bjxq_g/hq720.jpg",
+        "available": true,
+        "duration": "52:45",
+        "homeTeam": "United 4th Phase",
+        "awayTeam": "Hermes FC",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "KPL Match 18"
+        ]
+      },
+      {
+        "id": "yt-e2e6_OzpFxw",
+        "type": "full-match",
+        "title": "Mini Soccer Academy vs. Kraken FC | KPL Match 17",
+        "videoUrl": "https://www.youtube.com/watch?v=e2e6_OzpFxw",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/e2e6_OzpFxw/hq720.jpg",
+        "available": true,
+        "duration": "50:19",
+        "homeTeam": "Mini Soccer Academy",
+        "awayTeam": "Kraken FC",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "KPL Match 17"
+        ]
+      },
+      {
+        "id": "yt-Fuo9qLKS25g",
+        "type": "full-match",
+        "title": "Knights FC vs. Underdogs FC | KPL Match 16",
+        "videoUrl": "https://www.youtube.com/watch?v=Fuo9qLKS25g",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/Fuo9qLKS25g/hq720.jpg",
+        "available": true,
+        "duration": "51:36",
+        "homeTeam": "Knights FC",
+        "awayTeam": "Underdogs FC",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "KPL Match 16"
+        ]
+      },
+      {
+        "id": "yt-dRFQZu43Yas",
+        "type": "full-match",
+        "title": "Demigods FC vs. Hermes FC | KPL Match 15",
+        "videoUrl": "https://www.youtube.com/watch?v=dRFQZu43Yas",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/dRFQZu43Yas/hq720.jpg",
+        "available": true,
+        "duration": "50:55",
+        "homeTeam": "Demigods FC",
+        "awayTeam": "Hermes FC",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "KPL Match 15"
+        ]
+      },
+      {
+        "id": "yt-gW3c38PsiiY",
+        "type": "full-match",
+        "title": "Kraken FC vs United 4th Phase | KPL Match 14",
+        "videoUrl": "https://www.youtube.com/watch?v=gW3c38PsiiY",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/gW3c38PsiiY/hq720.jpg",
+        "available": true,
+        "duration": "55:25",
+        "homeTeam": "Kraken FC",
+        "awayTeam": "United 4th Phase",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "KPL Match 14"
+        ]
+      },
+      {
+        "id": "yt-s84y-ac4giE",
+        "type": "full-match",
+        "title": "Underdogs FC vs. Legacy FC | KPL Match 13",
+        "videoUrl": "https://www.youtube.com/watch?v=s84y-ac4giE",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/s84y-ac4giE/hq720.jpg",
+        "available": true,
+        "duration": "57:03",
+        "homeTeam": "Underdogs FC",
+        "awayTeam": "Legacy FC",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "KPL Match 13"
+        ]
+      },
+      {
+        "id": "yt-8V_IFV8jx_8",
+        "type": "full-match",
+        "title": "Knights FC vs. Kitsune FC | KPL Match 12",
+        "videoUrl": "https://www.youtube.com/watch?v=8V_IFV8jx_8",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/8V_IFV8jx_8/hq720.jpg",
+        "available": true,
+        "duration": "56:29",
+        "homeTeam": "Knights FC",
+        "awayTeam": "Kitsune FC",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "KPL Match 12"
+        ]
+      },
+      {
+        "id": "yt-sAsAWCu2NFI",
+        "type": "full-match",
+        "title": "Mini Soccer Academy vs. Ascend FC | KPL Match 11",
+        "videoUrl": "https://www.youtube.com/watch?v=sAsAWCu2NFI",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/sAsAWCu2NFI/hq720.jpg",
+        "available": true,
+        "duration": "57:41",
+        "homeTeam": "Mini Soccer Academy",
+        "awayTeam": "Ascend FC",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "KPL Match 11"
+        ]
+      },
+      {
+        "id": "yt--MrR2k8IiY0",
+        "type": "full-match",
+        "title": "Hermes FC vs. Legacy FC | KPL Match 8",
+        "videoUrl": "https://www.youtube.com/watch?v=-MrR2k8IiY0",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/-MrR2k8IiY0/hq720.jpg",
+        "available": true,
+        "duration": "52:25",
+        "homeTeam": "Hermes FC",
+        "awayTeam": "Legacy FC",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "KPL Match 8"
+        ]
+      },
+      {
+        "id": "yt-pQmXhUCVxyQ",
+        "type": "full-match",
+        "title": "Ascend FC vs. Underdogs FC | KPL Match 7",
+        "videoUrl": "https://www.youtube.com/watch?v=pQmXhUCVxyQ",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/pQmXhUCVxyQ/hq720.jpg",
+        "available": true,
+        "duration": "50:42",
+        "homeTeam": "Ascend FC",
+        "awayTeam": "Underdogs FC",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "KPL Match 7"
+        ]
+      },
+      {
+        "id": "yt-HoT909sXwuA",
+        "type": "full-match",
+        "title": "United 4th Phase vs. Ascend FC | KPL Match 9",
+        "videoUrl": "https://www.youtube.com/watch?v=HoT909sXwuA",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/HoT909sXwuA/hq720.jpg",
+        "available": true,
+        "duration": "53:17",
+        "homeTeam": "United 4th Phase",
+        "awayTeam": "Ascend FC",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "KPL Match 9"
+        ]
+      },
+      {
+        "id": "yt-9P8sZXqv3yc",
+        "type": "full-match",
+        "title": "Knights FC vs. Kraken FC | KPL Match 10",
+        "videoUrl": "https://www.youtube.com/watch?v=9P8sZXqv3yc",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/9P8sZXqv3yc/hq720.jpg",
+        "available": true,
+        "duration": "51:54",
+        "homeTeam": "Knights FC",
+        "awayTeam": "Kraken FC",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "KPL Match 10"
+        ]
+      },
+      {
+        "id": "yt-RQBiAw5IsnM",
+        "type": "full-match",
+        "title": "Mini Soccer Academy vs. Demigods FC | KPL Match 6",
+        "videoUrl": "https://www.youtube.com/watch?v=RQBiAw5IsnM",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/RQBiAw5IsnM/hq720.jpg",
+        "available": true,
+        "duration": "54:26",
+        "homeTeam": "Mini Soccer Academy",
+        "awayTeam": "Demigods FC",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "KPL Match 6"
+        ]
+      },
+      {
+        "id": "yt--jl1W5BD77E",
+        "type": "full-match",
+        "title": "Kraken FC vs. Demigods FC | KPL Match 5",
+        "videoUrl": "https://www.youtube.com/watch?v=-jl1W5BD77E",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/-jl1W5BD77E/hq720.jpg",
+        "available": true,
+        "duration": "50:44",
+        "homeTeam": "Kraken FC",
+        "awayTeam": "Demigods FC",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "KPL Match 5"
+        ]
+      },
+      {
+        "id": "yt-U4WhMFoiFmE",
+        "type": "player-feature",
+        "title": "Guess the PLAYER by thier baby photos | Do They Know Ball? | S1E01",
+        "videoUrl": "https://www.youtube.com/watch?v=U4WhMFoiFmE",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/U4WhMFoiFmE/hq720.jpg",
+        "available": true,
+        "duration": "1:12"
+      },
+      {
+        "id": "yt-xQu87DxUvfM",
+        "type": "full-match",
+        "title": "Kraken FC vs. Legacy FC (B) | KPL Match 4",
+        "videoUrl": "https://www.youtube.com/watch?v=xQu87DxUvfM",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/xQu87DxUvfM/hq720.jpg",
+        "available": true,
+        "duration": "49:53",
+        "homeTeam": "Kraken FC",
+        "awayTeam": "Legacy FC (B)",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "KPL Match 4"
+        ]
+      },
+      {
+        "id": "yt-5AWK0ctaW98",
+        "type": "full-match",
+        "title": "Mini Soccer Academy vs. Knights FC | KPL Match 3",
+        "videoUrl": "https://www.youtube.com/watch?v=5AWK0ctaW98",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/5AWK0ctaW98/hq720.jpg",
+        "available": true,
+        "duration": "53:42",
+        "homeTeam": "Mini Soccer Academy",
+        "awayTeam": "Knights FC",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "KPL Match 3"
+        ]
+      },
+      {
+        "id": "yt-iomMYCkcbL8",
+        "type": "full-match",
+        "title": "United 4th Phase vs. Demigods FC | KPL Match 2",
+        "videoUrl": "https://www.youtube.com/watch?v=iomMYCkcbL8",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/iomMYCkcbL8/hq720.jpg",
+        "available": true,
+        "duration": "51:49",
+        "homeTeam": "United 4th Phase",
+        "awayTeam": "Demigods FC",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "KPL Match 2"
+        ]
+      },
+      {
+        "id": "yt-J4qtPwgiKZQ",
+        "type": "full-match",
+        "title": "Underdogs FC vs. Hermes FC | KPL Match 1",
+        "videoUrl": "https://www.youtube.com/watch?v=J4qtPwgiKZQ",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/J4qtPwgiKZQ/hq720.jpg",
+        "available": true,
+        "duration": "54:01",
+        "homeTeam": "Underdogs FC",
+        "awayTeam": "Hermes FC",
+        "competition": "Knuckleball Pro League",
+        "tags": [
+          "KPL Match 1"
+        ]
+      },
+      {
+        "id": "yt-YTPhljaf2vM",
+        "type": "full-match",
+        "title": "👑 CHAMPIONS! Passion FC Win 5-1 vs Legacy FC | AP & Chakresh Shine ⭐",
+        "videoUrl": "https://www.youtube.com/watch?v=YTPhljaf2vM",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/YTPhljaf2vM/hq720.jpg",
+        "available": true,
+        "duration": "53:47",
+        "homeTeam": "👑 CHAMPIONS! Passion FC Win 5-1",
+        "awayTeam": "Legacy FC"
+      },
+      {
+        "id": "yt-47_pOPNBo5c",
+        "type": "full-match",
+        "title": "⚔️ Defensive Masterclass: Electric Monkeys Defeat Interceptors FC 1-0",
+        "videoUrl": "https://www.youtube.com/watch?v=47_pOPNBo5c",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/47_pOPNBo5c/hq720.jpg",
+        "available": true,
+        "duration": "50:56"
+      },
+      {
+        "id": "yt-jN9c-A4xZPs",
+        "type": "full-match",
+        "title": "🚀 LEGACY FC STAND TALL! 5-3 Over Walkalone | Power Play From Abin & Sujith 🔥",
+        "videoUrl": "https://www.youtube.com/watch?v=jN9c-A4xZPs",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/jN9c-A4xZPs/hq720.jpg",
+        "available": true,
+        "duration": "53:02"
+      },
+      {
+        "id": "yt-dWniEYB94CQ",
+        "type": "full-match",
+        "title": "💥 AP GOES CRAZY! 7 Goals in Passion FC’s 14-2 Win Over Sewy FC | Total Domination ⚡",
+        "videoUrl": "https://www.youtube.com/watch?v=dWniEYB94CQ",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/dWniEYB94CQ/hq720.jpg",
+        "available": true,
+        "duration": "51:54"
+      },
+      {
+        "id": "yt-KMch3WJLejc",
+        "type": "full-match",
+        "title": "14-GOAL THRILLER! Galacticos FC Beat Underdogs 9-5 | Attack Mode: ON 🔥",
+        "videoUrl": "https://www.youtube.com/watch?v=KMch3WJLejc",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/KMch3WJLejc/hq720.jpg",
+        "available": true,
+        "duration": "53:41"
+      },
+      {
+        "id": "yt-OmnMqgWKRG8",
+        "type": "full-match",
+        "title": "💪  FROM BEHIND TO VICTORY! Passion FC 3-1 Interceptors | Second Half Takeover ⚡",
+        "videoUrl": "https://www.youtube.com/watch?v=OmnMqgWKRG8",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/OmnMqgWKRG8/hq720.jpg",
+        "available": true,
+        "duration": "54:05"
+      },
+      {
+        "id": "yt-ChbX6iEy8gI",
+        "type": "short-clip",
+        "title": "Phalguni pulls one back for knights 🪇",
+        "videoUrl": "https://www.youtube.com/watch?v=ChbX6iEy8gI",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/ChbX6iEy8gI/frame0.jpg",
+        "available": true,
+        "tags": [
+          "knuckleball",
+          "football",
+          "fyp"
+        ]
+      },
+      {
+        "id": "yt-0szFWuoInWI",
+        "type": "short-clip",
+        "title": "Unstoppable Goal from Muzamil 🔥",
+        "videoUrl": "https://www.youtube.com/watch?v=0szFWuoInWI",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/0szFWuoInWI/frame0.jpg",
+        "available": true,
+        "tags": [
+          "knuckleball",
+          "fyp",
+          "football",
+          "kpl"
+        ]
+      },
+      {
+        "id": "yt-Mn0BXbZor-Y",
+        "type": "short-clip",
+        "title": "Dani's Brace vs Underdogs 🔥",
+        "videoUrl": "https://www.youtube.com/watch?v=Mn0BXbZor-Y",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/Mn0BXbZor-Y/frame0.jpg",
+        "available": true,
+        "tags": [
+          "knuckleball",
+          "football",
+          "fyp"
+        ]
+      },
+      {
+        "id": "yt-hkxwKUFtCSU",
+        "type": "short-clip",
+        "title": "Hattrick for Hemanth ⚽⚽⚽",
+        "videoUrl": "https://www.youtube.com/watch?v=hkxwKUFtCSU",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/hkxwKUFtCSU/frame0.jpg",
+        "available": true,
+        "tags": [
+          "knuckleball",
+          "fyp",
+          "football"
+        ]
+      },
+      {
+        "id": "yt-mJ1cwaVlbp0",
+        "type": "short-clip",
+        "title": "WHAT a goal by Yashas 😲🔥",
+        "videoUrl": "https://www.youtube.com/watch?v=mJ1cwaVlbp0",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/mJ1cwaVlbp0/frame0.jpg",
+        "available": true,
+        "tags": [
+          "knuckleballproleague",
+          "kpl",
+          "soccer",
+          "football",
+          "fypシ",
+          "streetfootball"
+        ]
+      },
+      {
+        "id": "yt--T72hZ1jYmc",
+        "type": "short-clip",
+        "title": "Zaidan with a brace ⚽⚽",
+        "videoUrl": "https://www.youtube.com/watch?v=-T72hZ1jYmc",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/-T72hZ1jYmc/frame0.jpg",
+        "available": true,
+        "tags": [
+          "knuckleballproleague",
+          "knuckleball",
+          "football",
+          "soccer"
+        ]
+      },
+      {
+        "id": "yt-j_io-8bA59E",
+        "type": "short-clip",
+        "title": "Abhishek scores an insane goal ⚡",
+        "videoUrl": "https://www.youtube.com/watch?v=j_io-8bA59E",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/j_io-8bA59E/frame0.jpg",
+        "available": true,
+        "tags": [
+          "knuckleballproleague",
+          "knuckleball",
+          "streetfootball",
+          "football"
+        ]
+      },
+      {
+        "id": "yt-L-MWNET8A-E",
+        "type": "short-clip",
+        "title": "Maaz scores 4️⃣ against Kitsune FC",
+        "videoUrl": "https://www.youtube.com/watch?v=L-MWNET8A-E",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/L-MWNET8A-E/frame0.jpg",
+        "available": true,
+        "tags": [
+          "knuckleballproleague",
+          "knuckleball",
+          "football",
+          "fypシ"
+        ]
+      },
+      {
+        "id": "yt-uxoMaynGfB4",
+        "type": "short-clip",
+        "title": "Rahul's brace against Demigods",
+        "videoUrl": "https://www.youtube.com/watch?v=uxoMaynGfB4",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/uxoMaynGfB4/frame0.jpg",
+        "available": true,
+        "tags": [
+          "knuckleballproleague",
+          "knuckleball",
+          "fypシ",
+          "football"
+        ]
+      },
+      {
+        "id": "yt--JmgiI9sacE",
+        "type": "short-clip",
+        "title": "Shresht scores one back for Hermes FC 🔥",
+        "videoUrl": "https://www.youtube.com/watch?v=-JmgiI9sacE",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/-JmgiI9sacE/frame0.jpg",
+        "available": true,
+        "tags": [
+          "knuckleballproleague",
+          "knuckleball"
+        ]
+      },
+      {
+        "id": "yt-FkeAofNZfCM",
+        "type": "short-clip",
+        "title": "Passion FC’s Chakresh Takes the Spotlight 🔥.",
+        "videoUrl": "https://www.youtube.com/watch?v=FkeAofNZfCM",
+        "platform": "youtube",
+        "thumbnail": "https://i.ytimg.com/vi/FkeAofNZfCM/frame0.jpg",
+        "available": true,
+        "tags": [
+          "FootballShorts",
+          "PassionFC"
+        ]
+      }
+    ];
+
+    /* Newest Instagram posts and reels, read from @knuckleball.in on
+       2026-11-08. Captions are the account's own; date comes from the
+       post id. Cards link straight out to Instagram. */
+    var IG_REELS = [
+      {
+        "id": "ig-DSoWz96k4NZ",
+        "type": "instagram-reel",
+        "title": "Hattrick for Hemanth ⚽⚽⚽",
+        "postUrl": "https://www.instagram.com/reel/DSoWz96k4NZ/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DSoWz96k4NZ.webp",
+        "available": true,
+        "date": "2025-12-24"
+      },
+      {
+        "id": "ig-DRhqztVkwTD",
+        "type": "instagram-reel",
+        "title": "Just another day for Yashas 🤷‍♂️",
+        "postUrl": "https://www.instagram.com/reel/DRhqztVkwTD/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DRhqztVkwTD.webp",
+        "available": true,
+        "date": "2025-11-26"
+      },
+      {
+        "id": "ig-DRg_Kd9E8Xc",
+        "type": "instagram-reel",
+        "title": "Brace for Zaidan ⚽⚽",
+        "postUrl": "https://www.instagram.com/reel/DRg_Kd9E8Xc/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DRg_Kd9E8Xc.webp",
+        "available": true,
+        "date": "2025-11-26"
+      },
+      {
+        "id": "ig-DRgyOP3kd1L",
+        "type": "instagram-reel",
+        "title": "Solo strike by Abhi ⚡⚡⚡",
+        "postUrl": "https://www.instagram.com/reel/DRgyOP3kd1L/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DRgyOP3kd1L.webp",
+        "available": true,
+        "date": "2025-11-26"
+      },
+      {
+        "id": "ig-DRd-ggSEdZP",
+        "type": "instagram-reel",
+        "title": "Arjun nets his first goal 🔥",
+        "postUrl": "https://www.instagram.com/reel/DRd-ggSEdZP/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DRd-ggSEdZP.webp",
+        "available": true,
+        "date": "2025-11-25"
+      },
+      {
+        "id": "ig-DRd6IF1CMbR",
+        "type": "instagram-reel",
+        "title": "Goal of the season? 🚀🎯",
+        "postUrl": "https://www.instagram.com/reel/DRd6IF1CMbR/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DRd6IF1CMbR.webp",
+        "available": true,
+        "date": "2025-11-25"
+      },
+      {
+        "id": "ig-DRd5KQjCCRl",
+        "type": "instagram-reel",
+        "title": "@yashas_d_m007 with a banger 🔥",
+        "postUrl": "https://www.instagram.com/reel/DRd5KQjCCRl/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DRd5KQjCCRl.webp",
+        "available": true,
+        "date": "2025-11-25"
+      },
+      {
+        "id": "ig-DRFfGSAk1dD",
+        "type": "instagram-reel",
+        "title": "There's no stopping him 🖐️",
+        "postUrl": "https://www.instagram.com/reel/DRFfGSAk1dD/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DRFfGSAk1dD.webp",
+        "available": true,
+        "date": "2025-11-15"
+      },
+      {
+        "id": "ig-DRFczu3E8Ds",
+        "type": "instagram-reel",
+        "title": "Villa with the opener 🤠",
+        "postUrl": "https://www.instagram.com/reel/DRFczu3E8Ds/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DRFczu3E8Ds.webp",
+        "available": true,
+        "date": "2025-11-15"
+      },
+      {
+        "id": "ig-DQ9jvo_Ey78",
+        "type": "instagram-reel",
+        "title": "LAST MINUTE goals hit the hardest.",
+        "postUrl": "https://www.instagram.com/reel/DQ9jvo_Ey78/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DQ9jvo_Ey78.webp",
+        "available": true,
+        "date": "2025-11-12"
+      },
+      {
+        "id": "ig-DQ9hvzGk_TD",
+        "type": "instagram-reel",
+        "title": "Top corner 🚀🎯",
+        "postUrl": "https://www.instagram.com/reel/DQ9hvzGk_TD/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DQ9hvzGk_TD.webp",
+        "available": true,
+        "date": "2025-11-12"
+      },
+      {
+        "id": "ig-DQ9gxDrkyZA",
+        "type": "instagram-reel",
+        "title": "Prem scores his first goal of the season for Legacy FC.",
+        "postUrl": "https://www.instagram.com/reel/DQ9gxDrkyZA/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DQ9gxDrkyZA.webp",
+        "available": true,
+        "date": "2025-11-12"
+      }
+    ];
+
+    var IG_POSTS = [
+      {
+        "id": "ig-Dfd0OE1Tc61",
+        "type": "instagram-post",
+        "title": "group a table | md1 | szn 2",
+        "postUrl": "https://www.instagram.com/p/Dfd0OE1Tc61/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/Dfd0OE1Tc61.webp",
+        "available": true,
+        "date": "2026-11-08"
+      },
+      {
+        "id": "ig-Dfdz_wPzi_Z",
+        "type": "instagram-post",
+        "title": "May thousands of lamps light up your life with endless happiness, richness, health, and wealth forever 🪔",
+        "postUrl": "https://www.instagram.com/p/Dfdz_wPzi_Z/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/Dfdz_wPzi_Z.webp",
+        "available": true,
+        "date": "2026-11-08"
+      },
+      {
+        "id": "ig-Dfdz4RXTGCf",
+        "type": "instagram-post",
+        "title": "group b table. | md1 | szn 2",
+        "postUrl": "https://www.instagram.com/p/Dfdz4RXTGCf/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/Dfdz4RXTGCf.webp",
+        "available": true,
+        "date": "2026-11-08"
+      },
+      {
+        "id": "ig-DfT22mHz-js",
+        "type": "instagram-post",
+        "title": "thank you joseph | szn 2",
+        "postUrl": "https://www.instagram.com/p/DfT22mHz-js/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DfT22mHz-js.webp",
+        "available": true,
+        "date": "2026-11-04"
+      },
+      {
+        "id": "ig-DfT1I_ATJBF",
+        "type": "instagram-post",
+        "title": "thank you robo! | @robertstephen4 | szn 2",
+        "postUrl": "https://www.instagram.com/p/DfT1I_ATJBF/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DfT1I_ATJBF.webp",
+        "available": true,
+        "date": "2026-11-04"
+      },
+      {
+        "id": "ig-DfTy9k3E2M6",
+        "type": "instagram-post",
+        "title": "ft. veltrix united vs passion fc | game 13 | md1 | szn 2",
+        "postUrl": "https://www.instagram.com/p/DfTy9k3E2M6/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DfTy9k3E2M6.webp",
+        "available": true,
+        "date": "2026-11-04"
+      },
+      {
+        "id": "ig-DfSWZzck1A2",
+        "type": "instagram-post",
+        "title": "ft. crescents fc vs first touch fc | game 12 | md1 | szn 2",
+        "postUrl": "https://www.instagram.com/p/DfSWZzck1A2/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DfSWZzck1A2.webp",
+        "available": true,
+        "date": "2026-11-03"
+      },
+      {
+        "id": "ig-DfSIL7RE9ts",
+        "type": "instagram-post",
+        "title": "ft. legacy ffa vs united 5’s | game 11 | md1 | szn 2",
+        "postUrl": "https://www.instagram.com/p/DfSIL7RE9ts/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DfSIL7RE9ts.webp",
+        "available": true,
+        "date": "2026-11-03"
+      },
+      {
+        "id": "ig-DfRL2hyk8EI",
+        "type": "instagram-post",
+        "title": "ft. nbfc vs falcons fc | game 10 | md1 | szn 2",
+        "postUrl": "https://www.instagram.com/p/DfRL2hyk8EI/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DfRL2hyk8EI.webp",
+        "available": true,
+        "date": "2026-11-03"
+      },
+      {
+        "id": "ig-DfQwlR0E3V_",
+        "type": "instagram-post",
+        "title": "ft. first touch fc vs veltrix united | game 9 | md1 | szn 2",
+        "postUrl": "https://www.instagram.com/p/DfQwlR0E3V_/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DfQwlR0E3V_.webp",
+        "available": true,
+        "date": "2026-11-03"
+      },
+      {
+        "id": "ig-DfQRrkDE2a8",
+        "type": "instagram-post",
+        "title": "ft. passion fc vs crescents fc | game 8 | md1 | szn 2",
+        "postUrl": "https://www.instagram.com/p/DfQRrkDE2a8/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DfQRrkDE2a8.webp",
+        "available": true,
+        "date": "2026-11-02"
+      },
+      {
+        "id": "ig-DfQI4MIE3Bc",
+        "type": "instagram-post",
+        "title": "ft. legacy ffa vs nbfc | game 7 | md1 | szn 2",
+        "postUrl": "https://www.instagram.com/p/DfQI4MIE3Bc/",
+        "platform": "instagram",
+        "thumbnail": "assets/images/media/instagram/DfQI4MIE3Bc.webp",
+        "available": true,
+        "date": "2026-11-02"
+      }
+    ];
+
+    /* Real photography that already ships with the project. */
+    var PHOTOS = [
+      {
+        src: "assets/images/graphics/Home%20Page/hero%20image%20in%20home%20page%20optimised.webp",
+        alt: "Players in blue and white kits on a grass pitch, the ball in mid-air between them"
+      },
+      {
+        src: "assets/images/graphics/Home%20Page/hero%20image%202%20in%20home%20page.webp",
+        alt: "A player in a blue and white kit in front of a NewAge pitch-side banner"
+      },
+      {
+        src: "assets/images/graphics/Home%20Page/hero%20image%203%20in%20home%20page.webp",
+        alt: "A player in a striped blue and white kit in front of a goal net"
+      }
+    ];
+
+    var PAGE_SIZE = 6;
+    var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    var REDUCE_MOTION = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+
+    var TYPE_LABEL = {
+      "full-match": "Full match",
+      "highlights": "Highlights",
+      "short-clip": "Clip",
+      "player-feature": "Player feature",
+      "behind-the-scenes": "Behind the scenes",
+      "instagram-reel": "Reel",
+      "instagram-post": "Post"
+    };
+
+    var FEATURED_EMPTY = "The first published replay or original film takes this slot — a wide still, the competition and teams, its running time, and the watch action.";
+    var ARCHIVE_EMPTY = "Full matches land here as they are published, each tagged with its competition, season, teams, final score and running time. Search, filters and sorting switch on with the first entry.";
+    var NO_RESULTS = "Nothing in the archive matches those filters yet.";
+
+    /* ---------------- helpers ---------------- */
+    function $(id) { return document.getElementById(id); }
+
+    /* Media records may one day come from a CMS, so every value that
+       reaches the DOM is escaped rather than trusted. */
+    function esc(value) {
+      return String(value === null || value === undefined ? "" : value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
+
+    function uniq(list) {
+      var seen = {};
+      return list.filter(function (v) {
+        if (seen[v]) return false;
+        seen[v] = true;
+        return true;
+      });
+    }
+
+    function isDate(v) { return /^\d{4}-\d{2}-\d{2}$/.test(String(v || "")); }
+
+    function fmtDate(iso) {
+      if (!isDate(iso)) return "";
+      var y = iso.slice(0, 4);
+      var m = Number(iso.slice(5, 7)) - 1;
+      var d = Number(iso.slice(8, 10));
+      if (d < 1 || d > 31) return "";
+      return d + " " + MONTHS[m] + " " + y;
+    }
+
+    function typeLabel(type) { return TYPE_LABEL[type] || "Video"; }
+
+    function matchup(rec) {
+      if (rec.homeTeam && rec.awayTeam) return rec.homeTeam + " vs " + rec.awayTeam;
+      return rec.homeTeam || rec.awayTeam || "";
+    }
+
+    function scoreLine(rec) {
+      if (rec.homeScore === null || rec.homeScore === undefined) return "";
+      if (rec.awayScore === null || rec.awayScore === undefined) return "";
+      return rec.homeScore + "\u2013" + rec.awayScore;
+    }
+
+    function isPlayable(rec) {
+      return rec.available !== false && typeof rec.videoUrl === "string" && rec.videoUrl.trim() !== "";
+    }
+
+    function metaBits(rec) {
+      var bits = [];
+      if (rec.competition) bits.push(esc(rec.competition));
+      if (rec.season) bits.push(esc(rec.season));
+      var when = fmtDate(rec.date);
+      if (when) bits.push(esc(when));
+      if (rec.duration) bits.push(esc(rec.duration));
+      return bits;
+    }
+
+    function metaHtml(rec) {
+      var bits = metaBits(rec);
+      if (!bits.length) return "";
+      return '<p class="media-card-meta">' + bits.map(function (b) {
+        return "<span>" + b + "</span>";
+      }).join("") + "</p>";
+    }
+
+    /* ---------------- cards ---------------- */
+    function thumbHtml(rec) {
+      if (rec.thumbnail) {
+        return '<img src="' + esc(rec.thumbnail) + '" alt="" loading="lazy" decoding="async" onerror="this.hidden=true" />';
+      }
+      return '<div class="media-card-thumb media-card-thumb--empty"><span>Thumbnail pending</span></div>';
+    }
+
+    function buildCard(rec, variant) {
+      /* Instagram cards are plain links: the account's own embed and
+         CDN are the source of truth, so the card hands off to Instagram. */
+      var external = rec.platform === "instagram" && rec.postUrl;
+      var playable = isPlayable(rec);
+      var el = document.createElement(external ? "a" : (playable ? "button" : "article"));
+      el.className = "media-card media-card--" + variant;
+      if (external) {
+        el.href = rec.postUrl;
+        el.target = "_blank";
+        el.rel = "noopener";
+        el.setAttribute("aria-label", "Open on Instagram: " + (rec.title || typeLabel(rec.type)));
+      } else if (playable) {
+        el.type = "button";
+        el.setAttribute("aria-label", "Play: " + (rec.title || typeLabel(rec.type)));
+      } else {
+        el.setAttribute("aria-label", (rec.title || typeLabel(rec.type)) + " — not published yet");
+      }
+
+      var badges = [];
+      /* "Latest posts" already labels these; a badge would sit on the artwork. */
+      if (rec.type === "instagram-post") { /* no badge */ }
+      else if (rec.type === "full-match") badges.push('<span class="media-badge media-badge--full">Full match</span>');
+      else if (rec.type === "short-clip") badges.push('<span class="media-badge media-badge--clip">Clip</span>');
+      else badges.push('<span class="media-badge media-badge--type">' + esc(typeLabel(rec.type)) + "</span>");
+      if (!playable && !external) badges.push('<span class="media-badge media-badge--type">Awaiting footage</span>');
+
+      var score = scoreLine(rec);
+      var title = rec.title || matchup(rec) || typeLabel(rec.type) + " — title pending";
+
+      var html = '<div class="media-card-thumb">' + thumbHtml(rec) +
+        (badges.length ? '<div class="media-card-badges">' + badges.join("") + "</div>" : "") +
+        (playable ? '<div class="media-card-play"></div>' : "") +
+        "</div>" +
+        '<div class="media-card-body">' +
+          '<p class="media-card-title">' + esc(title) + "</p>" +
+          (rec.description ? '<p class="media-card-sub">' + esc(rec.description) + "</p>" : "") +
+          (score ? '<p class="media-card-score">' + esc(score) + "</p>" : "") +
+          metaHtml(rec) +
+          (external ? '<p class="media-card-action">View on Instagram</p>' :
+            playable ? '<p class="media-card-action">' + (rec.type === "full-match" ? "Watch full match" : "Watch") + "</p>" : "") +
+        "</div>";
+
+      el.innerHTML = html;
+      if (playable) {
+        el.addEventListener("click", function () { openPlayer(rec); });
+      }
+      return el;
+    }
+
+    /* Non-interactive card that shows the layout without pretending
+       anything is playable. */
+    function placeholderCard(variant, title, fields) {
+      var el = document.createElement("article");
+      el.className = "media-card media-card--" + variant + " media-card--placeholder";
+      el.setAttribute("aria-label", "Placeholder card — no footage published yet");
+      el.innerHTML =
+        '<div class="media-card-thumb media-card-thumb--empty"><span>No footage yet</span></div>' +
+        '<div class="media-card-body">' +
+          '<p class="media-card-title">' + esc(title) + "</p>" +
+          '<p class="media-card-meta"><span>' + esc(fields) + "</span></p>" +
+        "</div>";
+      return el;
+    }
+
+    /* ---------------- section 01 status ---------------- */
+    function renderHeroStatus() {
+      var published = MEDIA.filter(function (m) { return isPlayable(m); }).length;
+      var node = $("heroStatus");
+      if (!node) return;
+      node.textContent = published
+        ? published + (published === 1 ? " title" : " titles") + " ready to watch"
+        : "No matches published yet — the archive opens with the first fixture.";
+    }
+
+    /* ---------------- section 02 featured ---------------- */
+    function renderFeatured() {
+      var slot = $("featuredSlot");
+      if (!slot) return;
+      slot.innerHTML = "";
+
+      var rec = null;
+      for (var i = 0; i < MEDIA.length; i++) {
+        if (MEDIA[i].featured && isPlayable(MEDIA[i])) { rec = MEDIA[i]; break; }
+      }
+
+      if (!rec) {
+        slot.innerHTML = '<div class="media-empty">' +
+          '<h3 class="media-empty-title">Nothing featured yet</h3>' +
+          '<p class="media-empty-copy">' + esc(FEATURED_EMPTY) + "</p>" +
+          "</div>";
+        return;
+      }
+
+      var meta = [];
+      if (rec.competition) meta.push(esc(rec.competition));
+      if (rec.season) meta.push(esc(rec.season));
+      if (matchup(rec)) meta.push(esc(matchup(rec)));
+      var when = fmtDate(rec.date);
+      if (when) meta.push(esc(when));
+      if (rec.duration) meta.push(esc(rec.duration));
+
+      var el = document.createElement("div");
+      el.className = "feature";
+      el.innerHTML =
+        '<button class="feature-media" type="button" aria-label="Play: ' + esc(rec.title || typeLabel(rec.type)) + '">' +
+          (rec.thumbnail ? '<img src="' + esc(rec.thumbnail) + '" alt="" loading="lazy" decoding="async" onerror="this.hidden=true" />' : "") +
+          '<div class="media-card-badges"><span class="media-badge media-badge--full">' + esc(typeLabel(rec.type)) + "</span></div>" +
+          '<div class="media-card-play"></div>' +
+        "</button>" +
+        '<div class="feature-body">' +
+          '<p class="feature-meta">Featured</p>' +
+          '<h3 class="feature-title">' + esc(rec.title || typeLabel(rec.type)) + "</h3>" +
+          (rec.description ? '<p class="feature-desc">' + esc(rec.description) + "</p>" : "") +
+          (meta.length ? '<p class="feature-meta">' + meta.join(" \u00b7 ") + "</p>" : "") +
+          '<p><button class="media-cta" type="button" id="featuredWatch">Watch now</button></p>' +
+        "</div>";
+
+      slot.appendChild(el);
+      $("featuredWatch").addEventListener("click", function () { openPlayer(rec); });
+    }
+
+    /* ---------------- section 03 full matches ---------------- */
+    var archive = { q: "", competition: "", season: "", team: "", sort: "newest", shown: PAGE_SIZE };
+
+    function fullMatches() {
+      return MEDIA.filter(function (m) { return m.type === "full-match"; });
+    }
+
+    function matchesQuery(rec, q) {
+      if (!q) return true;
+      var hay = [rec.title, rec.competition, rec.season, rec.homeTeam, rec.awayTeam,
+        (rec.tags || []).join(" ")].filter(Boolean).join(" ").toLowerCase();
+      return hay.indexOf(q) !== -1;
+    }
+
+    /* shortcut: no published dates in this archive, so sorting falls back to
+       the array order, which is the channel's newest-first order. */
+    function sortRecords(list, dir) {
+      return list.slice().sort(function (a, b) {
+        var da = isDate(a.date) ? a.date : "";
+        var db = isDate(b.date) ? b.date : "";
+        if (da && !db) return -1;
+        if (!da && db) return 1;
+        if (da && db && da !== db) {
+          if (dir === "oldest") return da < db ? -1 : 1;
+          return da > db ? -1 : 1;
+        }
+        var ia = MEDIA.indexOf(a);
+        var ib = MEDIA.indexOf(b);
+        return dir === "oldest" ? ib - ia : ia - ib;
+      });
+    }
+
+    function fillSelect(select, values, allLabel, current) {
+      if (!select) return;
+      var html = '<option value="">' + esc(allLabel) + "</option>";
+      for (var i = 0; i < values.length; i++) {
+        html += '<option value="' + esc(values[i]) + '">' + esc(values[i]) + "</option>";
+      }
+      select.innerHTML = html;
+      select.value = values.indexOf(current) !== -1 ? current : "";
+      /* A filter with no options is a control that cannot do anything. */
+      var box = select.closest ? select.closest(".archive-field") : null;
+      if (box) box.hidden = values.length === 0;
+    }
+
+    function renderArchive() {
+      var all = fullMatches();
+      var toolbar = $("archiveToolbar");
+      var grid = $("archiveGrid");
+      var empty = $("archiveEmpty");
+      var more = $("archiveMore");
+      var count = $("archiveCount");
+
+      grid.innerHTML = "";
+      empty.innerHTML = "";
+      more.hidden = true;
+
+      if (toolbar) toolbar.hidden = all.length === 0;
+
+      if (all.length) {
+        var comps = uniq(all.map(function (r) { return r.competition; }).filter(Boolean)).sort();
+        var seasons = uniq(all.map(function (r) { return r.season; }).filter(Boolean)).sort();
+        var teams = uniq(all.reduce(function (acc, r) {
+          if (r.homeTeam) acc.push(r.homeTeam);
+          if (r.awayTeam) acc.push(r.awayTeam);
+          return acc;
+        }, [])).sort();
+
+        fillSelect($("archiveCompetition"), comps, "All competitions", archive.competition);
+        fillSelect($("archiveSeason"), seasons, "All seasons", archive.season);
+        fillSelect($("archiveTeam"), teams, "All teams", archive.team);
+        archive.competition = $("archiveCompetition").value;
+        archive.season = $("archiveSeason").value;
+        archive.team = $("archiveTeam").value;
+        $("archiveSort").value = archive.sort;
+      }
+
+      var list = sortRecords(all.filter(function (r) {
+        if (!matchesQuery(r, archive.q)) return false;
+        if (archive.competition && r.competition !== archive.competition) return false;
+        if (archive.season && r.season !== archive.season) return false;
+        if (archive.team && r.homeTeam !== archive.team && r.awayTeam !== archive.team) return false;
+        return true;
+      }), archive.sort);
+
+      if (!all.length) {
+        grid.appendChild(placeholderCard("grid", "Full match replay", "Competition · season · teams · score · running time"));
+        empty.innerHTML = '<div class="media-empty">' +
+          '<h3 class="media-empty-title">No replays in the archive yet</h3>' +
+          '<p class="media-empty-copy">' + esc(ARCHIVE_EMPTY) + "</p>" +
+          "</div>";
+      } else if (!list.length) {
+        empty.innerHTML = '<div class="media-empty">' +
+          '<h3 class="media-empty-title">Nothing matches those filters</h3>' +
+          '<p class="media-empty-copy">' + esc(NO_RESULTS) + "</p>" +
+          '<button class="media-cta media-cta--outline" type="button" id="archiveReset">Clear filters</button>' +
+          "</div>";
+        $("archiveReset").addEventListener("click", function () {
+          archive.q = ""; archive.competition = ""; archive.season = ""; archive.team = "";
+          if ($("archiveSearch")) $("archiveSearch").value = "";
+          renderArchive();
+        });
+      } else {
+        var slice = list.slice(0, archive.shown);
+        for (var i = 0; i < slice.length; i++) grid.appendChild(buildCard(slice[i], "grid"));
+        if (list.length > slice.length) more.hidden = false;
+      }
+
+      if (count) {
+        count.textContent = list.length === all.length
+          ? list.length + (list.length === 1 ? " match" : " matches")
+          : list.length + " of " + all.length + " matches";
+      }
+    }
+
+    function wireArchive() {
+      var search = $("archiveSearch");
+      if (search) {
+        search.addEventListener("input", function () {
+          archive.q = search.value.trim().toLowerCase();
+          archive.shown = PAGE_SIZE;
+          renderArchive();
+        });
+      }
+      [["archiveCompetition", "competition"], ["archiveSeason", "season"], ["archiveTeam", "team"]].forEach(function (pair) {
+        var node = $(pair[0]);
+        if (!node) return;
+        node.addEventListener("change", function () {
+          archive[pair[1]] = node.value;
+          archive.shown = PAGE_SIZE;
+          renderArchive();
+        });
+      });
+      var sort = $("archiveSort");
+      if (sort) {
+        sort.addEventListener("change", function () {
+          archive.sort = sort.value;
+          archive.shown = PAGE_SIZE;
+          renderArchive();
+        });
+      }
+      var more = $("archiveMore");
+      if (more) {
+        more.addEventListener("click", function () {
+          archive.shown += PAGE_SIZE;
+          renderArchive();
+        });
+      }
+    }
+
+    /* ---------------- sections 04 / 05 — rails ---------------- */
+    function renderRail(type, railId, previewId, noteId, variant, emptyNote, fields) {
+      var rail = $(railId);
+      var preview = $(previewId);
+      var note = $(noteId);
+      var records = MEDIA.filter(function (m) { return m.type === type; });
+
+      rail.innerHTML = "";
+      preview.innerHTML = "";
+      rail.hidden = records.length === 0;
+
+      if (records.length) {
+        for (var i = 0; i < records.length; i++) rail.appendChild(buildCard(records[i], variant));
+        if (note) note.textContent = "";
+      } else {
+        preview.appendChild(placeholderCard(variant, typeLabel(type), fields));
+        if (note) note.textContent = emptyNote;
+      }
+    }
+
+    /* ---------------- section 06 — player features ---------------- */
+    function renderFeatures() {
+      var grid = $("featuresGrid");
+      var note = $("featuresNote");
+      var records = MEDIA.filter(function (m) { return m.type === "player-feature"; });
+      grid.innerHTML = "";
+      note.textContent = "";
+
+      if (records.length) {
+        for (var i = 0; i < records.length; i++) grid.appendChild(buildCard(records[i], "feature"));
+      } else {
+        grid.appendChild(placeholderCard("feature", "Player feature", "Interview · profile · skill breakdown"));
+        note.textContent = "Interviews, profiles and breakdowns are published with the players' consent.";
+      }
+    }
+
+    /* ---------------- section 08 — photo stories ---------------- */
+    var photoIndex = 0;
+
+    function renderPhotos() {
+      var grid = $("photoGrid");
+      if (!grid) return;
+      grid.innerHTML = "";
+      if (PHOTOS.length >= 3) grid.className = "photo-grid is-editorial";
+
+      PHOTOS.forEach(function (photo, i) {
+        var tile = document.createElement("button");
+        tile.type = "button";
+        tile.className = "photo-tile";
+        tile.setAttribute("aria-label", "Open photo " + (i + 1) + " of " + PHOTOS.length);
+        tile.innerHTML = '<img src="' + esc(photo.src) + '" alt="' + esc(photo.alt) + '" loading="lazy" decoding="async" />';
+        tile.addEventListener("click", function () { openLightbox(i); });
+        grid.appendChild(tile);
+      });
+    }
+
+    function openLightbox(i) {
+      photoIndex = i;
+      paintLightbox();
+      var box = $("photoLightbox");
+      lastFocus = document.activeElement;
+      box.hidden = false;
+      document.documentElement.classList.add("media-locked");
+      $("photoClose").focus();
+    }
+
+    function paintLightbox() {
+      var photo = PHOTOS[photoIndex];
+      $("photoLightboxImg").src = photo.src;
+      $("photoLightboxImg").alt = photo.alt;
+      $("photoLightboxCap").textContent = photo.alt + " (" + (photoIndex + 1) + " of " + PHOTOS.length + ")";
+    }
+
+    function stepLightbox(delta) {
+      photoIndex = (photoIndex + delta + PHOTOS.length) % PHOTOS.length;
+      paintLightbox();
+    }
+
+    function closeLightbox() {
+      $("photoLightbox").hidden = true;
+      document.documentElement.classList.remove("media-locked");
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    /* ---------------- section 09 — Instagram ---------------- */
+    function renderInstagram() {
+      var reels = $("igReelsRail");
+      var posts = $("igPostsGrid");
+      var note = $("instagramNote");
+      if (!reels || !posts) return;
+      reels.innerHTML = "";
+      posts.innerHTML = "";
+      IG_REELS.forEach(function (rec) { reels.appendChild(buildCard(rec, "clip")); });
+      IG_POSTS.forEach(function (rec) { posts.appendChild(buildCard(rec, "feature")); });
+      if (note) note.textContent = "Newest first — " + IG_REELS.length + " reels and " + IG_POSTS.length + " posts.";
+    }
+
+    /* ---------------- section 10 — browse by competition ---------------- */
+    function renderCompetitions() {
+      var wrap = $("competitionChips");
+      var note = $("competitionsNote");
+      wrap.innerHTML = "";
+      note.textContent = "";
+
+      var comps = uniq(MEDIA.map(function (m) { return m.competition; }).filter(Boolean)).sort();
+
+      if (!comps.length) {
+        note.textContent = "Competition and season filters appear here with the archive's first title.";
+        return;
+      }
+
+      comps.forEach(function (name) {
+        var count = MEDIA.filter(function (m) { return m.competition === name; }).length;
+        var chip = document.createElement("button");
+        chip.type = "button";
+        chip.className = "competition-chip";
+        chip.innerHTML = esc(name) + '<span class="competition-chip-copy">' + count + (count === 1 ? " title" : " titles") + "</span>";
+        chip.addEventListener("click", function () {
+          archive.competition = name;
+          archive.shown = PAGE_SIZE;
+          renderArchive();
+          if ($("archiveCompetition")) $("archiveCompetition").value = name;
+          document.getElementById("full-matches").scrollIntoView({ behavior: REDUCE_MOTION ? "auto" : "smooth", block: "start" });
+        });
+        wrap.appendChild(chip);
+      });
+    }
+
+    /* ---------------- video player ---------------- */
+    var lastFocus = null;
+
+    function youtubeId(url) {
+      var m = String(url).match(/(?:youtube\.com\/(?:watch\?[^#]*v=|embed\/|shorts\/|live\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
+      return m ? m[1] : "";
+    }
+
+    function playerError(message) {
+      return '<p class="media-player-error">' + esc(message) + "</p>";
+    }
+
+    function openPlayer(rec) {
+      var modal = $("mediaModal");
+      var host = $("mediaPlayer");
+      var label = typeLabel(rec.type);
+
+      /* A record that is switched off, or names no source, gets a
+         sentence instead of a broken player. */
+      if (!isPlayable(rec)) {
+        host.innerHTML = playerError(label + " — this title is not available to watch yet.");
+        finishOpen(rec, label, modal);
+        return;
+      }
+
+      if (rec.platform === "youtube") {
+        var id = youtubeId(rec.videoUrl);
+        if (!id) {
+          host.innerHTML = playerError("That YouTube link could not be read, so the player cannot open.");
+          finishOpen(rec, label, modal);
+          return;
+        }
+        /* No autoplay: nothing starts with sound before the viewer asks.
+           referrerpolicy is required: YouTube error 153 without it. */
+        if (location.protocol === "file:") {
+          host.innerHTML = playerError("YouTube needs a web address to play. Serve this folder over http, or open the video on YouTube below.");
+          finishOpen(rec, label, modal);
+          return;
+        }
+        host.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + esc(id) +
+          '?rel=0&modestbranding=1" title="' + esc((rec.title || label) + " player") +
+          '" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>';
+      } else {
+        var video = document.createElement("video");
+        video.controls = true;
+        video.preload = "metadata";
+        video.playsInline = true;
+        video.src = rec.videoUrl;
+        if (rec.thumbnail) video.poster = rec.thumbnail;
+        video.setAttribute("aria-label", (rec.title || label) + " player");
+        video.addEventListener("error", function () {
+          host.innerHTML = playerError("This video could not be loaded. Check the file path or link, then try again.");
+        });
+        host.appendChild(video);
+      }
+
+      finishOpen(rec, label, modal);
+    }
+
+    function finishOpen(rec, label, modal) {
+      $("mediaModalTitle").textContent = rec.title || label;
+      var bits = metaBits(rec);
+      var line = matchup(rec);
+      if (line) bits.unshift(esc(line));
+      $("mediaModalMeta").innerHTML = bits.join(" \u00b7 ");
+
+      /* An embed is not the only route to the video. YouTube refuses to play
+         inside a page that has no web origin — opened straight from disk that
+         is error 153 — and an owner can switch embedding off entirely. This
+         link works either way. */
+      var note = $("mediaModalNote");
+      if (note) {
+        var direct = rec.platform === "youtube" && isPlayable(rec) && /^https?:/i.test(rec.videoUrl || "");
+        note.hidden = !direct;
+        if (direct) {
+          note.innerHTML = (location.protocol === "file:"
+            ? "This page is open from a file, and YouTube will not play inside one \u2014 serve the folder over http, or "
+            : "Trouble with the player? ") +
+            '<a href="' + esc(rec.videoUrl) + '" target="_blank" rel="noopener">open on YouTube</a>.';
+        }
+      }
+
+      lastFocus = document.activeElement;
+      modal.hidden = false;
+      document.documentElement.classList.add("media-locked");
+      $("mediaModalClose").focus();
+    }
+
+    function closePlayer() {
+      var modal = $("mediaModal");
+      if (modal.hidden) return;
+      modal.hidden = true;
+      /* Removing the player is what stops playback. */
+      $("mediaPlayer").innerHTML = "";
+      document.documentElement.classList.remove("media-locked");
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    function trapTab(dialog, event) {
+      var focusables = dialog.querySelectorAll(
+        'a[href], button:not([disabled]), input, select, textarea, iframe, video, [tabindex]:not([tabindex="-1"])'
+      );
+      if (!focusables.length) return;
+      var first = focusables[0];
+      var last = focusables[focusables.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+
+    function wireDialogs() {
+      $("mediaModalClose").addEventListener("click", closePlayer);
+      $("mediaModal").querySelector('[data-close="1"]').addEventListener("click", closePlayer);
+      $("mediaModal").querySelector(".media-modal-dialog").addEventListener("keydown", function (e) {
+        if (e.key === "Tab") trapTab($("mediaModal"), e);
+      });
+
+      $("photoClose").addEventListener("click", closeLightbox);
+      $("photoPrev").addEventListener("click", function () { stepLightbox(-1); });
+      $("photoNext").addEventListener("click", function () { stepLightbox(1); });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          if (!$("mediaModal").hidden) closePlayer();
+          else if (!$("photoLightbox").hidden) closeLightbox();
+          return;
+        }
+        if (!$("photoLightbox").hidden) {
+          if (e.key === "ArrowLeft") stepLightbox(-1);
+          if (e.key === "ArrowRight") stepLightbox(1);
+          if (e.key === "Tab") trapTab($("photoLightbox"), e);
+        }
+      });
+    }
+
+    /* ---------------- boot ---------------- */
+    function init() {
+      renderHeroStatus();
+      renderFeatured();
+      wireArchive();
+      renderArchive();
+      renderRail("short-clip", "clipsRail", "clipsPreview", "clipsNote", "clip",
+        "Goals, saves, celebrations and last-minute moments — vertical clips stay vertical.",
+        "Category · player · length");
+      renderFeatures();
+      renderPhotos();
+      renderInstagram();
+      renderCompetitions();
+      wireDialogs();
+    }
+
+    var toggle = document.querySelector(".navbar-toggle");
+    var menu = document.getElementById("navbarMenu");
+    if (toggle && menu) {
+      toggle.addEventListener("click", function () {
+        var open = menu.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", String(open));
+      });
+    }
+
+    init();
+  })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Organization", "@id": "https://www.theballerleague.in/#organization", "name": "Knuckleball", "legalName": "Knuckleball Global Pvt Ltd", "url": "https://www.theballerleague.in/", "logo": "https://www.theballerleague.in/assets/images/logos/main%20logo.webp", "sameAs": ["https://www.instagram.com/knuckleball.in/", "https://www.youtube.com/@knuckleball-in"] },
+      { "@type": "SportsOrganization", "@id": "https://www.theballerleague.in/#baller-league", "name": "The Baller League", "url": "https://www.theballerleague.in/competition.html", "parentOrganization": { "@id": "https://www.theballerleague.in/#organization" }, "sport": "Football" },
+      { "@type": "WebPage", "@id": "https://www.theballerleague.in/media.html", "url": "https://www.theballerleague.in/media.html", "name": "Media | The Baller League — Matchday Archive", "isPartOf": { "@id": "https://www.theballerleague.in/#website" }, "about": { "@id": "https://www.theballerleague.in/#baller-league" }, "inLanguage": "en-IN", "datePublished": "2026-11-06" },
+      { "@type": "WebSite", "@id": "https://www.theballerleague.in/#website", "url": "https://www.theballerleague.in/", "name": "Knuckleball — The Baller League", "publisher": { "@id": "https://www.theballerleague.in/#organization" } },
+      { "@type": "BreadcrumbList", "@id": "https://www.theballerleague.in/media.html#breadcrumb", "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.theballerleague.in/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Media", "item": "https://www.theballerleague.in/media.html" }
+      ]},
+      { "@type": "VideoObject", "@id": "https://www.theballerleague.in/media.html#video-2ftpEFlBK_A", "name": "Passion FC vs Crescents FC | Match 8 | The Baller League SZN 02", "description": "Full match replay — Passion FC vs Crescents FC, Match 8, The Baller League Season 02, Knuckleball x Bhanuvara League.", "uploadDate": "2026-11-08", "contentUrl": "https://www.youtube.com/watch?v=2ftpEFlBK_A", "embedUrl": "https://www.youtube-nocookie.com/embed/2ftpEFlBK_A", "thumbnailUrl": "https://i.ytimg.com/vi/2ftpEFlBK_A/hq720.jpg", "duration": "PT25M48S", "publisher": { "@id": "https://www.theballerleague.in/#organization" } }
+    ]
+  }
+  </script>
+</body>
+</html>
+

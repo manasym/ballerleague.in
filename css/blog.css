@@ -1,0 +1,47 @@
+/* --------------------------------------------------------------
+   Baller League Season 2 — Blog index
+   Only what style.css does not already cover: the CSS-only image
+   placeholder tiles, the date line and the placeholder note.
+   -------------------------------------------------------------- */
+
+/* Image placeholder — pure CSS, so it can never render as a broken image */
+.article-image--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 8px,
+      rgba(255, 255, 255, 0.03) 8px,
+      rgba(255, 255, 255, 0.03) 16px
+    ),
+    #0a111f;
+}
+
+.article-image--placeholder span {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  /* 5.2:1 on the #0a111f tile — --text-muted is only 4.34:1 there */
+  color: #7a879b;
+}
+
+.article-card-date {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* Placeholder cards carry no link, so drop the hover lift (no false affordance) */
+.article-card--static:hover {
+  transform: none;
+  box-shadow: var(--shadow-sm);
+}
+
+@media (min-width: 1025px) {
+  .article-grid--news {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

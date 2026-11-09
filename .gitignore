@@ -1,0 +1,11 @@
+# Local tooling and dev artifacts — excluded from the deployed site
+.agents/
+.opencode/
+_site/
+node_modules/
+*.log
+
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini

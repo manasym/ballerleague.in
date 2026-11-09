@@ -1,0 +1,406 @@
+/* --------------------------------------------------------------
+   Baller League - Player profile page
+   Compact, Apple-inspired: portrait card, tight type, quiet surfaces
+   -------------------------------------------------------------- */
+
+body.pf-page {
+  background: #080808;
+  color: #ffffff;
+}
+
+body.pf-page main .container {
+  max-width: 1040px;
+}
+
+/* ---------- Hero ---------- */
+.pf-hero {
+  border: none;
+  background: #080808;
+  padding: 2.25rem 0 0;
+}
+
+.pf-hero-inner {
+  display: grid;
+  grid-template-columns: 108px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  gap: 1rem 1.15rem;
+  align-items: center;
+}
+
+.pf-portrait {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  aspect-ratio: 4 / 5;
+  border-radius: 16px;
+  background: #0f0f0f;
+  border: 1px solid #1c1c1c;
+  isolation: isolate;
+  transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Card artwork as a sharp backdrop behind the portrait. */
+.pf-portrait-glow {
+  position: absolute;
+  inset: -9px;
+  z-index: -1;
+  border-radius: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+  transition: opacity 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pf-portrait-glow--normal {
+  background-image: url("../assets/images/graphics/hover/non hover.webp");
+  opacity: 0.35;
+}
+
+.pf-portrait-glow--hover {
+  background-image: url("../assets/images/graphics/hover/hover.webp");
+  opacity: 0;
+}
+
+.pf-portrait img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  border-radius: 15px;
+  filter: grayscale(0.12) contrast(1.03);
+  transition: filter 0.4s ease, transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pf-shirt-badge {
+  position: absolute;
+  z-index: 2;
+  top: 0.45rem;
+  right: 0.45rem;
+  min-width: 1.9rem;
+  height: 1.9rem;
+  padding: 0 0.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--neon-yellow);
+  color: #080808;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.pf-identity {
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+}
+
+.pf-hero-info {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+@media (min-width: 700px) {
+  .pf-hero {
+    padding-top: 3rem;
+  }
+
+  .pf-hero-inner {
+    grid-template-columns: 220px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1.25rem 2.5rem;
+    align-items: start;
+  }
+
+  .pf-portrait {
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+
+  .pf-identity {
+    align-self: end;
+  }
+
+  .pf-hero-info {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+/* Desktop: only the portrait card responds to hover. */
+@media (hover: hover) and (pointer: fine) {
+  .pf-portrait:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .pf-portrait:hover .pf-portrait-glow--normal {
+    opacity: 0;
+  }
+
+  .pf-portrait:hover .pf-portrait-glow--hover {
+    opacity: 0.6;
+  }
+
+  .pf-portrait:hover img {
+    transform: scale(1.02);
+    filter: grayscale(0) contrast(1.05);
+  }
+}
+
+/* Mobile: only the portrait aura breathes, like the squad cards. */
+@media (max-width: 699px) {
+  .pf-portrait-glow--normal {
+    animation: breath-bg-normal 5s ease-in-out infinite;
+  }
+
+  .pf-portrait-glow--hover {
+    animation: breath-bg-hover 5s ease-in-out infinite;
+  }
+}
+
+/* ---------- Identity ---------- */
+.pf-name {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2.2rem, 7vw, 3.6rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 0.95;
+  color: #ffffff;
+  margin: 0 0 0.55rem;
+}
+
+.pf-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.11em;
+}
+
+.pf-team {
+  color: #ffffff;
+  margin-right: 0.6rem;
+}
+
+.pf-bio {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: #9a9a9a;
+  margin: 0 0 1.35rem;
+  max-width: 62ch;
+}
+
+.pf-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.pf-ctas .btn {
+  padding: 0.55rem 1.1rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+}
+
+/* Global outline button assumes a light page; profile is dark. */
+body.pf-page .btn-outline {
+  color: #ffffff;
+  border-color: #333333;
+}
+
+body.pf-page .btn-outline:hover {
+  background: #ffffff;
+  color: #080808;
+}
+
+@media (max-width: 480px) {
+  .pf-ctas {
+    flex-direction: column;
+  }
+  .pf-ctas .btn {
+    width: 100%;
+  }
+}
+
+/* ---------- Sections ---------- */
+.pf-section {
+  padding: 2.25rem 0;
+  border-bottom: 1px solid #161616;
+}
+
+.pf-section:last-of-type {
+  border-bottom: none;
+}
+
+.pf-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+.pf-head-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  margin: 0;
+}
+
+.pf-head-link {
+  font-size: 0.66rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--neon-yellow);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.pf-head-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Details: compact facts ---------- */
+.pf-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin: 0;
+}
+
+.pf-fact {
+  padding: 0.8rem 0.95rem;
+  background: #0d0d0d;
+  border: 1px solid #1a1a1a;
+  border-radius: 12px;
+}
+
+.pf-fact dt {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: #7a7a7a;
+}
+
+.pf-fact dd {
+  margin: 0.25rem 0 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* ---------- Stats: value over label, 2x2 on phones ---------- */
+.pf-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pf-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.9rem 1rem;
+  background: #0d0d0d;
+  border: 1px solid #1a1a1a;
+  border-radius: 12px;
+}
+
+.pf-stat-value {
+  display: block;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.8rem, 5vw, 2.3rem);
+  line-height: 1;
+  color: var(--neon-yellow);
+}
+
+.pf-stat-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+}
+
+/* ---------- Notes / empty states ---------- */
+.pf-empty {
+  margin: 0.9rem 0 0;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: #7a7a7a;
+  max-width: 56ch;
+}
+
+/* ---------- Phones: third card takes the full row ---------- */
+@media (max-width: 699px) {
+  .pf-fact:last-child,
+  .pf-stat:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ---------- Tablet & desktop ---------- */
+@media (min-width: 700px) {
+  .pf-facts {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .pf-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .pf-section {
+    padding: 2.75rem 0;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .pf-portrait,
+  .pf-portrait img {
+    transition: none;
+  }
+
+  .pf-portrait:hover,
+  .pf-portrait:hover img {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .pf-portrait-glow {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .pf-portrait-glow--normal {
+    opacity: 0.35 !important;
+  }
+
+  .pf-portrait-glow--hover {
+    opacity: 0 !important;
+  }
+}

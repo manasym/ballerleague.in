@@ -1,0 +1,444 @@
+/* --------------------------------------------------------------
+   Baller League Season 2 — Article page
+   Editorial layout reusing the shared Y2K navigation and design tokens
+   -------------------------------------------------------------- */
+
+/* ---------- Article page shell ---------- */
+.article-page {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--charcoal);
+}
+
+/* ---------- Article header ---------- */
+.article-header {
+  margin-bottom: var(--space-4);
+}
+
+.article-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--text-white);
+  margin: 0 0 1rem;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.article-author,
+.article-date {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.article-divider {
+  font-size: 0.85rem;
+  color: var(--charcoal);
+}
+
+.article-share {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: 1px solid var(--charcoal);
+  border-radius: var(--radius-sm);
+  color: var(--text-white);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  transition: border-color 200ms ease, color 200ms ease, transform 200ms ease;
+  font-family: inherit;
+  white-space: nowrap;
+}
+
+.article-share:hover {
+  border-color: var(--neon-yellow);
+  color: var(--neon-yellow);
+}
+
+.article-share:active {
+  transform: scale(0.96);
+}
+
+.share-icon {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.article-standfirst {
+  font-size: 1.1rem;
+  color: var(--text-faint);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 720px;
+}
+
+/* ---------- Featured image ---------- */
+.article-featured-image {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: #0a111f;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: var(--space-4);
+}
+
+.article-featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ---------- Article body ---------- */
+.article-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.article-paragraph {
+  font-size: 1rem;
+  color: var(--text-white);
+  line-height: 1.75;
+  margin: 0;
+  max-width: 68ch;
+}
+
+.article-section-heading {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: var(--text-white);
+  margin: var(--space-5) 0 0.75rem;
+  line-height: 1.15;
+}
+
+/* ---------- Related content panel ---------- */
+.article-related {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.article-related-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: var(--neon-yellow);
+  margin: 0 0 var(--space-2);
+  line-height: 1.1;
+}
+
+.related-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: border-color 200ms ease, transform 200ms ease;
+}
+
+.related-item:last-child {
+  border-bottom: none;
+}
+
+.related-item:hover {
+  border-color: var(--neon-yellow);
+  transform: translateX(4px);
+}
+
+.related-item:focus-visible {
+  outline: 2px solid var(--neon-yellow);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+
+.related-image {
+  width: 96px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #0a111f;
+}
+
+.related-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.related-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.related-category {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--neon-yellow);
+  line-height: 1;
+}
+
+.related-headline {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-white);
+  line-height: 1.35;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Template preview markers ---------- */
+/* Delete .article-badge and the .article-placeholder spans for launch. */
+.article-badge {
+  display: inline-block;
+  margin: 0 0 1rem;
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--neon-magenta);
+  border-radius: var(--radius-pill);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--neon-magenta);
+}
+
+.article-placeholder {
+  /* 6.6:1 on the #080808 page background */
+  color: #7a879b;
+  border-bottom: 1px dashed #3a3a3a;
+}
+
+/* Image placeholder — pure CSS, so it can never render as a broken image */
+.img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 8px,
+      rgba(255, 255, 255, 0.03) 8px,
+      rgba(255, 255, 255, 0.03) 16px
+    ),
+    #0a111f;
+}
+
+.img-placeholder span {
+  padding: 0 0.5rem;
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-align: center;
+  /* 5.2:1 on the #0a111f tile — --text-muted is only 4.34:1 there */
+  color: #7a879b;
+}
+
+/* ---------- Responsive: two columns on desktop ---------- */
+@media (min-width: 1025px) {
+  .article-page {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-8);
+    padding: var(--space-8) 0;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .article-related {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .article-header {
+    margin-bottom: 0;
+  }
+
+  .article-title {
+    font-size: clamp(2.5rem, 5vw, 3.75rem);
+  }
+
+  .article-featured-image {
+    height: 420px;
+    width: 100%;
+    aspect-ratio: auto;
+  }
+
+  .article-body {
+    max-width: 64ch;
+  }
+
+  .article-related-title {
+    margin-bottom: var(--space-2);
+  }
+}
+
+/* ---------- Tablet ---------- */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .article-page {
+    gap: var(--space-6);
+    padding: var(--space-6) 0;
+  }
+
+  .article-title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+  }
+
+  .article-featured-image {
+    height: 320px;
+  }
+
+  .article-related {
+    gap: var(--space-2);
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  .article-page {
+    gap: var(--space-4);
+    padding: var(--space-4) 0;
+  }
+
+  .article-title {
+    font-size: clamp(1.75rem, 10vw, 2.25rem);
+  }
+
+  .article-meta {
+    gap: 0.5rem;
+  }
+
+  .article-share {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.65rem;
+  }
+
+  .article-standfirst {
+    font-size: 1rem;
+  }
+
+  .article-featured-image {
+    height: 260px;
+    margin-bottom: var(--space-3);
+  }
+
+  .article-body {
+    gap: 1rem;
+  }
+
+  .article-paragraph {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 100%;
+  }
+
+  .article-section-heading {
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+    margin: var(--space-4) 0 0.5rem;
+  }
+
+  .article-related {
+    gap: var(--space-2);
+  }
+
+  .article-related-title {
+    font-size: 1.25rem;
+    margin-bottom: var(--space-2);
+  }
+
+  .related-item {
+    padding: 0.5rem 0;
+  }
+
+  .related-image {
+    width: 80px;
+    height: 45px;
+  }
+
+  .related-headline {
+    font-size: 0.8rem;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .article-share,
+  .related-item,
+  .article-featured-image img {
+    transition: none !important;
+  }
+
+  .related-item:hover {
+    transform: none !important;
+  }
+}
+
+/* ---------- Article lists, links and FAQ ---------- */
+.article-list {
+  margin: 0 0 var(--space-3);
+  padding-left: 1.25rem;
+  max-width: 68ch;
+}
+
+.article-list li {
+  color: var(--text-white);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 0.4rem;
+}
+
+.article-body a {
+  color: var(--neon-yellow);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(232, 255, 0, 0.35);
+}
+
+.article-body a:hover {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+.article-faq-q {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-white);
+  line-height: 1.5;
+  margin: var(--space-3) 0 0.35rem;
+  max-width: 68ch;
+}

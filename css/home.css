@@ -1,0 +1,1404 @@
+/* --------------------------------------------------------------
+   Baller League Season 2 — Homepage
+   Home-specific styles reused with the shared Y2K design tokens
+   -------------------------------------------------------------- */
+
+/* ---------- Hero carousel (Swiper.js) ---------- */
+.hero-carousel {
+  position: relative;
+  background: var(--near-black);
+  border-bottom: 1px solid var(--charcoal);
+  overflow: hidden;
+  padding: 0;
+  margin-top: var(--space-4);
+}
+
+.hero-swiper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Fallback when the Swiper CDN is blocked: show one slide, not three stacked */
+.hero-carousel.is-static .hero-slide:not(:first-child),
+.hero-carousel.is-static .hero-pagination,
+.hero-carousel.is-static .hero-button-prev,
+.hero-carousel.is-static .hero-button-next {
+  display: none;
+}
+
+.hero-slide {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 325px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #0a111f;
+  overflow: hidden;
+  border-radius: var(--radius-card);
+}
+
+.hero-slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  min-height: 325px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(8, 8, 8, 0.4) 50%, rgba(8, 8, 8, 0.85) 100%);
+  pointer-events: none;
+  z-index: 1;
+  border-radius: var(--radius-card);
+}
+
+.hero-content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-6) var(--space-4);
+  z-index: 2;
+  max-width: 520px;
+}
+
+.hero-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--neon-yellow);
+  margin: 0 0 1rem;
+  line-height: 1;
+}
+
+.hero-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+  color: var(--text-white);
+  margin: 0 0 1rem;
+  display: block;
+}
+
+.hero-word {
+  display: inline-block;
+}
+
+.hero-word--white {
+  color: var(--text-white);
+}
+
+.hero-word--neon {
+  color: var(--neon-yellow);
+}
+
+.hero-season {
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--neon-yellow);
+  margin: 0 0 1rem;
+  line-height: 1;
+  display: block;
+}
+
+.hero-dek {
+  font-size: 1rem;
+  color: var(--text-white);
+  line-height: 1.5;
+  margin: 0 0 1.5rem;
+  max-width: 460px;
+}
+
+.hero-ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.hero-cta-primary {
+  width: fit-content;
+}
+
+.hero-cta-secondary {
+  width: fit-content;
+  background: var(--neon-yellow);
+  color: var(--toolbar-bg);
+}
+
+/* Swiper pagination & navigation */
+.hero-pagination {
+  position: absolute;
+  bottom: var(--space-3);
+  left: var(--space-4);
+  right: auto;
+  width: auto;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+  border-radius: 50%;
+  margin: 0 6px;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--neon-magenta);
+  box-shadow: 0 0 8px var(--neon-magenta);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: rgba(8, 8, 8, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  color: var(--text-white);
+  z-index: 3;
+  backdrop-filter: blur(4px);
+  transition: background 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+.swiper-button-prev {
+  left: var(--space-3);
+}
+
+.swiper-button-next {
+  right: var(--space-3);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--text-white);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: var(--neon-yellow);
+  border-color: var(--neon-yellow);
+  color: var(--near-black);
+}
+
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after {
+  color: var(--near-black);
+}
+
+/* Hide Swiper scrollbar if present */
+.swiper-scrollbar {
+  display: none;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 800ms var(--ease-smooth), transform 800ms var(--ease-smooth);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Competition dashboard ---------- */
+.dashboard {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  padding: var(--space-5) 0;
+  border-bottom: 1px solid var(--charcoal);
+}
+
+.dashboard-panel {
+  position: relative;
+  min-width: 0;
+  background: #0a111f;
+  border: 1px solid var(--charcoal);
+  border-radius: var(--radius-card);
+  padding: 1.5rem 1.25rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+  transition: transform 300ms var(--ease-smooth), border-color 300ms var(--ease-smooth),
+    box-shadow 300ms var(--ease-smooth);
+}
+
+.dashboard-panel:hover {
+  transform: translateY(-3px);
+  border-color: var(--neon-yellow);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Accent edge glow on panels */
+.dashboard-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--neon-yellow), var(--neon-magenta));
+  opacity: 0.5;
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+}
+
+/* Badge labels */
+.panel-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--neon-yellow);
+  margin: 0 0 0.5rem;
+  line-height: 1;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.panel-view-table {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-white);
+  background: var(--neon-yellow);
+  color: var(--near-black);
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.panel-view-table:hover {
+  background: #fff;
+  transform: translateY(-1px);
+}
+
+/* Match label */
+.dashboard-panel-match-label {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  margin: 0 0 1rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Matchup layout */
+.dashboard-panel-matchup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard-panel-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.panel-crest {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+  background: #080808;
+  border: 1px solid var(--charcoal);
+  transition: transform 300ms var(--ease-smooth);
+}
+
+.dashboard-panel:hover .panel-crest {
+  transform: scale(1.05);
+}
+
+.panel-team-name {
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-white);
+  line-height: 1.1;
+  text-align: center;
+}
+
+.panel-vs {
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--text-faint);
+  line-height: 1;
+}
+
+/* Meta row for upcoming match */
+.panel-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.panel-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.panel-meta-icon {
+  color: var(--neon-yellow);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  width: 36px;
+  text-align: center;
+}
+
+.panel-meta-divider {
+  width: 1px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Empty state for panels with no confirmed fixture or result yet */
+.panel-empty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.25rem 0;
+}
+
+.panel-empty-value {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--text-white);
+  margin: 0;
+}
+
+.panel-empty-note {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 34ch;
+}
+
+/* Score layout */
+.panel-score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.panel-score-center {
+  text-align: center;
+}
+
+.panel-score-value {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: var(--neon-yellow);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .panel-score {
+    gap: 1rem;
+  }
+  .panel-score-value {
+    font-size: 2.75rem;
+  }
+}
+
+.panel-match-status {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-white);
+  background: rgba(8, 8, 8, 0.8);
+  border: 1px solid var(--charcoal);
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* View match report button */
+.panel-view-report {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-white);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  transition: background 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+.panel-view-report:hover {
+  background: var(--neon-yellow);
+  color: var(--near-black);
+  border-color: var(--neon-yellow);
+}
+
+.panel-report-icon {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--neon-yellow);
+}
+
+.panel-report-arrow {
+  font-size: 0.9rem;
+}
+
+.standings-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.standings-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.standings-scroll::-webkit-scrollbar-thumb {
+  background: var(--charcoal);
+  border-radius: 3px;
+}
+
+/* Standings table */
+.standings-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.standings-table th {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  text-align: left;
+  padding: 0.5rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.standings-table td {
+  text-align: left;
+  padding: 0.5rem;
+  color: var(--text-white);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.standings-table tr:last-child td {
+  border-bottom: none;
+}
+
+.standings-table td:first-child {
+  font-weight: 800;
+  color: var(--neon-yellow);
+  width: 20px;
+}
+
+.standings-table td:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.standings-crest {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+  background: #080808;
+  border: 1px solid var(--charcoal);
+}
+
+.standings-table td:nth-child(7),
+.standings-table th:nth-child(7) {
+  text-align: right;
+  font-weight: 800;
+  color: var(--neon-yellow);
+}
+
+.standings-table td:nth-child(3),
+.standings-table td:nth-child(4),
+.standings-table td:nth-child(5),
+.standings-table td:nth-child(6),
+.standings-table th:nth-child(3),
+.standings-table th:nth-child(4),
+.standings-table th:nth-child(5),
+.standings-table th:nth-child(6) {
+  text-align: center;
+}
+
+.standings-note {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin: 0.75rem 0 0;
+}
+
+/* ---------- Teams carousel ---------- */
+.teams-section {
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--charcoal);
+}
+
+.teams-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.teams-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--text-white);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.teams-view-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--neon-yellow);
+  text-decoration: none;
+}
+
+.teams-view-all:hover {
+  text-decoration: underline;
+}
+
+.teams-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.teams-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  padding: 0.5rem 0;
+}
+
+.teams-track::-webkit-scrollbar {
+  display: none;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 0 0 auto;
+  width: 120px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.team-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+  background: #080808;
+  border: 1px solid var(--charcoal);
+}
+
+.team-card .team-name {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-white);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.team-card:hover .team-name {
+  color: var(--neon-yellow);
+}
+
+.carousel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: #080808;
+  border: 1px solid var(--charcoal);
+  border-radius: var(--radius-pill);
+  color: var(--text-white);
+  font-size: 1.125rem;
+  cursor: pointer;
+  z-index: 3;
+  transition: background 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+.carousel-btn:hover {
+  background: var(--neon-yellow);
+  color: var(--near-black);
+  border-color: var(--neon-yellow);
+}
+
+.carousel-btn--prev {
+  position: absolute;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+}
+
+.carousel-btn--next {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+}
+
+/* ---------- Featured players carousel ---------- */
+.featured-players {
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--charcoal);
+}
+
+.featured-players-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.featured-players-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--text-white);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.featured-players-view-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--neon-yellow);
+  text-decoration: none;
+}
+
+.featured-players-view-all:hover {
+  text-decoration: underline;
+}
+
+.featured-players-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+.featured-players-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 0.75rem var(--space-4);
+  margin: 0;
+}
+
+.featured-players-track::-webkit-scrollbar {
+  display: none;
+}
+
+.featured-players .player-card {
+  flex: 0 0 auto;
+  width: min(260px, calc(100vw - 2rem));
+  height: 420px;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: #0a111f;
+  border: 1px solid var(--charcoal);
+  box-shadow: var(--shadow-md);
+  transition: transform 300ms var(--ease-smooth), box-shadow 300ms var(--ease-smooth);
+  cursor: pointer;
+  isolation: isolate;
+  position: relative;
+  scroll-snap-align: center;
+}
+
+.featured-players .player-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  border-color: var(--neon-yellow);
+}
+
+.featured-players .card-bg--normal {
+  opacity: 1;
+  z-index: 1;
+}
+
+.featured-players .card-bg--hover {
+  opacity: 0;
+  z-index: 1;
+}
+
+.featured-players .card-portrait-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent;
+}
+
+.featured-players .card-portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.featured-players .card-number {
+  display: none;
+}
+
+.featured-players .card-flag {
+  display: none;
+}
+
+.featured-players .card-divider {
+  display: none;
+}
+
+.featured-players .card-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--neon-yellow);
+  padding: 0.9rem 1rem;
+  z-index: 3;
+}
+
+.featured-players .card-name {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.featured-players .card-first {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--near-black);
+}
+
+.featured-players .card-surname {
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+  color: var(--near-black);
+}
+
+.featured-players .card-role {
+  display: none;
+}
+
+/* Empty state: featured players have no confirmed squad list yet */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 2rem 1.5rem;
+  background: #0a111f;
+  border: 1px solid var(--charcoal);
+  border-radius: var(--radius-card);
+  border-left: 3px solid var(--neon-yellow);
+}
+
+.empty-state-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--text-white);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.empty-state-cta {
+  margin-top: 0.35rem;
+  width: fit-content;
+}
+
+/* ---------- Latest stories ---------- */
+.stories-section {
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--charcoal);
+}
+
+.stories-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stories-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--text-white);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.stories-view-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--neon-yellow);
+  text-decoration: none;
+}
+
+.stories-view-all:hover {
+  text-decoration: underline;
+}
+
+.stories-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.story-card {
+  position: relative;
+  background: #0a111f;
+  border: 1px solid var(--charcoal);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 250ms var(--ease-smooth), box-shadow 250ms var(--ease-smooth);
+}
+
+.story-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.story-link {
+  display: block;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.story-image {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: #080808;
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 350ms var(--ease-smooth);
+}
+
+.story-card:hover .story-image img {
+  transform: scale(1.03);
+}
+
+/* Placeholder tile used until a real story image exists */
+.story-image--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 8px,
+      rgba(255, 255, 255, 0.03) 8px,
+      rgba(255, 255, 255, 0.03) 16px
+    ),
+    #0a111f;
+}
+
+.story-image--placeholder span {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Muted text sitting on the #0a111f panel surface: --text-muted is 4.34:1 there,
+   just under AA, so these use a slightly lighter grey (5.2:1). */
+.panel-empty-note,
+.story-image--placeholder span {
+  color: #7a879b;
+}
+
+.story-play {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neon-yellow);
+  font-size: 1.25rem;
+  font-weight: 900;
+  opacity: 0;
+  transition: opacity 250ms var(--ease-smooth);
+}
+
+.story-card:hover .story-play {
+  opacity: 1;
+}
+
+.story-body {
+  padding: 1rem 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.story-category {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--neon-yellow);
+  line-height: 1;
+}
+
+.story-headline {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-white);
+  line-height: 1.35;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.story-date {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ---------- Partners section ---------- */
+.partners-section {
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--charcoal);
+}
+
+.partners-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.partners-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--text-white);
+  margin: 0;
+  line-height: 1.1;
+}
+
+.partners-divider {
+  flex: 1;
+  height: 1px;
+  background: var(--charcoal);
+  max-width: 200px;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 60px;
+}
+
+.partner-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(0.3);
+  transition: filter 200ms ease;
+}
+
+.partner-item:hover .partner-logo {
+  filter: grayscale(0);
+}
+
+/* ---------- CTA banner ---------- */
+.cta-banner {
+  position: relative;
+  background: var(--near-black);
+  border-top: 1px solid var(--charcoal);
+  padding: var(--space-6) var(--space-2);
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background-image: url("../assets/images/graphics/Navigation/navigation background.webp");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cta-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 8, 8, 0.35);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cta-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.cta-eyebrow {
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--neon-yellow);
+  margin: 0;
+}
+
+.cta-headline {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--text-white);
+  margin: 0.5rem 0 0.5rem;
+}
+
+.cta-dek {
+  font-size: 0.95rem;
+  color: var(--text-faint);
+  margin: 0 0 1.25rem;
+  line-height: 1.5;
+  max-width: 560px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-primary,
+.cta-secondary {
+  width: fit-content;
+}
+
+.cta-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Footer styles live in style.css (shared by home, competition and shop) */
+
+/* ---------- Responsive ---------- */
+@media (min-width: 641px) {
+  .dashboard {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .stories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .teams-track,
+  .featured-players-track {
+    padding: 0.5rem 0;
+  }
+
+  .cta-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .cta-content {
+    max-width: 600px;
+  }
+
+  .cta-buttons {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1025px) {
+  .hero-slide-img {
+    min-height: 403px;
+  }
+
+  .hero-content {
+    max-width: 600px;
+    padding: var(--space-8) var(--space-6);
+  }
+
+  .dashboard {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    padding: var(--space-6) 0;
+  }
+
+  .dashboard-panel {
+    min-height: 320px;
+    padding: 1.5rem 1.25rem 1.25rem;
+  }
+
+  .panel-crest {
+    width: 72px;
+    height: 72px;
+  }
+
+  .stories-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+
+  .marquee-viewport {
+    mask-image: none;
+    -webkit-mask-image: none;
+    overflow-x: auto;
+    scrollbar-width: thin;
+  }
+
+  .marquee-track {
+    width: auto;
+    flex-wrap: nowrap;
+  }
+
+  .marquee-viewport:hover .marquee-track {
+    animation-play-state: running;
+  }
+
+  /* Swiper hero carousel reduced motion */
+  .hero-swiper {
+    animation: none;
+  }
+
+  .hero-swiper,
+  .swiper-slide {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Mobile: story grid becomes a swipeable carousel */
+@media (max-width: 640px) {
+  .stories-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: 0.6rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .stories-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .stories-grid > * {
+    flex: 0 0 82%;
+    scroll-snap-align: center;
+  }
+}
+

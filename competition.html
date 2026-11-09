@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/images/logos/main%20logo.webp" type="image/webp" />
+  <title>Baller League Competition: Results, Scorers and Standings</title>
+  <meta name="description" content="Baller League Season 2 results, fixtures, Group A and B standings, top scorers and matchday events from New Age World School, Bengaluru — Bangalore's best amateur football league." />
+  <meta name="keywords" content="best amateur league, best league in Bangalore, Baller League Bangalore, Baller League standings, Baller League top scorers, Bangalore amateur football" />
+  <link rel="canonical" href="https://www.theballerleague.in/competition.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Knuckleball" />
+  <meta property="og:title" content="Baller League Competition: Results, Scorers and Standings" />
+  <meta property="og:description" content="Baller League Season 2 results, fixtures, standings, top scorers and matchday events from Bengaluru." />
+  <meta property="og:url" content="https://www.theballerleague.in/competition.html" />
+  <meta property="og:image" content="https://www.theballerleague.in/assets/images/logos/main%20logo.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@knuckleball.in" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/competition.css" />
+  <!-- Preload shared navigation assets -->
+  <link rel="preload" as="image" href="assets/images/logos/main%20logo.webp" />
+  <link rel="preload" as="image" href="assets/images/graphics/Navigation/navigation%20background.webp" />
+</head>
+<body>
+
+  <!-- Baller League Season 2 Y2K navigation toolbar (reused from players.html) -->
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="navbar-bg"></div>
+    <div class="navbar-inner">
+      <button class="navbar-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navbarMenu">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+      </button>
+
+      <div class="navbar-brand" aria-label="Baller League">
+        <a href="index.html" class="brand-link">
+          <img class="navbar-logo" src="assets/images/logos/main%20logo.webp" alt="Baller League" />
+          <span class="s02-label">S02 / 026</span>
+        </a>
+      </div>
+
+      <ul class="navbar-menu" id="navbarMenu" role="menubar">
+        <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+        <li role="none"><a href="competition.html" class="nav-link active" role="menuitem" aria-current="page">Competition</a></li>
+        <li role="none"><a href="players.html" class="nav-link" role="menuitem">Players</a></li>
+        <li role="none"><a href="shop.html" class="nav-link" role="menuitem">Shop</a></li>
+        <li role="none"><a href="blog.html" class="nav-link" role="menuitem">Blog</a></li>
+        <li role="none"><a href="media.html" class="nav-link" role="menuitem">Media</a></li>
+      </ul>
+
+      <div class="navbar-actions">
+        <a href="players.html" class="nav-cta" aria-label="Join the League">JOIN THE LEAGUE ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol class="breadcrumb-list">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item"><span aria-current="page">Competition</span></li>
+    </ol>
+  </nav>
+
+  <main class="container competition-page" id="competitionContent">
+
+    <!-- Section 01 — Compact Competition Hero -->
+    <header class="comp-hero reveal">
+      <div class="comp-hero-inner">
+        <span class="comp-matchday">SEASON 02 · GROUP STAGE</span>
+        <h1 class="comp-title">BALLER LEAGUE COMPETITION</h1>
+        <p class="comp-dek">RESULTS · FIXTURES · STANDINGS</p>
+        <p class="comp-venue">New Age World School · Bengaluru</p>
+      </div>
+    </header>
+
+    <!-- Section 02 - Match Centre -->
+    <section class="match-centre reveal">
+      <div class="match-centre-header">
+        <h2 class="match-centre-title">Match Centre</h2>
+        <div class="pitch-filters">
+          <button class="pitch-filter active" data-filter="all" aria-pressed="true">All Pitches</button>
+          <button class="pitch-filter" data-filter="live" aria-pressed="false">Live</button>
+          <button class="pitch-filter" data-filter="upcoming" aria-pressed="false">Upcoming</button>
+          <button class="pitch-filter" data-filter="completed" aria-pressed="false">Completed</button>
+        </div>
+      </div>
+      <div class="matches-grid" id="matchesGrid">
+        <!-- Match cards injected by JS -->
+      </div>
+      <div class="match-centre-empty" id="matchesEmpty" style="display:none;">
+        <p>NO MATCHES YET — THE SEASON 2 SCHEDULE PUBLISHES BEFORE MATCHDAY 1.</p>
+      </div>
+    </section>
+
+    <!-- Section 03 — Matchday Fixtures -->
+    <section class="matchday-fixtures reveal">
+      <div class="fixtures-header">
+        <h2 class="fixtures-title">Results &amp; Fixtures</h2>
+      </div>
+      <div class="fixtures-list" id="fixturesList">
+        <!-- Fixture rows injected by JS -->
+      </div>
+      <div class="fixtures-empty" id="fixturesEmpty" style="display:none;">
+        <p>NO FIXTURES CONFIRMED YET — THE SEASON 2 SCHEDULE PUBLISHES BEFORE MATCHDAY 1.</p>
+      </div>
+    </section>
+
+    <!-- Section 04 — League Standings -->
+    <section class="league-standings reveal">
+      <div class="standings-header">
+        <h2 class="standings-title">League Standings</h2>
+      </div>
+      <div class="standings-scroll">
+        <table class="standings-table" id="standingsTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Team</th>
+              <th>P</th>
+              <th>W</th>
+              <th>D</th>
+              <th>L</th>
+              <th>GD</th>
+              <th>PTS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Standings rows injected by JS -->
+          </tbody>
+        </table>
+      </div>
+      <p class="standings-note" id="standingsNote">Group A and Group B · 13 results in · First Draft FC and TBD yet to play.</p>
+    </section>
+
+    <!-- Section 04b — Top Scorers -->
+    <section class="league-standings top-scorers reveal" aria-labelledby="topScorersTitle">
+      <div class="standings-header">
+        <h2 class="standings-title" id="topScorersTitle">Top Scorers</h2>
+      </div>
+      <div class="standings-scroll">
+        <table class="standings-table top-scorers-table" id="topScorersTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Player</th>
+              <th>Team</th>
+              <th>G</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Top scorers injected by JS -->
+          </tbody>
+        </table>
+      </div>
+      <p class="standings-note">Group A scorers supplied after Matchday 1. Group B scorers will be added when published.</p>
+    </section>
+
+    <!-- Section 05 — Matchday Event Feed -->
+    <section class="matchday-events reveal">
+      <div class="events-header">
+        <h2 class="events-title">Matchday Events</h2>
+        <div class="event-filter">
+          <button class="event-filter-btn active" data-filter="all" aria-pressed="true">All Events</button>
+          <button class="event-filter-btn" data-filter="goal" aria-pressed="false">Goals</button>
+          <button class="event-filter-btn" data-filter="card" aria-pressed="false">Cards</button>
+          <button class="event-filter-btn" data-filter="announcement" aria-pressed="false">Announcements</button>
+        </div>
+      </div>
+      <div class="event-feed" id="eventFeed">
+        <!-- Event items injected by JS -->
+      </div>
+      <div class="event-feed-empty" id="eventsEmpty" style="display:none;">
+        <p>SCORERS AND CARDS WILL BE ADDED HERE.</p>
+      </div>
+    </section>
+
+    <!-- Section 06 — Player of the Day -->
+    <section class="player-of-the-day reveal">
+      <div class="player-of-the-day-inner">
+        <div class="player-portrait-wrap" id="playerPortraitWrap">
+          <!-- Portrait injected by JS -->
+        </div>
+        <div class="player-info">
+          <h2 class="player-name" id="playerName">—</h2>
+          <p class="player-team" id="playerTeam">—</p>
+          <p class="player-position" id="playerPosition">—</p>
+          <div class="player-stats" id="playerStats">
+            <!-- Stats injected by JS -->
+          </div>
+        </div>
+      </div>
+      <div class="player-of-the-day-empty" id="playerOfTheDayEmpty" style="display:none;">
+        <p>NO PLAYER OF THE DAY SELECTED YET.</p>
+        <p style="font-size:0.75rem;font-weight:400;color:var(--text-faint);margin-top:0.5rem;">Selection confirmed after the next matchday.</p>
+      </div>
+    </section>
+
+    <!-- Section 07 — Next Up -->
+    <section class="next-up reveal">
+      <div class="next-up-inner">
+        <div class="next-up-header">
+          <span class="next-up-tag">Next Up</span>
+          <h2 class="next-up-title">Upcoming Fixture</h2>
+        </div>
+        <div class="next-up-matchup" id="nextUpMatchup">
+          <!-- Next fixture injected by JS -->
+        </div>
+        <div class="next-up-details" id="nextUpDetails">
+          <!-- Next fixture details injected by JS -->
+        </div>
+        <a href="article.html" class="next-up-cta" id="nextUpCta">
+          Match Details ↗
+          <span class="next-up-arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/logos/main%20logo.webp" alt="Baller League" class="footer-logo" />
+        <span class="footer-s02">S02 / 026</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="competition.html">Competition</a>
+        <a href="players.html">Players</a>
+        <a href="shop.html">Shop</a>
+        <a href="blog.html">Blog</a>
+        <a href="media.html">Media</a>
+      </nav>
+      <div class="footer-copy">
+        <p>&copy; 2026 Baller League Season 2. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* --------------------------------------------------------------
+       Competition Page — Matchday Control Centre
+       Data layer (static, no backend).
+
+       Only supplied results live here. Scorers, cards and the
+       Player of the Day are added when they are supplied.
+       Club names are read from the supplied crest artwork.
+       -------------------------------------------------------------- */
+
+    const CREST = {
+      blr: "assets/images/logos/Bangalore%20Grafters%20FC.webp",
+      crescents: "assets/images/logos/Crescents%20FC.webp",
+      falcons: "assets/images/logos/Falcons%20FC.webp",
+      firstDraft: "assets/images/logos/First%20Draft%20FC.webp",
+      firstTouch: "assets/images/logos/First%20Touch%20FC.webp",
+      grvty: "assets/images/logos/GRVTY%20FC.webp",
+      legacy: "assets/images/logos/Legacy%20FFA.webp",
+      nbfc: "assets/images/logos/NBFC.webp",
+      nexus: "assets/images/logos/NEXUS%20FC.webp",
+      passion: "assets/images/logos/Passion%20FC.webp",
+      u4: "assets/images/logos/United%204th%20Phase.webp",
+      u5: "assets/images/logos/United%205's.webp",
+      veltrix: "assets/images/logos/Veltrix%20United.webp",
+      walkalone: "assets/images/logos/Walkalone%20FC.webp",
+      wlwg: "assets/images/logos/WLWG%20FC.webp",
+      tbd: "assets/images/logos/main%20logo.webp"
+    };
+
+    const competitionData = {
+      season: "SEASON 02",
+      matchday: "GROUP STAGE",
+      venue: "New Age World School · Bengaluru",
+      matches: [
+        /* ---- Group A ---- */
+        { group: "A", home: { name: "NEXUS FC", crest: CREST.nexus }, away: { name: "GRVTY FC", crest: CREST.grvty }, score: { home: 3, away: 0 }, status: "FULL TIME", scorers: { home: ["Chethan 2"], away: [] }, report: "news-matchday-1-recap.html" },
+        { group: "A", home: { name: "Bangalore Grafters FC", crest: CREST.blr }, away: { name: "United 4th Phase", crest: CREST.u4 }, score: { home: 1, away: 2 }, status: "FULL TIME", scorers: { home: ["Aju"], away: ["Hari", "Subbaiah"] }, report: "news-matchday-1-recap.html" },
+        { group: "A", home: { name: "WLWG FC", crest: CREST.wlwg }, away: { name: "Walkalone FC", crest: CREST.walkalone }, score: { home: 4, away: 2 }, status: "FULL TIME", scorers: { home: ["Daniel 2", "Rishabh", "Puneeth"], away: ["Shree", "Rohan"] }, report: "news-wlwg-comeback.html" },
+        { group: "A", home: { name: "Bangalore Grafters FC", crest: CREST.blr }, away: { name: "Walkalone FC", crest: CREST.walkalone }, score: { home: 10, away: 2 }, status: "FULL TIME", scorers: { home: ["Adnan 4", "Fazil 3", "Abhinav", "Aju", "Mathai"], away: ["Shree 2"] }, report: "news-bangalore-grafters-10-2.html" },
+        { group: "A", home: { name: "United 4th Phase", crest: CREST.u4 }, away: { name: "WLWG FC", crest: CREST.wlwg }, score: { home: 3, away: 1 }, status: "FULL TIME", scorers: { home: ["AD 2", "Hakee Zyech"], away: ["Uthappa"] }, report: "news-matchday-1-recap.html" },
+        /* ---- Group B ---- */
+        { group: "B", home: { name: "United 5's", crest: CREST.u5 }, away: { name: "Falcons FC", crest: CREST.falcons }, score: { home: 4, away: 1 }, status: "FULL TIME" },
+        { group: "B", home: { name: "Legacy FFA", crest: CREST.legacy }, away: { name: "NBFC", crest: CREST.nbfc }, score: { home: 7, away: 1 }, status: "FULL TIME" },
+        { group: "B", home: { name: "Passion FC", crest: CREST.passion }, away: { name: "Crescents FC", crest: CREST.crescents }, score: { home: 4, away: 1 }, status: "FULL TIME" },
+        { group: "B", home: { name: "First Touch FC", crest: CREST.firstTouch }, away: { name: "Veltrix United", crest: CREST.veltrix }, score: { home: 3, away: 0 }, status: "FULL TIME" },
+        { group: "B", home: { name: "NBFC", crest: CREST.nbfc }, away: { name: "Falcons FC", crest: CREST.falcons }, score: { home: 2, away: 1 }, status: "FULL TIME" },
+        { group: "B", home: { name: "Legacy FFA", crest: CREST.legacy }, away: { name: "United 5's", crest: CREST.u5 }, score: { home: 5, away: 1 }, status: "FULL TIME" },
+        { group: "B", home: { name: "Crescents FC", crest: CREST.crescents }, away: { name: "First Touch FC", crest: CREST.firstTouch }, score: { home: 3, away: 2 }, status: "FULL TIME" },
+        { group: "B", home: { name: "Passion FC", crest: CREST.passion }, away: { name: "Veltrix United", crest: CREST.veltrix }, score: { home: 4, away: 3 }, status: "FULL TIME" },
+        /* ---- Yet to play ---- */
+        { group: "A", home: { name: "First Draft FC", crest: CREST.firstDraft }, away: { name: "TBD", crest: CREST.tbd }, score: null, status: "UPCOMING" }
+      ],
+      groups: {
+        A: [
+          { pos: 1, name: "United 4th Phase", crest: CREST.u4, p: 2, w: 2, d: 0, l: 0, gd: "+3", pts: 6 },
+          { pos: 2, name: "Bangalore Grafters FC", crest: CREST.blr, p: 2, w: 1, d: 0, l: 1, gd: "+7", pts: 3 },
+          { pos: 3, name: "NEXUS FC", crest: CREST.nexus, p: 1, w: 1, d: 0, l: 0, gd: "+3", pts: 3 },
+          { pos: 4, name: "WLWG FC", crest: CREST.wlwg, p: 2, w: 1, d: 0, l: 1, gd: "0", pts: 3 },
+          { pos: 5, name: "GRVTY FC", crest: CREST.grvty, p: 1, w: 0, d: 0, l: 1, gd: "-3", pts: 0 },
+          { pos: 6, name: "Walkalone FC", crest: CREST.walkalone, p: 2, w: 0, d: 0, l: 2, gd: "-10", pts: 0 },
+          { pos: 7, name: "First Draft FC", crest: CREST.firstDraft, p: 0, w: 0, d: 0, l: 0, gd: "0", pts: 0 },
+          { pos: 8, name: "TBD", crest: CREST.tbd, p: 0, w: 0, d: 0, l: 0, gd: "0", pts: 0 }
+        ],
+        B: [
+          { pos: 1, name: "Legacy FFA", crest: CREST.legacy, p: 2, w: 2, d: 0, l: 0, gd: "+10", pts: 6 },
+          { pos: 2, name: "Passion FC", crest: CREST.passion, p: 2, w: 2, d: 0, l: 0, gd: "+4", pts: 6 },
+          { pos: 3, name: "First Touch FC", crest: CREST.firstTouch, p: 2, w: 1, d: 0, l: 1, gd: "+2", pts: 3 },
+          { pos: 4, name: "United 5's", crest: CREST.u5, p: 2, w: 1, d: 0, l: 1, gd: "-1", pts: 3 },
+          { pos: 5, name: "Crescents FC", crest: CREST.crescents, p: 2, w: 1, d: 0, l: 1, gd: "-2", pts: 3 },
+          { pos: 6, name: "NBFC", crest: CREST.nbfc, p: 2, w: 1, d: 0, l: 1, gd: "-5", pts: 3 },
+          { pos: 7, name: "Veltrix United", crest: CREST.veltrix, p: 2, w: 0, d: 0, l: 2, gd: "-4", pts: 0 },
+          { pos: 8, name: "Falcons FC", crest: CREST.falcons, p: 2, w: 0, d: 0, l: 2, gd: "-4", pts: 0 }
+        ]
+      },
+      // Group A scorer data supplied after Matchday 1.
+      scorers: [
+        { name: "Adnan", team: "Bangalore Grafters FC", goals: 4 },
+        { name: "Fazil", team: "Bangalore Grafters FC", goals: 3 },
+        { name: "Chethan", team: "NEXUS FC", goals: 2 },
+        { name: "Daniel", team: "WLWG FC", goals: 2 },
+        { name: "Shree", team: "Walkalone FC", goals: 2 },
+        { name: "AD", team: "United 4th Phase", goals: 2 },
+        { name: "Hari", team: "United 4th Phase", goals: 1 },
+        { name: "Subbaiah", team: "United 4th Phase", goals: 1 },
+        { name: "Hakee Zyech", team: "United 4th Phase", goals: 1 },
+        { name: "Rishabh", team: "WLWG FC", goals: 1 },
+        { name: "Puneeth", team: "WLWG FC", goals: 1 },
+        { name: "Uthappa", team: "WLWG FC", goals: 1 },
+        { name: "Rohan", team: "Walkalone FC", goals: 1 },
+        { name: "Abhinav", team: "Bangalore Grafters FC", goals: 1 },
+        { name: "Aju", team: "Bangalore Grafters FC", goals: 1 },
+        { name: "Mathai", team: "Bangalore Grafters FC", goals: 1 }
+      ],
+      events: [
+        { time: "FT", player: "Chethan", team: "NEXUS FC", label: "2 goals", type: "goal", score: "3 – 0" },
+        { time: "FT", player: "GRVTY FC", team: "Official result", label: "Walkover — 3-0 awarded", type: "announcement", score: "3 – 0" },
+        { time: "FT", player: "Hari", team: "United 4th Phase", label: "Goal", type: "goal", score: "1 – 2" },
+        { time: "FT", player: "Subbaiah", team: "United 4th Phase", label: "Goal", type: "goal", score: "1 – 2" },
+        { time: "FT", player: "Aju", team: "Bangalore Grafters FC", label: "Goal", type: "goal", score: "1 – 2" },
+        { time: "FT", player: "Daniel", team: "WLWG FC", label: "2 goals", type: "goal", score: "4 – 2" },
+        { time: "FT", player: "Rishabh", team: "WLWG FC", label: "Goal", type: "goal", score: "4 – 2" },
+        { time: "FT", player: "Puneeth", team: "WLWG FC", label: "Goal", type: "goal", score: "4 – 2" },
+        { time: "FT", player: "Shree", team: "Walkalone FC", label: "Goal", type: "goal", score: "4 – 2" },
+        { time: "FT", player: "Rohan", team: "Walkalone FC", label: "Goal", type: "goal", score: "4 – 2" },
+        { time: "FT", player: "Adnan", team: "Bangalore Grafters FC", label: "4 goals", type: "goal", score: "10 – 2" },
+        { time: "FT", player: "Fazil", team: "Bangalore Grafters FC", label: "3 goals", type: "goal", score: "10 – 2" },
+        { time: "FT", player: "Abhinav", team: "Bangalore Grafters FC", label: "Goal", type: "goal", score: "10 – 2" },
+        { time: "FT", player: "Aju", team: "Bangalore Grafters FC", label: "Goal", type: "goal", score: "10 – 2" },
+        { time: "FT", player: "Mathai", team: "Bangalore Grafters FC", label: "Goal", type: "goal", score: "10 – 2" },
+        { time: "FT", player: "Shree", team: "Walkalone FC", label: "2 goals", type: "goal", score: "10 – 2" },
+        { time: "FT", player: "AD", team: "United 4th Phase", label: "2 goals", type: "goal", score: "3 – 1" },
+        { time: "FT", player: "Hakee Zyech", team: "United 4th Phase", label: "Goal", type: "goal", score: "3 – 1" },
+        { time: "FT", player: "Uthappa", team: "WLWG FC", label: "Goal", type: "goal", score: "3 – 1" }
+      ],
+      playerOfTheDay: null,
+      nextUp: null
+    };
+
+    /* --------------------------------------------------------------
+       Render helpers
+       -------------------------------------------------------------- */
+    function statusClass(status) {
+      const s = (status || "").toUpperCase();
+      if (s === "LIVE") return "match-status-badge--live";
+      return "";
+    }
+
+    function fixtureStatusClass(status) {
+      const s = (status || "").toUpperCase();
+      if (s === "LIVE") return "fixture-status--live";
+      if (s === "FULL TIME") return "fixture-status--fulltime";
+      if (s === "UPCOMING") return "fixture-status--upcoming";
+      if (s === "HALF-TIME") return "fixture-status--live";
+      return "";
+    }
+
+    function statusLabel(status) {
+      const s = (status || "").toUpperCase();
+      if (s === "FULL TIME") return "FULL TIME";
+      if (s === "UPCOMING") return "UPCOMING";
+      if (s === "LIVE") return "LIVE";
+      if (s === "HALF-TIME") return "HALF TIME";
+      if (s === "POSTPONED") return "POSTPONED";
+      return status || "—";
+    }
+
+    function formatScore(match) {
+      if (!match.score) return "− −";
+      return `${match.score.home} − ${match.score.away}`;
+    }
+
+    function clockHtml(match) {
+      if (match.status.toUpperCase() === "LIVE" && match.clock) {
+        return `<span class="match-clock match-clock--live">${match.clock}'</span>`;
+      }
+      if (match.time) {
+        return `<span class="match-clock">${match.time}</span>`;
+      }
+      return `<span class="match-clock">—</span>`;
+    }
+
+    /* --------------------------------------------------------------
+       Section 02 — Live Match Centre
+       -------------------------------------------------------------- */
+    function renderMatches(filter = "all") {
+      const grid = document.getElementById("matchesGrid");
+      const empty = document.getElementById("matchesEmpty");
+      grid.innerHTML = "";
+
+      const filtered = competitionData.matches.filter(m => {
+        if (filter === "all") return true;
+        if (filter === "live") return m.status.toUpperCase() === "LIVE";
+        if (filter === "upcoming") return m.status.toUpperCase() === "UPCOMING";
+        if (filter === "completed") return m.status.toUpperCase() === "FULL TIME" || m.status.toUpperCase() === "HALF-TIME";
+        return true;
+      });
+
+      if (filtered.length === 0) {
+        grid.style.display = "none";
+        empty.style.display = "block";
+        empty.querySelector("p").textContent = competitionData.matches.length === 0
+          ? "NO MATCHES YET — THE SEASON 2 SCHEDULE PUBLISHES BEFORE MATCHDAY 1."
+          : "NO MATCHES FOR THE SELECTED FILTER.";
+        return;
+      }
+      grid.style.display = "";
+      empty.style.display = "none";
+
+      filtered.forEach(match => {
+        const card = document.createElement("article");
+        card.className = "match-card";
+        card.setAttribute("aria-label", `Match ${match.home.name} vs ${match.away.name}`);
+
+        const scoreHtml = match.score
+          ? `<span class="match-score-value">${formatScore(match)}</span>`
+          : `<span class="match-vs">VS</span>`;
+
+        const clock = clockHtml(match);
+
+        card.innerHTML = `
+          <div class="match-card-header">
+            <span class="match-pitch">Group ${match.group || "—"}</span>
+            <span class="match-status-badge ${statusClass(match.status)}">${statusLabel(match.status)}</span>
+          </div>
+          <div class="match-score">
+            <div class="match-team">
+              <img src="${match.home.crest}" alt="${match.home.name} crest" class="match-crest" loading="lazy" />
+              <span class="match-team-name">${match.home.name}</span>
+            </div>
+            ${scoreHtml}
+            <div class="match-team">
+              <img src="${match.away.crest}" alt="${match.away.name} crest" class="match-crest" loading="lazy" />
+              <span class="match-team-name">${match.away.name}</span>
+            </div>
+          </div>
+          ${match.scorers ? '<div class="match-scorers">' +
+            (match.scorers.home.length ? '<span><strong>' + match.home.name + '</strong> ' + match.scorers.home.join(", ") + '</span>' : '') +
+            (match.scorers.away.length ? '<span><strong>' + match.away.name + '</strong> ' + match.scorers.away.join(", ") + '</span>' : '') +
+          '</div>' : ''}
+          <div class="match-card-footer">
+            <div class="match-meta">
+              <span>${match.date || "TBD"}</span>
+              <span>${clock}</span>
+            </div>
+            ${match.report ? '<a href="' + match.report + '" class="match-view">Match Report <span class="match-view-arrow">→</span></a>' : ''}
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    /* --------------------------------------------------------------
+       Section 03 — Matchday Fixtures
+       -------------------------------------------------------------- */
+    function renderFixtures() {
+      const list = document.getElementById("fixturesList");
+      const empty = document.getElementById("fixturesEmpty");
+      list.innerHTML = "";
+
+      empty.style.display = competitionData.matches.length === 0 ? "block" : "none";
+
+      competitionData.matches.forEach((match, index) => {
+        const row = document.createElement("div");
+        row.className = "fixture-row";
+
+        const scoreHtml = match.score
+          ? `<span class="fixture-score">${match.score.home} − ${match.score.away}</span>`
+          : `<span class="fixture-vs-placeholder">VS</span>`;
+
+        row.innerHTML = `
+          <span class="fixture-id">M${index + 1}</span>
+          <span class="fixture-time">${match.time || "—"}</span>
+          <span class="fixture-pitch">Group ${match.group || "—"}</span>
+          <div class="fixture-teams">
+            <div class="fixture-team">
+              <img src="${match.home.crest}" alt="${match.home.name} crest" class="fixture-crest" loading="lazy" />
+              <span class="fixture-team-name">${match.home.name}</span>
+            </div>
+            <span class="fixture-vs">VS</span>
+            <div class="fixture-team">
+              <img src="${match.away.crest}" alt="${match.away.name} crest" class="fixture-crest" loading="lazy" />
+              <span class="fixture-team-name">${match.away.name}</span>
+            </div>
+          </div>
+          ${scoreHtml}
+          <span class="fixture-status ${fixtureStatusClass(match.status)}">${statusLabel(match.status)}</span>
+        `;
+        list.appendChild(row);
+      });
+    }
+
+    /* --------------------------------------------------------------
+       Section 04 — League Standings
+       -------------------------------------------------------------- */
+    function renderStandings() {
+      const tbody = document.querySelector("#standingsTable tbody");
+      const note = document.getElementById("standingsNote");
+      tbody.innerHTML = "";
+
+      ["A", "B"].forEach(group => {
+        const teams = competitionData.groups[group] || [];
+        const head = document.createElement("tr");
+        head.className = "standings-group";
+        head.innerHTML = `<td colspan="8">Group ${group}</td>`;
+        tbody.appendChild(head);
+
+        teams.forEach(team => {
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td class="standings-pos">${team.pos}</td>
+            <td class="standings-team">
+              <img src="${team.crest}" alt="${team.name === "TBD" ? "Opponent to be confirmed" : team.name + " crest"}" class="standings-crest" loading="lazy" />
+              <span class="standings-team-name">${team.name}</span>
+            </td>
+            <td class="standings-stat">${team.p}</td>
+            <td class="standings-stat">${team.w}</td>
+            <td class="standings-stat">${team.d}</td>
+            <td class="standings-stat">${team.l}</td>
+            <td class="standings-stat">${team.gd}</td>
+            <td class="standings-pts">${team.pts}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+      });
+
+      note.textContent = "Group A and Group B · 13 results in · First Draft FC and TBD yet to play.";
+    }
+
+    /* --------------------------------------------------------------
+       Section 04b — Top Scorers
+       -------------------------------------------------------------- */
+    function renderTopScorers() {
+      const tbody = document.querySelector("#topScorersTable tbody");
+      if (!tbody) return;
+      tbody.innerHTML = "";
+
+      competitionData.scorers.forEach((scorer, index) => {
+        const tr = document.createElement("tr");
+        tr.innerHTML =
+          '<td class="standings-pos">' + (index + 1) + '</td>' +
+          '<td class="top-scorer-name">' + scorer.name + '</td>' +
+          '<td class="top-scorer-team">' + scorer.team + '</td>' +
+          '<td class="top-scorer-goals">' + scorer.goals + '</td>';
+        tbody.appendChild(tr);
+      });
+    }
+
+    /* --------------------------------------------------------------
+       Section 05 — Matchday Event Feed
+       -------------------------------------------------------------- */
+    function renderEvents(filter = "all") {
+      const feed = document.getElementById("eventFeed");
+      const empty = document.getElementById("eventsEmpty");
+      feed.innerHTML = "";
+
+      const filtered = competitionData.events.filter(e => {
+        if (filter === "all") return true;
+        return e.type === filter;
+      });
+
+      if (filtered.length === 0) {
+        feed.style.display = "none";
+        empty.style.display = "block";
+        return;
+      }
+      feed.style.display = "flex";
+      empty.style.display = "none";
+
+      filtered.forEach(event => {
+        const item = document.createElement("div");
+        item.className = `event-item event-item--${event.type}`;
+        item.innerHTML = `
+          <span class="event-time ${event.type === 'ft' ? 'event-time--ft' : ''}">${event.time}</span>
+          <div class="event-details">
+            <span class="event-player">${event.player || "—"}</span>
+            <span class="event-team">${event.team || "—"}</span>
+            <span class="event-type ${event.type === 'card' ? 'event-type--card' : ''}">${event.label}</span>
+          </div>
+          <span class="event-score">${event.score || ""}</span>
+        `;
+        feed.appendChild(item);
+      });
+    }
+
+    /* --------------------------------------------------------------
+       Section 06 — Player of the Day
+       -------------------------------------------------------------- */
+    function renderPlayerOfTheDay() {
+      const wrap = document.getElementById("playerPortraitWrap");
+      const empty = document.getElementById("playerOfTheDayEmpty");
+      const nameEl = document.getElementById("playerName");
+      const teamEl = document.getElementById("playerTeam");
+      const posEl = document.getElementById("playerPosition");
+      const statsEl = document.getElementById("playerStats");
+
+      if (!competitionData.playerOfTheDay) {
+        wrap.style.display = "none";
+        nameEl.style.display = "none";
+        teamEl.style.display = "none";
+        posEl.style.display = "none";
+        statsEl.style.display = "none";
+        empty.style.display = "flex";
+        return;
+      }
+
+      const p = competitionData.playerOfTheDay;
+      wrap.innerHTML = `<img src="${p.portrait}" alt="Portrait of ${p.name}" class="player-portrait" loading="lazy" />`;
+      nameEl.textContent = p.name;
+      teamEl.textContent = p.team;
+      posEl.textContent = p.position;
+
+      let statsHtml = "";
+      if (p.goals !== undefined) statsHtml += `<div class="player-stat"><span class="player-stat-label">Goals</span><span class="player-stat-value">${p.goals}</span></div>`;
+      statsEl.innerHTML = statsHtml;
+    }
+
+    /* --------------------------------------------------------------
+       Section 07 — Next Up
+       -------------------------------------------------------------- */
+    function renderNextUp() {
+      const upcoming = competitionData.matches.find(m => m.status.toUpperCase() === "UPCOMING");
+      const matchup = document.getElementById("nextUpMatchup");
+      const details = document.getElementById("nextUpDetails");
+      const cta = document.getElementById("nextUpCta");
+
+      if (!upcoming) {
+        matchup.innerHTML = `<div style="text-align:center;color:var(--text-muted);">No upcoming fixture scheduled.</div>`;
+        details.innerHTML = "";
+        cta.style.display = "none";
+        return;
+      }
+
+      competitionData.nextUp = upcoming;
+
+      matchup.innerHTML = `
+        <div class="next-up-team">
+          <img src="${upcoming.home.crest}" alt="${upcoming.home.name} crest" class="next-up-crest" loading="lazy" />
+          <span class="next-up-team-name">${upcoming.home.name}</span>
+        </div>
+        <span class="next-up-vs">VS</span>
+        <div class="next-up-team">
+          <img src="${upcoming.away.crest}" alt="${upcoming.away.name} crest" class="next-up-crest" loading="lazy" />
+          <span class="next-up-team-name">${upcoming.away.name}</span>
+        </div>
+      `;
+
+      details.innerHTML = `
+        <div class="next-up-detail"><span>${upcoming.date || "TBD"}</span><span>${upcoming.time || "—"}</span></div>
+        <div class="next-up-detail"><span>Pitch</span><span>${upcoming.pitch || "TBD"}</span></div>
+        <div class="next-up-detail"><span>Venue</span><span>${competitionData.venue}</span></div>
+      `;
+    }
+
+    /* --------------------------------------------------------------
+       Initialise
+       -------------------------------------------------------------- */
+    function init() {
+      renderMatches();
+      renderFixtures();
+      renderStandings();
+      renderTopScorers();
+      renderEvents();
+      renderPlayerOfTheDay();
+      renderNextUp();
+
+      // Pitch filter buttons
+      document.querySelectorAll(".pitch-filter").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".pitch-filter").forEach(b => {
+            b.classList.remove("active");
+            b.setAttribute("aria-pressed", "false");
+          });
+          btn.classList.add("active");
+          btn.setAttribute("aria-pressed", "true");
+          renderMatches(btn.dataset.filter);
+        });
+      });
+
+      // Event filter buttons
+      document.querySelectorAll(".event-filter-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".event-filter-btn").forEach(b => {
+            b.classList.remove("active");
+            b.setAttribute("aria-pressed", "false");
+          });
+          btn.classList.add("active");
+          btn.setAttribute("aria-pressed", "true");
+          renderEvents(btn.dataset.filter);
+        });
+      });
+
+      // Mobile menu toggle (reused behaviour)
+      const toggle = document.querySelector(".navbar-toggle");
+      const menu = document.getElementById("navbarMenu");
+      if (toggle && menu) {
+        toggle.addEventListener("click", () => {
+          const open = menu.classList.toggle("open");
+          toggle.setAttribute("aria-expanded", String(open));
+        });
+      }
+    }
+
+    // Reveal-on-scroll animation (reused pattern)
+    const observerOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+    // Start when DOM ready
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
+    }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Organization", "@id": "https://www.theballerleague.in/#organization", "name": "Knuckleball", "legalName": "Knuckleball Global Pvt Ltd", "url": "https://www.theballerleague.in/", "logo": "https://www.theballerleague.in/assets/images/logos/main%20logo.webp", "sameAs": ["https://www.instagram.com/knuckleball.in/", "https://www.youtube.com/@knuckleball-in"] },
+      { "@type": "SportsOrganization", "@id": "https://www.theballerleague.in/#baller-league", "name": "The Baller League", "url": "https://www.theballerleague.in/competition.html", "parentOrganization": { "@id": "https://www.theballerleague.in/#organization" }, "sport": "Football" },
+      { "@type": "WebPage", "@id": "https://www.theballerleague.in/competition.html", "url": "https://www.theballerleague.in/competition.html", "name": "Baller League Competition: Results, Scorers and Standings", "isPartOf": { "@id": "https://www.theballerleague.in/#website" }, "about": { "@id": "https://www.theballerleague.in/#baller-league" }, "inLanguage": "en-IN", "datePublished": "2026-11-06" },
+      { "@type": "WebSite", "@id": "https://www.theballerleague.in/#website", "url": "https://www.theballerleague.in/", "name": "Knuckleball — The Baller League", "publisher": { "@id": "https://www.theballerleague.in/#organization" } },
+      { "@type": "BreadcrumbList", "@id": "https://www.theballerleague.in/competition.html#breadcrumb", "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.theballerleague.in/index.html" },
+        { "@type": "ListItem", "position": 2, "name": "Competition", "item": "https://www.theballerleague.in/competition.html" }
+      ]}
+    ]
+  }
+  </script>
+</body>
+</html>
+
