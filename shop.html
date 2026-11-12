@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -10,9 +10,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="assets/images/logos/main%20logo.webp" type="image/webp" />
+  <link rel="icon" href="assets/images/logos/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logos/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/images/logos/apple-touch-icon.png" />
   <title>Shop | The Baller League: Content &amp; Editions</title>
-  <meta name="description" content="Baller League Shop by Knuckleball, highlight edits, player portraits, team films and editions. Football content professionally produced for players, squads and clubs in Bengaluru." />
+  <meta name="description" content="Baller League Shop by Knuckleball: highlight edits, player portraits, team films and editions for players, squads and clubs in Bengaluru." />
   <link rel="canonical" href="https://www.theballerleague.in/shop.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Knuckleball" />
@@ -21,7 +23,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <meta property="og:url" content="https://www.theballerleague.in/shop.html" />
   <meta property="og:image" content="https://www.theballerleague.in/assets/images/logos/main%20logo.webp" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@knuckleball.in" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -315,7 +316,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </p>
         </div>
 
-        <form class="shop-form" id="shopForm">
+        <form class="shop-form" id="shopForm" action="mailto:hello@theballerleague.in" method="post" enctype="text/plain">
+          <input type="hidden" name="_subject" value="Shop enquiry" />
           <div class="shop-field">
             <label for="f-name">Full name</label>
             <input id="f-name" name="Full name" type="text" autocomplete="name" required />
@@ -396,6 +398,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="shop.html">Shop</a>
         <a href="blog.html">Blog</a>
         <a href="media.html">Media</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="mailto:hello@theballerleague.in">Contact</a>
       </nav>
       <div class="footer-copy">
         <p>&copy; 2026 Baller League Season 2. All rights reserved.</p>
@@ -423,29 +427,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
     });
 
-    // Enquiry is emailed, since no booking backend exists yet.
-    // shortcut: ENQUIRY_INBOX is an unverified placeholder address, not a live inbox.
-    // Replace it with the real shop address before launch, or enquiries are lost.
-    const ENQUIRY_INBOX = 'shop@theballerleague.com';
+    // Enquiries post to Formspree when FORM_ID is set, and fall back to email otherwise.
+    const FORM_ID = 'XXXXXXXX';
+    const FALLBACK_EMAIL = 'hello@theballerleague.in';
     const form = document.getElementById('shopForm');
     const hint = document.getElementById('formHint');
 
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('submit', async (event) => {
       event.preventDefault();
-
       const data = new FormData(form);
-      const lines = [];
-      for (const [key, value] of data.entries()) {
-        if (String(value).trim()) lines.push(key + ': ' + String(value).trim());
+      const subject = 'Shop enquiry: ' + packageSelect.value;
+
+      if (FORM_ID === 'XXXXXXXX') {
+        const lines = [];
+        for (const [key, value] of data.entries()) {
+          if (String(value).trim()) lines.push(key + ': ' + String(value).trim());
+        }
+        hint.textContent = 'Opening your email client with this enquiry\u2026';
+        window.location.href = 'mailto:' + FALLBACK_EMAIL +
+          '?subject=' + encodeURIComponent(subject) +
+          '&body=' + encodeURIComponent(lines.join('\n') + '\n\nSent from the Baller League shop page.');
+        return;
       }
 
-      const subject = 'Shop enquiry: ' + packageSelect.value;
-      const body = lines.join('\n') + '\n\nSent from the Baller League shop page.';
-      hint.textContent = 'Opening your email client with this enquiry…';
-      window.location.href =
-        'mailto:' + ENQUIRY_INBOX +
-        '?subject=' + encodeURIComponent(subject) +
-        '&body=' + encodeURIComponent(body);
+      hint.textContent = 'Sending\u2026';
+      try {
+        const res = await fetch('https://formspree.io/f/' + FORM_ID, {
+          method: 'POST',
+          body: data,
+          headers: { Accept: 'application/json' }
+        });
+        hint.textContent = res.ok
+          ? 'Thanks, we got it. We will reply within one working day.'
+          : 'Something went wrong. Email ' + FALLBACK_EMAIL + ' instead.';
+        if (res.ok) form.reset();
+      } catch {
+        hint.textContent = 'Something went wrong. Email ' + FALLBACK_EMAIL + ' instead.';
+      }
     });
   </script>
 

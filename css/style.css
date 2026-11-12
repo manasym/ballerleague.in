@@ -1180,8 +1180,10 @@ a {
 
 /* ---------- Breadcrumb navigation ---------- */
 .breadcrumb {
-  display: none;
-  padding: 0.55rem 0;
+  display: block;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0.55rem var(--space-2);
   font-size: 0.75rem;
   color: var(--text-faint);
 }
