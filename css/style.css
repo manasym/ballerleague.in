@@ -1180,7 +1180,7 @@ a {
 
 /* ---------- Breadcrumb navigation ---------- */
 .breadcrumb {
-  display: block;
+  display: none;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0.55rem var(--space-2);

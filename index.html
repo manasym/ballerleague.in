@@ -558,70 +558,70 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </script>
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://www.theballerleague.in/#organization",
-        "name": "Knuckleball",
-        "legalName": "Knuckleball Global Pvt Ltd",
-        "url": "https://www.theballerleague.in/",
-        "logo": "https://www.theballerleague.in/assets/images/logos/main%20logo.webp",
-        "description": "Knuckleball is a sports ecosystem developing football competitions, communities and experiences in India. It is the parent organisation of The Baller League and Baller Club.",
-        "sameAs": [
-          "https://www.instagram.com/knuckleball.in/",
-          "https://www.youtube.com/@knuckleball-in"
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.theballerleague.in/#organization",
+      "name": "Knuckleball",
+      "legalName": "Knuckleball Global Pvt Ltd",
+      "url": "https://www.theballerleague.in/",
+      "logo": "https://www.theballerleague.in/assets/images/logos/main%20logo.webp",
+      "description": "Knuckleball is a sports ecosystem developing football competitions, communities and experiences in India. It is the parent organisation of The Baller League and Baller Club.",
+      "sameAs": [
+        "https://www.instagram.com/knuckleball.in/",
+        "https://www.youtube.com/@knuckleball-in"
+      ]
+    },
+    {
+      "@type": "SportsOrganization",
+      "@id": "https://www.theballerleague.in/#baller-league",
+      "name": "The Baller League",
+      "url": "https://www.theballerleague.in/competition.html",
+      "parentOrganization": {
+        "@id": "https://www.theballerleague.in/#organization"
       },
-      {
-        "@type": "SportsOrganization",
-        "@id": "https://www.theballerleague.in/#baller-league",
-        "name": "The Baller League",
-        "url": "https://www.theballerleague.in/competition.html",
-        "parentOrganization": { "@id": "https://www.theballerleague.in/#organization" },
-        "sport": "Football",
-        "description": "The Baller League is the flagship competitive football league organised by Knuckleball, operating in Bengaluru, India."
+      "sport": "Football",
+      "description": "The Baller League is the flagship competitive football league organised by Knuckleball, operating in Bengaluru, India."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.theballerleague.in/index.html",
+      "url": "https://www.theballerleague.in/index.html",
+      "name": "Home | The Baller League Season 02",
+      "isPartOf": {
+        "@id": "https://www.theballerleague.in/#website"
       },
-      {
-        "@type": "WebPage",
-        "@id": "https://www.theballerleague.in/index.html",
-        "url": "https://www.theballerleague.in/index.html",
-        "name": "Home | The Baller League Season 02",
-        "isPartOf": { "@id": "https://www.theballerleague.in/#website" },
-        "primaryContentOfPage": { "@id": "https://www.theballerleague.in/#baller-league" },
-        "about": { "@id": "https://www.theballerleague.in/#organization" },
-        "inLanguage": "en-IN",
-        "datePublished": "2026-11-06",
-        "reviewedBy": { "@id": "https://www.theballerleague.in/#organization" }
+      "primaryContentOfPage": {
+        "@id": "https://www.theballerleague.in/#baller-league"
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://www.theballerleague.in/#website",
-        "url": "https://www.theballerleague.in/",
-        "name": "The Baller League by Knuckleball",
-        "publisher": { "@id": "https://www.theballerleague.in/#organization" },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://www.theballerleague.in/blog.html?q={search_term}",
-          "query-input": "required name=search_term"
-        }
+      "about": {
+        "@id": "https://www.theballerleague.in/#organization"
       },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://www.theballerleague.in/index.html#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.theballerleague.in/index.html"
-          }
-        ]
+      "inLanguage": "en-IN",
+      "datePublished": "2026-11-06",
+      "reviewedBy": {
+        "@id": "https://www.theballerleague.in/#organization"
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.theballerleague.in/#website",
+      "url": "https://www.theballerleague.in/",
+      "name": "The Baller League by Knuckleball",
+      "publisher": {
+        "@id": "https://www.theballerleague.in/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.theballerleague.in/blog.html?q={search_term}",
+        "query-input": "required name=search_term"
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>
 
