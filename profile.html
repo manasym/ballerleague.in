@@ -113,6 +113,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h2 class="pf-head-title" id="pf-details-title">PLAYER DETAILS</h2>
         </div>
         <dl class="pf-facts">
+          <div class="pf-fact"><dt>Position</dt><dd id="pfFactPosition">&mdash;</dd></div>
           <div class="pf-fact"><dt>Shirt number</dt><dd id="pfFactShirt">00</dd></div>
           <div class="pf-fact"><dt>Team</dt><dd id="pfFactTeam">Not recorded</dd></div>
           <div class="pf-fact"><dt>Season</dt><dd>S02 / 026</dd></div>
@@ -189,6 +190,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "bgfc-faisal": { name: "Faisal", position: "Position TBC", team: "Bangalore Grafters FC", shirt: 7, portrait: "assets/images/players/Bangalore%20Grafters/Faisal.webp", stats: { apps: 2, goals: 0, motm: 0 }, honours: [] },
       "bgfc-adnan": { name: "Adnan", position: "Position TBC", team: "Bangalore Grafters FC", shirt: 6, portrait: "assets/images/players/Bangalore%20Grafters/Adnan.webp", stats: { apps: 2, goals: 4, motm: 1 }, honours: [] },
       "bgfc-agastya": { name: "Agastya", position: "Position TBC", team: "Bangalore Grafters FC", shirt: 4, portrait: "assets/images/players/player-placeholder.webp", stats: { apps: 2, goals: 0, motm: 0 }, honours: [] },
+      "bgfc-danny": { name: "Danny", position: "Goalkeeper", team: "Bangalore Grafters FC", shirt: 15, portrait: "assets/images/players/player-placeholder.webp", stats: { apps: 2, goals: 0, motm: 0 }, honours: [] },
 
       /* --------------------------------------------------------------
          Crescents FC
@@ -202,6 +204,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "cf-karthik": { name: "Karthik", position: "Position TBC", team: "Crescents FC", shirt: 5, portrait: "assets/images/players/Crescents%20FC/Karthik.webp", stats: { apps: 2, goals: 0, motm: 0 }, honours: [] },
       "cf-pratik": { name: "Pratik", position: "Position TBC", team: "Crescents FC", shirt: 8, portrait: "assets/images/players/player-placeholder.webp", stats: { apps: 2, goals: 0, motm: 0 }, honours: [] },
       "cf-jaison": { name: "Jaison", position: "Position TBC", team: "Crescents FC", shirt: 29, portrait: "assets/images/players/player-placeholder.webp", stats: { apps: 2, goals: 0, motm: 0 }, honours: [] },
+      "cf-barath": { name: "Barath", position: "Goalkeeper", team: "Crescents FC", shirt: 1, portrait: "assets/images/players/player-placeholder.webp", stats: { apps: 2, goals: 0, motm: 0 }, honours: [] },
 
       /* --------------------------------------------------------------
          Falcons FC
@@ -228,6 +231,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "lffa-nangkhraw": { name: "Nangkhraw", position: "Position TBC", team: "Legacy FFA", shirt: 4, portrait: "assets/images/players/player-placeholder.webp", stats: { apps: 2, goals: 0, motm: 0 }, honours: [] },
       "lffa-trippzy": { name: "Trippzy", position: "Position TBC", team: "Legacy FFA", shirt: 10, portrait: "assets/images/players/player-placeholder.webp", stats: { apps: 2, goals: 1, motm: 0 }, honours: [] },
       "lffa-aaron": { name: "Aaron", position: "Position TBC", team: "Legacy FFA", shirt: 3, portrait: "assets/images/players/player-placeholder.webp", stats: { apps: 2, goals: 0, motm: 0 }, honours: [] },
+      "lffa-gigi": { name: "Gigi", position: "Goalkeeper", team: "Legacy FFA", shirt: 20, portrait: "assets/images/players/player-placeholder.webp", stats: { apps: 2, goals: 0, motm: 0 }, honours: [] },
 
       /* --------------------------------------------------------------
          NBFC
@@ -248,7 +252,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          -------------------------------------------------------------- */
       "nexus-ani": { name: "Ani", position: "Position TBC", team: "NEXUS FC", shirt: 19, portrait: "assets/images/players/Nexus%20FC/Ani.webp", stats: { apps: 1, goals: 0, motm: 0 }, honours: [] },
       "nexus-adi": { name: "Adi", position: "Position TBC", team: "NEXUS FC", shirt: 7, portrait: "assets/images/players/Nexus%20FC/Adi.webp", stats: { apps: 1, goals: 0, motm: 0 }, honours: [] },
-      "nexus-chethan": { name: "Chethan", position: "Position TBC", team: "NEXUS FC", shirt: 99, portrait: "assets/images/players/Nexus%20FC/Chetan.webp", stats: { apps: 1, goals: 2, motm: 1 }, honours: [] },
+      "nexus-chethan": { name: "Chethan", position: "Goalkeeper", team: "NEXUS FC", shirt: 99, portrait: "assets/images/players/Nexus%20FC/Chetan.webp", stats: { apps: 1, goals: 2, motm: 1 }, honours: [] },
       "nexus-arjun": { name: "Arjun", position: "Position TBC", team: "NEXUS FC", shirt: 13, portrait: "assets/images/players/Nexus%20FC/Arjun.webp", stats: { apps: 1, goals: 0, motm: 0 }, honours: [] },
       "nexus-samanth": { name: "Samanth", position: "Position TBC", team: "NEXUS FC", shirt: 21, portrait: "assets/images/players/Nexus%20FC/Samanth.webp", stats: { apps: 1, goals: 0, motm: 0 }, honours: [] },
       "nexus-yashas": { name: "Yashas", position: "Position TBC", team: "NEXUS FC", shirt: 3, portrait: "assets/images/players/Nexus%20FC/Yashas.webp", stats: { apps: 1, goals: 0, motm: 0 }, honours: [] },
@@ -266,7 +270,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "pfc-sajay": { name: "Sajay", position: "Position TBC", team: "Passion FC", shirt: 80, portrait: "assets/images/players/Passion%20FC/sajay.webp", stats: { apps: 2, goals: 0, motm: 0 }, honours: [] },
       "pfc-wani": { name: "Wani", position: "Position TBC", team: "Passion FC", shirt: 22, portrait: "assets/images/players/Passion%20FC/Wani.webp", stats: { apps: 2, goals: 2, motm: 0 }, honours: [] },
       "pfc-dhruva": { name: "Dhruva", position: "Position TBC", team: "Passion FC", shirt: "07", portrait: "assets/images/players/player-placeholder.webp", stats: { apps: 2, goals: 0, motm: 0 }, honours: [] },
-      "pfc-dhruv": { name: "Dhruv", position: "Position TBC", team: "Passion FC", portrait: "assets/images/players/Passion%20FC/Dhruv.webp", stats: { apps: 2, goals: 1, motm: 0 }, honours: [] },
+      "pfc-dhruv": { name: "Dhruv", position: "Goalkeeper", team: "Passion FC", shirt: 23, portrait: "assets/images/players/Passion%20FC/Dhruv.webp", stats: { apps: 2, goals: 1, motm: 0 }, honours: [] },
+      "pfc-aashish": { name: "Aashish", position: "Goalkeeper", team: "Passion FC", shirt: 56, portrait: "assets/images/players/player-placeholder.webp", stats: { apps: 2, goals: 0, motm: 0 }, honours: [] },
 
       /* --------------------------------------------------------------
          United 5's
@@ -280,6 +285,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "u5s-nitesh": { name: "Nitesh", position: "Position TBC", team: "United 5's", shirt: 7, portrait: "assets/images/players/player-placeholder.webp", stats: { apps: 2, goals: 1, motm: 0 }, honours: [] },
       "u5s-ankit": { name: "Ankit", position: "Position TBC", team: "United 5's", shirt: 10, portrait: "assets/images/players/player-placeholder.webp", stats: { apps: 2, goals: 2, motm: 0 }, honours: [] },
       "u5s-athing": { name: "Athing", position: "Position TBC", team: "United 5's", shirt: 20, portrait: "assets/images/players/player-placeholder.webp", stats: { apps: 2, goals: 0, motm: 0 }, honours: [] },
+      "u5s-manish": { name: "Manish", position: "Goalkeeper", team: "United 5's", shirt: 30, portrait: "assets/images/players/player-placeholder.webp", stats: { apps: 2, goals: 0, motm: 0 }, honours: [] },
 
       /* --------------------------------------------------------------
          Veltrix United
@@ -291,6 +297,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "vu-maaziee": { name: "Maaziee", position: "Position TBC", team: "Veltrix United", shirt: 21, portrait: "assets/images/players/player-placeholder.webp", stats: { apps: 2, goals: 2, motm: 0 }, honours: [] },
       "vu-chetan": { name: "Chetan", position: "Position TBC", team: "Veltrix United", shirt: 7, portrait: "assets/images/players/Veltrix%20United/Chetan.webp", stats: { apps: 2, goals: 1, motm: 0 }, honours: [] },
       "vu-mikey": { name: "Mikey", position: "Position TBC", team: "Veltrix United", shirt: 6, portrait: "assets/images/players/Veltrix%20United/Manjunath.webp", stats: { apps: 2, goals: 0, motm: 0 }, honours: [] },
+      "vu-noorjahan": { name: "Noorjahan", position: "Goalkeeper", team: "Veltrix United", shirt: 14, portrait: "assets/images/players/player-placeholder.webp", stats: { apps: 2, goals: 0, motm: 0 }, honours: [] },
 
 
       /* --------------------------------------------------------------
@@ -397,6 +404,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         document.getElementById("pfPortrait").alt = "Player portrait";
         document.getElementById("pfFactShirt").textContent = "00";
         document.getElementById("pfFactTeam").textContent = "Not recorded";
+        document.getElementById("pfFactPosition").textContent = "—";
         document.getElementById("pfStatApps").textContent = "—";
         document.getElementById("pfStatGoals").textContent = "—";
         document.getElementById("pfStatMotm").textContent = "—";
@@ -413,6 +421,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       document.getElementById("pfPortrait").alt = player.name + " portrait";
       document.getElementById("pfFactShirt").textContent = player.shirt !== undefined ? player.shirt : "00";
       document.getElementById("pfFactTeam").textContent = player.team;
+      document.getElementById("pfFactPosition").textContent = player.position || "—";
       document.getElementById("pfStatApps").textContent = player.stats && player.stats.apps !== undefined ? player.stats.apps : "—";
       document.getElementById("pfStatGoals").textContent = player.stats && player.stats.goals !== undefined ? player.stats.goals : "—";
       document.getElementById("pfStatMotm").textContent = player.stats && player.stats.motm !== undefined ? player.stats.motm : "—";
