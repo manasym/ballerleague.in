@@ -845,6 +845,17 @@
 }
 
 /* Card body, portrait and name plate come from style.css; only the badge is new */
+.featured-players .card-portrait {
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* Placeholder art has text, so show all of it instead of cropping */
+.featured-players .player-card--placeholder .card-portrait {
+  object-fit: contain;
+}
+
 .featured-players .card-goals {
   position: absolute;
   top: 0.75rem;
