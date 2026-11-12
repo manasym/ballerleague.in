@@ -1,10 +1,10 @@
 /* --------------------------------------------------------------
-   Baller League Season 2 — Blog index
+   Baller League Season 2, Blog index
    Only what style.css does not already cover: the CSS-only image
    placeholder tiles, the date line and the placeholder note.
    -------------------------------------------------------------- */
 
-/* Image placeholder — pure CSS, so it can never render as a broken image */
+/* Image placeholder: pure CSS, so it can never render as a broken image */
 .article-image--placeholder {
   display: flex;
   align-items: center;
@@ -25,7 +25,7 @@
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  /* 5.2:1 on the #0a111f tile — --text-muted is only 4.34:1 there */
+  /* 5.2:1 on the #0a111f tile: --text-muted is only 4.34:1 there */
   color: #7a879b;
 }
 

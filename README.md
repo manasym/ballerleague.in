@@ -1,4 +1,4 @@
-# the baller league — Player Album
+# the baller league: Player Album
 
 Static site for Baller League Season 2: teams, squad carousels, player profiles, competition table, shop, blog and media.
 
@@ -8,13 +8,13 @@ No build step, no framework. Plain HTML, CSS and vanilla JS, ready for GitHub Pa
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Home — hero, standings, team carousel |
+| `index.html` | Home: hero, standings, team carousel |
 | `competition.html` | Standings, fixtures, results |
 | `players.html` | 15 team squads with swipeable carousels |
-| `profile.html` | Single player profile — `profile.html?player=<id>` |
+| `profile.html` | Single player profile: `profile.html?player=<id>` |
 | `shop.html` | Shop / merchandise |
 | `blog.html` | News index |
-| `news-matchday-1-recap.html` | Matchday 1 recap — results, scorers, standings |
+| `news-matchday-1-recap.html` | Matchday 1 recap: results, scorers, standings |
 | `news-wlwg-comeback.html` | WLWG FC 4-2 Walkalone match report |
 | `news-bangalore-grafters-10-2.html` | Bangalore Grafters 10-2 Walkalone match report |
 | `article.html` | Article template |
@@ -82,12 +82,12 @@ Until real photos are uploaded, cards use the placeholders in `assets/images/gra
 
 The site is optimised for Google Search, AI Overviews, ChatGPT, Perplexity, Copilot, Bing and Gemini.
 
-**Canonical domain:** `https://www.theballerleague.in` — used in `robots.txt`, `sitemap.xml`, `rss.xml`, every page's `<link rel="canonical">` / `og:url`, and JSON-LD `@id` / `url` values.
+**Canonical domain:** `https://www.theballerleague.in`: used in `robots.txt`, `sitemap.xml`, `rss.xml`, every page's `<link rel="canonical">` / `og:url`, and JSON-LD `@id` / `url` values.
 
 **Files added:**
-- `llms.txt` — experimental content directory for AI discovery platforms
-- `rss.xml` — RSS feed for the blog/news channel
-- `css/style.css` — breadcrumb navigation styles
+- `llms.txt`: experimental content directory for AI discovery platforms
+- `rss.xml`: RSS feed for the blog/news channel
+- `css/style.css`: breadcrumb navigation styles
 
 **Implemented on every page:**
 - Canonical URL, Open Graph (`og:title`, `og:description`, `og:url`, `og:image`, `og:type`, `og:site_name`) and Twitter card meta tags

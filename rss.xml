@@ -1,14 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Knuckleball — The Baller League Blog</title>
+    <title>The Baller League Blog by Knuckleball</title>
     <link>https://www.theballerleague.in/blog.html</link>
-    <description>Stories, match reports and features from The Baller League — organised by Knuckleball.</description>
+    <description>Stories, match reports and features from The Baller League, organised by Knuckleball.</description>
     <language>en-in</language>
-    <lastBuildDate>2026-11-09T09:00:00+05:30</lastBuildDate>
+    <lastBuildDate>2026-11-12T09:00:00+05:30</lastBuildDate>
     <atom:link href="https://www.theballerleague.in/rss.xml" rel="self" type="application/rss+xml" />
     <managingEditor>editor@knuckleball.in (Knuckleball Editorial)</managingEditor>
     <webMaster>webmaster@knuckleball.in</webMaster>
+    <item>
+      <title>Group B Matchday 1 recap: eight results, 42 goals and Legacy FFA on top</title>
+      <link>https://www.theballerleague.in/news-group-b-matchday-1-recap.html</link>
+      <description>Every Group B result and scorer from Matchday 1, the full table and the numbers behind Legacy FFA's perfect start.</description>
+      <pubDate>Thu, 12 Nov 2026 09:00:00 +0530</pubDate>
+      <guid isPermaLink="false">https://www.theballerleague.in/news-group-b-matchday-1-recap.html</guid>
+    </item>
+    <item>
+      <title>Darshan's eight goals: how Legacy FFA's number 7 took the league lead</title>
+      <link>https://www.theballerleague.in/news-darshan-eight-goals-legacy-ffa.html</link>
+      <description>Six against NBFC, two against United 5's. Darshan has eight goals in two matches and a four-goal lead at the top of the charts.</description>
+      <pubDate>Thu, 12 Nov 2026 09:05:00 +0530</pubDate>
+      <guid isPermaLink="false">https://www.theballerleague.in/news-darshan-eight-goals-legacy-ffa.html</guid>
+    </item>
+    <item>
+      <title>Passion FC start 2-0: Dilsher's hat-trick seals a 4-3 thriller against Veltrix</title>
+      <link>https://www.theballerleague.in/news-passion-fc-two-wins.html</link>
+      <description>Passion FC have won both Group B matches, beating Crescents 4-1 and Veltrix 4-3 with Dilsher scoring four goals in two games.</description>
+      <pubDate>Thu, 12 Nov 2026 09:10:00 +0530</pubDate>
+      <guid isPermaLink="false">https://www.theballerleague.in/news-passion-fc-two-wins.html</guid>
+    </item>
+    <item>
+      <title>United 5's 4-1 Falcons FC: Yashwanth's double and an own goal</title>
+      <link>https://www.theballerleague.in/news-united-5s-4-1-falcons.html</link>
+      <description>Yashwanth scored twice, Ankit and Nitesh once each, and Falcons' only goal came from an own goal by Swapnil.</description>
+      <pubDate>Thu, 12 Nov 2026 09:15:00 +0530</pubDate>
+      <guid isPermaLink="false">https://www.theballerleague.in/news-united-5s-4-1-falcons.html</guid>
+    </item>
+    <item>
+      <title>Crescents FC 3-2 First Touch FC: Sanjay's double settles a five-goal game</title>
+      <link>https://www.theballerleague.in/news-crescents-first-touch-3-2.html</link>
+      <description>Sanjay scored twice and Manoj once as Crescents beat First Touch 3-2. Muied scored both of First Touch's goals.</description>
+      <pubDate>Thu, 12 Nov 2026 09:20:00 +0530</pubDate>
+      <guid isPermaLink="false">https://www.theballerleague.in/news-crescents-first-touch-3-2.html</guid>
+    </item>
+    <item>
+      <title>How the Baller League works: format, points and tiebreakers explained</title>
+      <link>https://www.theballerleague.in/news-baller-league-format-explained.html</link>
+      <description>A plain-English guide to Season 02: the two groups, the points system, goal-difference tiebreaks and how scorers are counted.</description>
+      <pubDate>Thu, 12 Nov 2026 09:25:00 +0530</pubDate>
+      <guid isPermaLink="false">https://www.theballerleague.in/news-baller-league-format-explained.html</guid>
+    </item>
     <item>
       <title>Baller League Matchday 1 recap: results, scorers and Group A standings</title>
       <link>https://www.theballerleague.in/news-matchday-1-recap.html</link>
@@ -31,7 +73,7 @@
       <guid isPermaLink="false">https://www.theballerleague.in/news-bangalore-grafters-10-2.html</guid>
     </item>
     <item>
-      <title>Baller League Season 2 — matchday archive opens</title>
+      <title>Baller League Season 2: matchday archive opens</title>
       <link>https://www.theballerleague.in/media.html</link>
       <description>The Season 2 matchday archive is live: full match replays, extended highlights, goals and player features from the Knuckleball Originals archive.</description>
       <pubDate>Sun, 08 Nov 2026 00:00:00 +0530</pubDate>

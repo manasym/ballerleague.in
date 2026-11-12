@@ -1,5 +1,5 @@
 /* --------------------------------------------------------------
-   Baller League Season 2 — Article page
+   Baller League Season 2, Article page
    Editorial layout reusing the shared Y2K navigation and design tokens
    -------------------------------------------------------------- */
 
@@ -244,7 +244,7 @@
   border-bottom: 1px dashed #3a3a3a;
 }
 
-/* Image placeholder — pure CSS, so it can never render as a broken image */
+/* Image placeholder: pure CSS, so it can never render as a broken image */
 .img-placeholder {
   display: flex;
   align-items: center;
@@ -267,7 +267,7 @@
   letter-spacing: 0.16em;
   text-transform: uppercase;
   text-align: center;
-  /* 5.2:1 on the #0a111f tile — --text-muted is only 4.34:1 there */
+  /* 5.2:1 on the #0a111f tile: --text-muted is only 4.34:1 there */
   color: #7a879b;
 }
 
@@ -441,4 +441,44 @@
   line-height: 1.5;
   margin: var(--space-3) 0 0.35rem;
   max-width: 68ch;
+}
+
+/* Collapsible FAQ: native <details> so it works without JS */
+.article-faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.article-faq-item:first-of-type {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.article-faq-item .article-faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 0;
+  padding: 1rem 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.article-faq-item .article-faq-q::-webkit-details-marker {
+  display: none;
+}
+
+.article-faq-item .article-faq-q::after {
+  content: "+";
+  flex-shrink: 0;
+  color: var(--neon-yellow);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.article-faq-item[open] .article-faq-q::after {
+  content: "\2013";
+}
+
+.article-faq-item .article-paragraph {
+  margin: 0 0 1rem;
 }

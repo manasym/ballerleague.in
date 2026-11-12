@@ -1,4 +1,4 @@
-# llms.txt — experimental content directory for AI discovery platforms.
+# llms.txt, experimental content directory for AI discovery platforms.
 # Canonical domain: https://www.theballerleague.in/
 
 # Knuckleball / The Baller League
@@ -7,21 +7,27 @@
 
 ## Core pages
 
-- [Home](/index.html) — The Baller League Season 2: competition overview, teams, standings and registration.
-- [Competition](/competition.html) — Match centre, fixtures, results and league standings for Baller League Season 2.
-- [Players](/players.html) — All Baller League Season 2 team squads and player profiles.
-- [Media](/media.html) — Match highlights, full-match replays, photography and social feeds from @knuckleball.in.
-- [Shop](/shop.html) — Baller League content services: highlight edits, player portraits, team films and editions.
-- [Blog](/blog.html) — Season 2 stories, match reports and editorial content.
-- [Matchday 1 recap](/news-matchday-1-recap.html) — Every Group A result and scorer, standings and top scorers after the opening round.
-- [WLWG FC 4-2 Walkalone](/news-wlwg-comeback.html) — Match report on WLWG's comeback from 2-0 down.
-- [Bangalore Grafters 10-2 Walkalone](/news-bangalore-grafters-10-2.html) — Adnan's four-goal match report and Group A table impact.
+- [Home](/index.html): The Baller League Season 2: competition overview, teams, standings and registration.
+- [Competition](/competition.html): Match centre, fixtures, results and league standings for Baller League Season 2.
+- [Players](/players.html): All Baller League Season 2 team squads and player profiles.
+- [Media](/media.html): Match highlights, full-match replays, photography and social feeds from @knuckleball.in.
+- [Shop](/shop.html): Baller League content services: highlight edits, player portraits, team films and editions.
+- [Blog](/blog.html): Season 2 stories, match reports and editorial content.
+- [Matchday 1 recap](/news-matchday-1-recap.html): Every Group A result and scorer, standings and top scorers after the opening round.
+- [WLWG FC 4-2 Walkalone](/news-wlwg-comeback.html): Match report on WLWG's comeback from 2-0 down.
+- [Bangalore Grafters 10-2 Walkalone](/news-bangalore-grafters-10-2.html): Adnan's four-goal match report and Group A table impact.
+- [Group B Matchday 1 recap](/news-group-b-matchday-1-recap.html): All eight Group B results, every scorer, the table and the key numbers.
+- [Darshan's eight goals](/news-darshan-eight-goals-legacy-ffa.html): Legacy FFA's number 7 and the early lead in the Season 02 scoring chart.
+- [Passion FC start 2-0](/news-passion-fc-two-wins.html): Dilsher's hat-trick, a 4-3 win over Veltrix and a 4-1 win over Crescents.
+- [United 5's 4-1 Falcons FC](/news-united-5s-4-1-falcons.html): Yashwanth's double, an own goal and what it means for Group B.
+- [Crescents FC 3-2 First Touch FC](/news-crescents-first-touch-3-2.html): Sanjay's double and Muied's brace in a five-goal Group B match.
+- [How the Baller League works](/news-baller-league-format-explained.html): Season 02 format, groups, points, goal-difference tiebreaks and scorer rules.
 
 ## Brand
 
-- [Knuckleball Global Pvt Ltd](/about.html) — Parent company identity, mission and leadership (page to be published).
-- [The Baller League](/baller-league.html) — Competition format, history and how to participate (page to be published).
-- [Baller Club](/baller-club.html) — Football community and learning initiative (page to be published).
+- [Knuckleball Global Pvt Ltd](/about.html): Parent company identity, mission and leadership (page to be published).
+- [The Baller League](/baller-league.html): Competition format, history and how to participate (page to be published).
+- [Baller Club](/baller-club.html): Football community and learning initiative (page to be published).
 
 ## Official social profiles
 

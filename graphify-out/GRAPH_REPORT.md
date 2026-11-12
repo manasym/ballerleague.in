@@ -1,7 +1,7 @@
-# Graph Report - theballerleague.in  (2026-11-09)
+# Graph Report - Player Album  (2026-11-12)
 
 ## Corpus Check
-- 3 files · ~209,599 words
+- 3 files · ~332,483 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 12 file(s) not represented in the graph (top: .css 8, (none) 2, .xml 2)
 
@@ -15,7 +15,7 @@
 - the baller league — Player Album
 
 ## God Nodes (most connected - your core abstractions)
-1. `the baller league — Player Album` - 8 edges
+1. `the baller league: Player Album` - 8 edges
 2. `graphify` - 1 edges
 3. `Pages` - 1 edges
 4. `Structure` - 1 edges
@@ -32,7 +32,7 @@
 
 ### Community 1 - "the baller league — Player Album"
 Cohesion: 0.22
-Nodes (8): Adding player photos, Deploy to GitHub Pages, Local preview, Notes, Pages, SEO / AEO / GEO, Structure, the baller league — Player Album
+Nodes (8): Adding player photos, Deploy to GitHub Pages, Local preview, Notes, Pages, SEO / AEO / GEO, Structure, the baller league: Player Album
 
 ## Knowledge Gaps
 - **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.

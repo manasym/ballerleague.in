@@ -1,5 +1,5 @@
 /* --------------------------------------------------------------
-   Baller League Season 2 — Homepage
+   Baller League Season 2, Homepage
    Home-specific styles reused with the shared Y2K design tokens
    -------------------------------------------------------------- */
 
@@ -47,7 +47,8 @@
 
 .hero-slide-img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -94,6 +95,16 @@
   color: var(--text-white);
   margin: 0 0 1rem;
   display: block;
+}
+
+/* Article slides carry a full headline, so they get a wider box and smaller type */
+.hero-content--article {
+  max-width: 700px;
+}
+
+.hero-title--article {
+  font-size: clamp(1.9rem, 4.2vw, 3.6rem);
+  line-height: 1.06;
 }
 
 .hero-word {
@@ -236,17 +247,6 @@
   }
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 800ms var(--ease-smooth), transform 800ms var(--ease-smooth);
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* ---------- Competition dashboard ---------- */
 .dashboard {
   display: grid;
@@ -285,8 +285,8 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--neon-yellow), var(--neon-magenta));
-  opacity: 0.5;
+  background: var(--neon-yellow);
+  opacity: 1;
   border-radius: var(--radius-card) var(--radius-card) 0 0;
 }
 
@@ -331,7 +331,8 @@
 }
 
 /* Match label */
-.dashboard-panel-match-label {
+.dashboard-panel-match-label,
+.panel-match-label {
   font-size: 0.8rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -823,6 +824,8 @@
   flex: 0 0 auto;
   width: min(260px, calc(100vw - 2rem));
   height: 420px;
+  display: block;
+  text-decoration: none;
   border-radius: var(--radius-card);
   overflow: hidden;
   background: #0a111f;
@@ -841,80 +844,27 @@
   border-color: var(--neon-yellow);
 }
 
-.featured-players .card-bg--normal {
-  opacity: 1;
-  z-index: 1;
-}
-
-.featured-players .card-bg--hover {
-  opacity: 0;
-  z-index: 1;
-}
-
-.featured-players .card-portrait-wrap {
+/* Card body, portrait and name plate come from style.css; only the badge is new */
+.featured-players .card-goals {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: transparent;
-}
-
-.featured-players .card-portrait {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-}
-
-.featured-players .card-number {
-  display: none;
-}
-
-.featured-players .card-flag {
-  display: none;
-}
-
-.featured-players .card-divider {
-  display: none;
-}
-
-.featured-players .card-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 5;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
   background: var(--neon-yellow);
-  padding: 0.9rem 1rem;
-  z-index: 3;
-}
-
-.featured-players .card-name {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-}
-
-.featured-players .card-first {
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-transform: uppercase;
+  color: var(--near-black);
+  font-size: 0.7rem;
+  font-weight: 800;
   letter-spacing: 0.08em;
-  color: var(--near-black);
-}
-
-.featured-players .card-surname {
-  font-size: 1.6rem;
-  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: -0.02em;
-  line-height: 0.95;
-  color: var(--near-black);
+  line-height: 1;
 }
 
-.featured-players .card-role {
-  display: none;
+/* Long club names (Bangalore Grafters FC) need the smaller line */
+.featured-players .card-first {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
 }
 
 /* Empty state: featured players have no confirmed squad list yet */
@@ -1278,7 +1228,7 @@
 /* ---------- Responsive ---------- */
 @media (min-width: 641px) {
   .dashboard {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.25rem;
   }
 
@@ -1319,13 +1269,12 @@
   }
 
   .dashboard {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.25rem;
     padding: var(--space-6) 0;
   }
 
   .dashboard-panel {
-    min-height: 320px;
     padding: 1.5rem 1.25rem 1.25rem;
   }
 
@@ -1402,3 +1351,66 @@ body {
   }
 }
 
+/* ---------- Mobile: hero and dashboard ---------- */
+@media (max-width: 640px) {
+  /* Photo-first hero: the headline stays for screen readers, the rest goes */
+  .hero-eyebrow,
+  .hero-season,
+  .hero-dek {
+    display: none;
+  }
+
+  .hero-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  .hero-cta-secondary {
+    display: none;
+  }
+
+  .hero-content {
+    padding: var(--space-4);
+  }
+
+  .hero-slide,
+  .hero-slide-img {
+    min-height: 260px;
+  }
+
+  .hero-carousel .hero-swiper .hero-pagination {
+    top: var(--space-3);
+    right: var(--space-4);
+    bottom: auto;
+    left: auto;
+    width: auto;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* Seven standings columns need room to scroll instead of squashing */
+  .standings-table {
+    min-width: 430px;
+  }
+
+  /* Arrows sit on top of the cards at this width, swiping is the control */
+  .carousel-btn {
+    display: none;
+  }
+
+  .dashboard,
+  .teams-section,
+  .partners-section {
+    padding: var(--space-4) 0;
+  }
+}

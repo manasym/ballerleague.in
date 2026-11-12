@@ -12,45 +12,45 @@
     "semantic_hash": ""
   },
   "article.html": {
-    "mtime": 1794218699.8074706,
-    "seen": 1794218881.8763077,
-    "ast_hash": "69affc5e44f7b7834f27db09ca9e91b9",
+    "mtime": 1794472180.702743,
+    "seen": 1794472305.6023135,
+    "ast_hash": "f98475e8552dcfca1631153a1af65a34",
     "semantic_hash": ""
   },
   "blog.html": {
-    "mtime": 1794218699.8094676,
-    "seen": 1794218881.8763077,
-    "ast_hash": "165b01ffe6e852c4da193acb67cab1ee",
+    "mtime": 1794474363.7022245,
+    "seen": 1794474467.6932373,
+    "ast_hash": "47e17ef983fa57a98e3349ad89205ced",
     "semantic_hash": ""
   },
   "competition.html": {
-    "mtime": 1794218699.8139834,
-    "seen": 1794218881.8763077,
-    "ast_hash": "36e6a41dbb7c9926e33d9c3f3986a12e",
+    "mtime": 1794474938.6363878,
+    "seen": 1794475687.932558,
+    "ast_hash": "289334fd4be0af616dcc3bd6d641ccdd",
     "semantic_hash": ""
   },
   "media.html": {
-    "mtime": 1794218699.8261404,
-    "seen": 1794218881.8763077,
-    "ast_hash": "6a6ecb2a03094ac92c2cb7205df3ece3",
+    "mtime": 1794472180.6992216,
+    "seen": 1794472305.6023135,
+    "ast_hash": "3171904f7ebd312f41c3315c0a3679f7",
     "semantic_hash": ""
   },
   "players.html": {
-    "mtime": 1794218699.8664289,
-    "seen": 1794218881.8763077,
-    "ast_hash": "55a8e50f8f8c0ea34c64427c1e51acb4",
+    "mtime": 1794472087.3559325,
+    "seen": 1794472305.6023135,
+    "ast_hash": "29b4b7b6c05200db2b43ac057f7f5f40",
     "semantic_hash": ""
   },
   "profile.html": {
-    "mtime": 1794218699.8714466,
-    "seen": 1794218881.8763077,
-    "ast_hash": "a3b9bd9f72950cbf9099d21fb5e29156",
+    "mtime": 1794474538.038847,
+    "seen": 1794474550.371633,
+    "ast_hash": "a90126b8bf88ca4c3ac4ae592ec6c5ca",
     "semantic_hash": ""
   },
   "shop.html": {
-    "mtime": 1794218699.8784723,
-    "seen": 1794218881.8763077,
-    "ast_hash": "797f5986651790d58054ad76accdcb54",
+    "mtime": 1794472217.6146665,
+    "seen": 1794472305.6023135,
+    "ast_hash": "c936f09f6984fc9808710a3069e61b9c",
     "semantic_hash": ""
   },
   ".github/workflows/deploy.yml": {
@@ -60,15 +60,15 @@
     "semantic_hash": ""
   },
   "404.html": {
-    "mtime": 1794218699.8013074,
-    "seen": 1794218881.8763077,
-    "ast_hash": "3f888918cf990723f4c33cf63db555b1",
+    "mtime": 1794472086.604351,
+    "seen": 1794472305.6023135,
+    "ast_hash": "8509b1ec3c71ff0de0752e09947dd90c",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1794218714.0526943,
-    "seen": 1794218881.8763077,
-    "ast_hash": "e5576681ec227d7c98875df73e5e774a",
+    "mtime": 1794472318.6345954,
+    "seen": 1794474467.6932373,
+    "ast_hash": "82c0843d1620cde2e7804f0a8ce68459",
     "semantic_hash": ""
   },
   "assets/data/PLayers list.txt": {
@@ -78,45 +78,15 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1794218699.8185804,
-    "seen": 1794218881.8763077,
-    "ast_hash": "69ec8daf1dfef3a7d55598e2475509f7",
+    "mtime": 1794476135.2717743,
+    "seen": 1794476265.8229337,
+    "ast_hash": "f7bc4765d2a419982a82e093b2ac7514",
     "semantic_hash": ""
   },
   "robots.txt": {
     "mtime": 1794218713.9977274,
-    "seen": 1794218881.8763077,
+    "seen": 1794463945.074695,
     "ast_hash": "9183a5336fe53910ee64f5a7505e00c2",
-    "semantic_hash": ""
-  },
-  "assets/images/graphics/Home Page/Partner logos/knuckleball.webp": {
-    "mtime": 1793975517.6886096,
-    "seen": 1793980099.4523118,
-    "ast_hash": "42994c106425db9a2bb3bb5bddc7d92d",
-    "semantic_hash": ""
-  },
-  "assets/images/graphics/Home Page/Partner logos/kridah labs.webp": {
-    "mtime": 1793975517.285678,
-    "seen": 1793980099.4523118,
-    "ast_hash": "f4df1a17a04848a05897f75e712563f8",
-    "semantic_hash": ""
-  },
-  "assets/images/graphics/Home Page/Partner logos/newage.webp": {
-    "mtime": 1793975514.5171418,
-    "seen": 1793980099.4523118,
-    "ast_hash": "a8988b376534e0127cb452b9a801916c",
-    "semantic_hash": ""
-  },
-  "assets/images/graphics/Home Page/Partner logos/sharepal.webp": {
-    "mtime": 1794030156.8247912,
-    "seen": 1794030808.6138942,
-    "ast_hash": "69b2988f63cc9beb1e09b8080945bccc",
-    "semantic_hash": ""
-  },
-  "assets/images/graphics/Home Page/Partner logos/streetplay.webp": {
-    "mtime": 1793975516.698885,
-    "seen": 1793980099.4523118,
-    "ast_hash": "8ae760c086a475d5a83636c5860613e9",
     "semantic_hash": ""
   },
   "assets/images/graphics/Home Page/hero image 2 in home page.webp": {
@@ -141,24 +111,6 @@
     "mtime": 1793975510.6532524,
     "seen": 1793980099.4523118,
     "ast_hash": "cb0e9aabaf0ebea6c50f011fd8cc10c9",
-    "semantic_hash": ""
-  },
-  "assets/images/graphics/Player/test 33.webp": {
-    "mtime": 1792258202.9232736,
-    "seen": 1793980099.4523118,
-    "ast_hash": "13be85dd7f3d18327c4fa27eabac51c6",
-    "semantic_hash": ""
-  },
-  "assets/images/graphics/Player/test11.webp": {
-    "mtime": 1792258176.8691561,
-    "seen": 1793980099.4523118,
-    "ast_hash": "d526991a595258d10ab83d912c515bfa",
-    "semantic_hash": ""
-  },
-  "assets/images/graphics/Player/test22.webp": {
-    "mtime": 1792258194.5606713,
-    "seen": 1793980099.4523118,
-    "ast_hash": "abeec90eb4db007ff8803628319cc84f",
     "semantic_hash": ""
   },
   "assets/images/graphics/hover/hover.webp": {
@@ -462,9 +414,9 @@
     "semantic_hash": ""
   },
   "llms.txt": {
-    "mtime": 1794218714.0007346,
-    "seen": 1794218881.8763077,
-    "ast_hash": "c242bb8a0ea3e40041873aaf5d02b529",
+    "mtime": 1794472087.5382812,
+    "seen": 1794472305.6023135,
+    "ast_hash": "703e4a2ddd1625dd0e8ece36848d5512",
     "semantic_hash": ""
   },
   "assets/images/players/Bangalore Grafters/AJU.webp": {
@@ -510,21 +462,21 @@
     "semantic_hash": ""
   },
   "news-bangalore-grafters-10-2.html": {
-    "mtime": 1794218699.8301718,
-    "seen": 1794218881.8763077,
-    "ast_hash": "22700861f722e39908798c3eaf20d851",
+    "mtime": 1794474363.6855307,
+    "seen": 1794474467.6932373,
+    "ast_hash": "d0232909cf0cf27fa9697a7a6a9655ec",
     "semantic_hash": ""
   },
   "news-matchday-1-recap.html": {
-    "mtime": 1794218699.8528428,
-    "seen": 1794218881.8763077,
-    "ast_hash": "a61b56bc07ca9081dac2af57f2a3f086",
+    "mtime": 1794474363.6954486,
+    "seen": 1794474467.6932373,
+    "ast_hash": "88729a73155d6ebfe1514cb51c0cf39e",
     "semantic_hash": ""
   },
   "news-wlwg-comeback.html": {
-    "mtime": 1794218699.8573823,
-    "seen": 1794218881.8763077,
-    "ast_hash": "fb13663828831a068d785bd3ae8bc69d",
+    "mtime": 1794474363.6994524,
+    "seen": 1794474467.6932373,
+    "ast_hash": "79ab01efb0fd45e8b1d17d5ff7cc7e63",
     "semantic_hash": ""
   },
   "assets/images/players/Crescents FC/Hari.webp": {
@@ -597,6 +549,300 @@
     "mtime": 1794217875.297343,
     "seen": 1794218041.4423583,
     "ast_hash": "5dfb18e20823e66739991ec1b1e4a722",
+    "semantic_hash": ""
+  },
+  "assets/images/players/Passion FC/Dhruv.webp": {
+    "mtime": 1794463784.7343452,
+    "seen": 1794463945.074695,
+    "ast_hash": "5bd839214aa652e8ac7d736166121b10",
+    "semantic_hash": ""
+  },
+  "assets/images/players/Passion FC/Dilsher.webp": {
+    "mtime": 1794463792.0072708,
+    "seen": 1794463945.074695,
+    "ast_hash": "c6eed936d716eca3cbb7948416cb6bd0",
+    "semantic_hash": ""
+  },
+  "assets/images/players/Passion FC/Shreyas.webp": {
+    "mtime": 1794463798.152464,
+    "seen": 1794463945.074695,
+    "ast_hash": "babc7f8fc75af40be68fb16a713b88b5",
+    "semantic_hash": ""
+  },
+  "assets/images/players/Passion FC/Veejin.webp": {
+    "mtime": 1794463804.1010158,
+    "seen": 1794463945.074695,
+    "ast_hash": "b176a80f405eb0730dcd50a4e158f7b2",
+    "semantic_hash": ""
+  },
+  "assets/images/players/Passion FC/Wani.webp": {
+    "mtime": 1794463810.1374028,
+    "seen": 1794463945.074695,
+    "ast_hash": "b33324eb8b86aa17f3fdc6327523aab9",
+    "semantic_hash": ""
+  },
+  "assets/images/players/Passion FC/lvanish.webp": {
+    "mtime": 1794463815.9613318,
+    "seen": 1794463945.074695,
+    "ast_hash": "69d09548b4c0c98d5a17296854e55538",
+    "semantic_hash": ""
+  },
+  "assets/images/players/Passion FC/sajay.webp": {
+    "mtime": 1794463822.0359354,
+    "seen": 1794463945.074695,
+    "ast_hash": "82f7f030189cbda81f1efd42085f91be",
+    "semantic_hash": ""
+  },
+  "assets/images/players/First Touch FC/Aamir.webp": {
+    "mtime": 1794465544.2110376,
+    "seen": 1794465652.4340549,
+    "ast_hash": "7a54c5a0b12d3ba3f485e2b20da75248",
+    "semantic_hash": ""
+  },
+  "assets/images/players/First Touch FC/Danish.webp": {
+    "mtime": 1794465556.7455406,
+    "seen": 1794465652.4340549,
+    "ast_hash": "3b30b781fa51885eb0f407161e47e03e",
+    "semantic_hash": ""
+  },
+  "assets/images/players/First Touch FC/Hamza.webp": {
+    "mtime": 1794465563.0048902,
+    "seen": 1794465652.4340549,
+    "ast_hash": "b621a1127143dca695d78c44d17728fd",
+    "semantic_hash": ""
+  },
+  "assets/images/players/First Touch FC/Kaushik.webp": {
+    "mtime": 1794465570.157623,
+    "seen": 1794465652.4340549,
+    "ast_hash": "c79b6e44dc0b0829743cbcc63d1d8f83",
+    "semantic_hash": ""
+  },
+  "assets/images/players/First Touch FC/Vansh.webp": {
+    "mtime": 1794465578.1372354,
+    "seen": 1794465652.4340549,
+    "ast_hash": "5e1445c5d49e1a4525b1ab9907b2d2fa",
+    "semantic_hash": ""
+  },
+  "assets/images/players/First Touch FC/Vedant.webp": {
+    "mtime": 1794465585.9420872,
+    "seen": 1794465652.4340549,
+    "ast_hash": "dc57226210a9561c7ef3996d1ceec46a",
+    "semantic_hash": ""
+  },
+  "assets/images/players/Veltrix United/Arnav.webp": {
+    "mtime": 1794466233.0235152,
+    "seen": 1794466328.8919258,
+    "ast_hash": "0c88a9dbb135951a554e478e0f7a260d",
+    "semantic_hash": ""
+  },
+  "assets/images/players/Veltrix United/Chetan.webp": {
+    "mtime": 1794466237.6026623,
+    "seen": 1794466328.8919258,
+    "ast_hash": "95c9ab74bda35aa1edd6e87ba58c3456",
+    "semantic_hash": ""
+  },
+  "assets/images/players/Veltrix United/Jagath.webp": {
+    "mtime": 1794466243.7021537,
+    "seen": 1794466328.8919258,
+    "ast_hash": "8f1b6b576fc1e209676613df2bf4312a",
+    "semantic_hash": ""
+  },
+  "assets/images/players/Veltrix United/Manjunath.webp": {
+    "mtime": 1794466249.2926252,
+    "seen": 1794466328.8919258,
+    "ast_hash": "c9ac8d7c66eb45dc9661e83f67b282fc",
+    "semantic_hash": ""
+  },
+  "assets/images/players/Veltrix United/Vikcy.webp": {
+    "mtime": 1794466254.478035,
+    "seen": 1794466328.8919258,
+    "ast_hash": "c892c70c668c8822b348a743b0aa6378",
+    "semantic_hash": ""
+  },
+  "assets/images/players/NBFC/Avinash.webp": {
+    "mtime": 1794468601.2376783,
+    "seen": 1794468697.7710357,
+    "ast_hash": "bd73717660a875497cfbfa3aa48a8897",
+    "semantic_hash": ""
+  },
+  "assets/images/players/NBFC/Jub.webp": {
+    "mtime": 1794468606.753045,
+    "seen": 1794468697.7710357,
+    "ast_hash": "914a457661b09354b740383a998fef10",
+    "semantic_hash": ""
+  },
+  "assets/images/players/NBFC/Kiran.webp": {
+    "mtime": 1794468612.601712,
+    "seen": 1794468697.7710357,
+    "ast_hash": "a2624d766fc7ba5a77b0f3f7e56dd777",
+    "semantic_hash": ""
+  },
+  "assets/images/players/NBFC/Rajeev.webp": {
+    "mtime": 1794468618.1771379,
+    "seen": 1794468697.7710357,
+    "ast_hash": "86b503382f42e8e9f70ffb48ddea59c7",
+    "semantic_hash": ""
+  },
+  "assets/images/players/NBFC/Sai.webp": {
+    "mtime": 1794468624.9841397,
+    "seen": 1794468697.7710357,
+    "ast_hash": "6cf624e4e89aa4de654a21bfec8afcee",
+    "semantic_hash": ""
+  },
+  "assets/images/players/NBFC/Sam.webp": {
+    "mtime": 1794468631.2078245,
+    "seen": 1794468697.7710357,
+    "ast_hash": "29e1aa57485b79f5d8279d815674c30e",
+    "semantic_hash": ""
+  },
+  "assets/images/players/NBFC/Sumanth.webp": {
+    "mtime": 1794468639.0912983,
+    "seen": 1794468697.7710357,
+    "ast_hash": "3f2125bb082ee792dfa2c6ab217116e2",
+    "semantic_hash": ""
+  },
+  "assets/images/players/NBFC/Utha.webp": {
+    "mtime": 1794468644.3737342,
+    "seen": 1794468697.7710357,
+    "ast_hash": "e545770ad4cef98240d9d5ecf63caec2",
+    "semantic_hash": ""
+  },
+  "assets/images/players/NBFC/Vishnu.webp": {
+    "mtime": 1794468650.3280008,
+    "seen": 1794468697.7710357,
+    "ast_hash": "088b908e4b3c8bc3925c169c63ef5ac1",
+    "semantic_hash": ""
+  },
+  "assets/images/players/player-placeholder.webp": {
+    "mtime": 1794468872.613279,
+    "seen": 1794468921.4313805,
+    "ast_hash": "09c079c438762085187ad301282558cf",
+    "semantic_hash": ""
+  },
+  "assets/data/Group B md1.txt": {
+    "mtime": 1794469792.6951783,
+    "seen": 1794469958.9787717,
+    "ast_hash": "e6f35edfeca0733617d9a5ac44c70b0f",
+    "semantic_hash": ""
+  },
+  "news-baller-league-format-explained.html": {
+    "mtime": 1794474363.6829243,
+    "seen": 1794474467.6932373,
+    "ast_hash": "dd61172eefb7d75cd24fa0a8f2cba5bd",
+    "semantic_hash": ""
+  },
+  "news-crescents-first-touch-3-2.html": {
+    "mtime": 1794474363.6911738,
+    "seen": 1794474467.6932373,
+    "ast_hash": "4daef6c45611b3f72c2c520780a5efd3",
+    "semantic_hash": ""
+  },
+  "news-darshan-eight-goals-legacy-ffa.html": {
+    "mtime": 1794474363.6855307,
+    "seen": 1794474467.6932373,
+    "ast_hash": "06c708c4ef8902dd4c70bdb8c6ed3fd7",
+    "semantic_hash": ""
+  },
+  "news-group-b-matchday-1-recap.html": {
+    "mtime": 1794474363.6855307,
+    "seen": 1794474467.6932373,
+    "ast_hash": "d6607b3cd92c6d10b5761f527ed10cf2",
+    "semantic_hash": ""
+  },
+  "news-passion-fc-two-wins.html": {
+    "mtime": 1794474363.6911738,
+    "seen": 1794474467.6932373,
+    "ast_hash": "fa5ccb47958a9a9d99c3fcf1f3b094f1",
+    "semantic_hash": ""
+  },
+  "news-united-5s-4-1-falcons.html": {
+    "mtime": 1794474363.6974907,
+    "seen": 1794474467.6932373,
+    "ast_hash": "54ae0c0ae35f142f08c173c41e6b2203",
+    "semantic_hash": ""
+  },
+  "assets/reference/Updated Fixtures.pdf": {
+    "mtime": 1794461633.7992468,
+    "seen": 1794471362.3116775,
+    "ast_hash": "3971946f8f6f74874d405b1e3bb18ceb",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Home Page/Partner logos/crank.webp": {
+    "mtime": 1794471847.3725162,
+    "seen": 1794471903.6892679,
+    "ast_hash": "6caa865ef94c6014a8b229b28de108ce",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Home Page/Partner logos/firstdraft.webp": {
+    "mtime": 1794471863.5506253,
+    "seen": 1794471903.6892679,
+    "ast_hash": "49ea284da1787c90cb0225b001254cd7",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Home Page/Partner logos/grochi.webp": {
+    "mtime": 1794471852.6370585,
+    "seen": 1794471903.6892679,
+    "ast_hash": "1a83ab1f243bde294e3acbef8880e877",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Home Page/Partner logos/play365.webp": {
+    "mtime": 1794471858.7648022,
+    "seen": 1794471903.6892679,
+    "ast_hash": "ba1d95ba860ca2af1e8ff1054fb522a6",
+    "semantic_hash": ""
+  },
+  "assets/images/Blogs/news-baller-league-format-explained.webp": {
+    "mtime": 1794474358.9453576,
+    "seen": 1794474467.6932373,
+    "ast_hash": "db03e457e681f840ecdd50cc0f8ae484",
+    "semantic_hash": ""
+  },
+  "assets/images/Blogs/news-bangalore-grafters-10-2.webp": {
+    "mtime": 1794474360.2609718,
+    "seen": 1794474467.6932373,
+    "ast_hash": "5e64411a00ecf7fce6be879e39cee3d5",
+    "semantic_hash": ""
+  },
+  "assets/images/Blogs/news-crescents-first-touch-3-2.webp": {
+    "mtime": 1794474362.075271,
+    "seen": 1794474467.6932373,
+    "ast_hash": "23e077798ac4145aa86ae51d8201e7d4",
+    "semantic_hash": ""
+  },
+  "assets/images/Blogs/news-darshan-eight-goals-legacy-ffa.webp": {
+    "mtime": 1794474359.6543005,
+    "seen": 1794474467.6932373,
+    "ast_hash": "e8bbb43ededcec30efa280814a627e76",
+    "semantic_hash": ""
+  },
+  "assets/images/Blogs/news-group-b-matchday-1-recap.webp": {
+    "mtime": 1794474360.8863564,
+    "seen": 1794474467.6932373,
+    "ast_hash": "2d9fdcff2dbf3c260330ca9e5ffd1ea2",
+    "semantic_hash": ""
+  },
+  "assets/images/Blogs/news-matchday-1-recap.webp": {
+    "mtime": 1794474362.676795,
+    "seen": 1794474467.6932373,
+    "ast_hash": "65c68bd1b6c1a8d6f2f2de3130b7a43a",
+    "semantic_hash": ""
+  },
+  "assets/images/Blogs/news-passion-fc-two-wins.webp": {
+    "mtime": 1794474361.4579325,
+    "seen": 1794474467.6932373,
+    "ast_hash": "5bde2b88c940ef82748b3cd99f021a5b",
+    "semantic_hash": ""
+  },
+  "assets/images/Blogs/news-united-5s-4-1-falcons.webp": {
+    "mtime": 1794474363.1826084,
+    "seen": 1794474467.6932373,
+    "ast_hash": "19dadbe6acec08d7da449a1e05ee1319",
+    "semantic_hash": ""
+  },
+  "assets/images/Blogs/news-wlwg-comeback.webp": {
+    "mtime": 1794474363.67555,
+    "seen": 1794474467.6932373,
+    "ast_hash": "4ad4673ece31c9f93c53a5559a5dfc4c",
     "semantic_hash": ""
   }
 }

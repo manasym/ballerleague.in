@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="assets/images/logos/main%20logo.webp" type="image/webp" />
   <title>Baller League Competition: Results, Scorers and Standings</title>
-  <meta name="description" content="Baller League Season 2 results, fixtures, Group A and B standings, top scorers and matchday events from New Age World School, Bengaluru — Bangalore's best amateur football league." />
+  <meta name="description" content="Baller League Season 2 results, fixtures, Group A and B standings, top scorers and matchday events from Play365 Vidyaranyapura, Bengaluru, the home of Bangalore's best amateur football league." />
   <meta name="keywords" content="best amateur league, best league in Bangalore, Baller League Bangalore, Baller League standings, Baller League top scorers, Bangalore amateur football" />
   <link rel="canonical" href="https://www.theballerleague.in/competition.html" />
   <meta property="og:type" content="website" />
@@ -68,18 +68,18 @@
 
   <main class="container competition-page" id="competitionContent">
 
-    <!-- Section 01 — Compact Competition Hero -->
-    <header class="comp-hero reveal">
+    <!-- Section 01: Compact Competition Hero -->
+    <header class="comp-hero">
       <div class="comp-hero-inner">
         <span class="comp-matchday">SEASON 02 · GROUP STAGE</span>
         <h1 class="comp-title">BALLER LEAGUE COMPETITION</h1>
         <p class="comp-dek">RESULTS · FIXTURES · STANDINGS</p>
-        <p class="comp-venue">New Age World School · Bengaluru</p>
+        <p class="comp-venue">Play365 Vidyaranyapura · Bengaluru</p>
       </div>
     </header>
 
     <!-- Section 02 - Match Centre -->
-    <section class="match-centre reveal">
+    <section class="match-centre">
       <div class="match-centre-header">
         <h2 class="match-centre-title">Match Centre</h2>
         <div class="pitch-filters">
@@ -93,12 +93,12 @@
         <!-- Match cards injected by JS -->
       </div>
       <div class="match-centre-empty" id="matchesEmpty" style="display:none;">
-        <p>NO MATCHES YET — THE SEASON 2 SCHEDULE PUBLISHES BEFORE MATCHDAY 1.</p>
+        <p>NO MATCHES YET. THE SEASON 2 SCHEDULE PUBLISHES BEFORE MATCHDAY 1.</p>
       </div>
     </section>
 
-    <!-- Section 03 — Matchday Fixtures -->
-    <section class="matchday-fixtures reveal">
+    <!-- Section 03: Matchday Fixtures -->
+    <section class="matchday-fixtures">
       <div class="fixtures-header">
         <h2 class="fixtures-title">Results &amp; Fixtures</h2>
       </div>
@@ -106,12 +106,12 @@
         <!-- Fixture rows injected by JS -->
       </div>
       <div class="fixtures-empty" id="fixturesEmpty" style="display:none;">
-        <p>NO FIXTURES CONFIRMED YET — THE SEASON 2 SCHEDULE PUBLISHES BEFORE MATCHDAY 1.</p>
+        <p>NO FIXTURES CONFIRMED YET. THE SEASON 2 SCHEDULE PUBLISHES BEFORE MATCHDAY 1.</p>
       </div>
     </section>
 
-    <!-- Section 04 — League Standings -->
-    <section class="league-standings reveal">
+    <!-- Section 04: League Standings -->
+    <section class="league-standings">
       <div class="standings-header">
         <h2 class="standings-title">League Standings</h2>
       </div>
@@ -134,11 +134,11 @@
           </tbody>
         </table>
       </div>
-      <p class="standings-note" id="standingsNote">Group A and Group B · 13 results in · First Draft FC and TBD yet to play.</p>
+      <p class="standings-note" id="standingsNote">Group A and Group B · 13 results in · 3 Group A fixtures to be rescheduled.</p>
     </section>
 
-    <!-- Section 04b — Top Scorers -->
-    <section class="league-standings top-scorers reveal" aria-labelledby="topScorersTitle">
+    <!-- Section 04b: Top Scorers -->
+    <section class="league-standings top-scorers" aria-labelledby="topScorersTitle">
       <div class="standings-header">
         <h2 class="standings-title" id="topScorersTitle">Top Scorers</h2>
       </div>
@@ -157,11 +157,11 @@
           </tbody>
         </table>
       </div>
-      <p class="standings-note">Group A scorers supplied after Matchday 1. Group B scorers will be added when published.</p>
+      <p class="standings-note">Top 5 scorers after Matchday 1 · <a href="players.html">all squads on the Players page</a></p>
     </section>
 
-    <!-- Section 05 — Matchday Event Feed -->
-    <section class="matchday-events reveal">
+    <!-- Section 05: Matchday Event Feed -->
+    <section class="matchday-events">
       <div class="events-header">
         <h2 class="events-title">Matchday Events</h2>
         <div class="event-filter">
@@ -179,8 +179,8 @@
       </div>
     </section>
 
-    <!-- Section 06 — Player of the Day -->
-    <section class="player-of-the-day reveal">
+    <!-- Section 06: Player of the Day -->
+    <section class="player-of-the-day">
       <div class="player-of-the-day-inner">
         <div class="player-portrait-wrap" id="playerPortraitWrap">
           <!-- Portrait injected by JS -->
@@ -200,8 +200,8 @@
       </div>
     </section>
 
-    <!-- Section 07 — Next Up -->
-    <section class="next-up reveal">
+    <!-- Section 07: Next Up -->
+    <section class="next-up">
       <div class="next-up-inner">
         <div class="next-up-header">
           <span class="next-up-tag">Next Up</span>
@@ -245,7 +245,7 @@
 
   <script>
     /* --------------------------------------------------------------
-       Competition Page — Matchday Control Centre
+       Competition Page, Matchday Control Centre
        Data layer (static, no backend).
 
        Only supplied results live here. Scorers, cards and the
@@ -269,31 +269,70 @@
       veltrix: "assets/images/logos/Veltrix%20United.webp",
       walkalone: "assets/images/logos/Walkalone%20FC.webp",
       wlwg: "assets/images/logos/WLWG%20FC.webp",
-      tbd: "assets/images/logos/main%20logo.webp"
+      velocity: "assets/images/logos/main%20logo.webp"
     };
 
     const competitionData = {
       season: "SEASON 02",
       matchday: "GROUP STAGE",
-      venue: "New Age World School · Bengaluru",
-      matches: [
-        /* ---- Group A ---- */
-        { group: "A", home: { name: "NEXUS FC", crest: CREST.nexus }, away: { name: "GRVTY FC", crest: CREST.grvty }, score: { home: 3, away: 0 }, status: "FULL TIME", scorers: { home: ["Chethan 2"], away: [] }, report: "news-matchday-1-recap.html" },
-        { group: "A", home: { name: "Bangalore Grafters FC", crest: CREST.blr }, away: { name: "United 4th Phase", crest: CREST.u4 }, score: { home: 1, away: 2 }, status: "FULL TIME", scorers: { home: ["Aju"], away: ["Hari", "Subbaiah"] }, report: "news-matchday-1-recap.html" },
-        { group: "A", home: { name: "WLWG FC", crest: CREST.wlwg }, away: { name: "Walkalone FC", crest: CREST.walkalone }, score: { home: 4, away: 2 }, status: "FULL TIME", scorers: { home: ["Daniel 2", "Rishabh", "Puneeth"], away: ["Shree", "Rohan"] }, report: "news-wlwg-comeback.html" },
-        { group: "A", home: { name: "Bangalore Grafters FC", crest: CREST.blr }, away: { name: "Walkalone FC", crest: CREST.walkalone }, score: { home: 10, away: 2 }, status: "FULL TIME", scorers: { home: ["Adnan 4", "Fazil 3", "Abhinav", "Aju", "Mathai"], away: ["Shree 2"] }, report: "news-bangalore-grafters-10-2.html" },
-        { group: "A", home: { name: "United 4th Phase", crest: CREST.u4 }, away: { name: "WLWG FC", crest: CREST.wlwg }, score: { home: 3, away: 1 }, status: "FULL TIME", scorers: { home: ["AD 2", "Hakee Zyech"], away: ["Uthappa"] }, report: "news-matchday-1-recap.html" },
-        /* ---- Group B ---- */
-        { group: "B", home: { name: "United 5's", crest: CREST.u5 }, away: { name: "Falcons FC", crest: CREST.falcons }, score: { home: 4, away: 1 }, status: "FULL TIME" },
-        { group: "B", home: { name: "Legacy FFA", crest: CREST.legacy }, away: { name: "NBFC", crest: CREST.nbfc }, score: { home: 7, away: 1 }, status: "FULL TIME" },
-        { group: "B", home: { name: "Passion FC", crest: CREST.passion }, away: { name: "Crescents FC", crest: CREST.crescents }, score: { home: 4, away: 1 }, status: "FULL TIME" },
-        { group: "B", home: { name: "First Touch FC", crest: CREST.firstTouch }, away: { name: "Veltrix United", crest: CREST.veltrix }, score: { home: 3, away: 0 }, status: "FULL TIME" },
-        { group: "B", home: { name: "NBFC", crest: CREST.nbfc }, away: { name: "Falcons FC", crest: CREST.falcons }, score: { home: 2, away: 1 }, status: "FULL TIME" },
-        { group: "B", home: { name: "Legacy FFA", crest: CREST.legacy }, away: { name: "United 5's", crest: CREST.u5 }, score: { home: 5, away: 1 }, status: "FULL TIME" },
-        { group: "B", home: { name: "Crescents FC", crest: CREST.crescents }, away: { name: "First Touch FC", crest: CREST.firstTouch }, score: { home: 3, away: 2 }, status: "FULL TIME" },
-        { group: "B", home: { name: "Passion FC", crest: CREST.passion }, away: { name: "Veltrix United", crest: CREST.veltrix }, score: { home: 4, away: 3 }, status: "FULL TIME" },
-        /* ---- Yet to play ---- */
-        { group: "A", home: { name: "First Draft FC", crest: CREST.firstDraft }, away: { name: "TBD", crest: CREST.tbd }, score: null, status: "UPCOMING" }
+      venue: "Play365 Vidyaranyapura · Bengaluru",
+                  matches: [
+        { group: "A", matchday: "MD1", date: "01 Nov 2026", time: "12:00 PM", pitch: "Turf 1", home: { name: "First Draft FC", crest: CREST.firstDraft }, away: { name: "Velocity FC", crest: CREST.velocity }, score: null, status: "POSTPONED" },
+        { group: "A", matchday: "MD1", date: "01 Nov 2026", time: "12:00 PM", pitch: "Turf 2", home: { name: "NEXUS FC", crest: CREST.nexus }, away: { name: "GRVTY FC", crest: CREST.grvty }, score: { home: 3, away: 0 }, status: "FULL TIME", scorers: { home: ["Chethan 2"], away: [] }, report: "news-matchday-1-recap.html" },
+        { group: "A", matchday: "MD1", date: "01 Nov 2026", time: "12:30 PM", pitch: "Turf 1", home: { name: "WLWG FC", crest: CREST.wlwg }, away: { name: "Walkalone FC", crest: CREST.walkalone }, score: { home: 4, away: 2 }, status: "FULL TIME", scorers: { home: ["Daniel 2", "Rishabh", "Puneeth"], away: ["Shree", "Rohan"] }, report: "news-wlwg-comeback.html" },
+        { group: "A", matchday: "MD1", date: "01 Nov 2026", time: "12:30 PM", pitch: "Turf 2", home: { name: "Bangalore Grafters FC", crest: CREST.blr }, away: { name: "United 4th Phase", crest: CREST.u4 }, score: { home: 1, away: 2 }, status: "FULL TIME", scorers: { home: ["Aju"], away: ["Hari", "Subbaiah"] }, report: "news-matchday-1-recap.html" },
+        { group: "A", matchday: "MD1", date: "01 Nov 2026", time: "1:00 PM", pitch: "Turf 1", home: { name: "Velocity FC", crest: CREST.velocity }, away: { name: "NEXUS FC", crest: CREST.nexus }, score: null, status: "POSTPONED" },
+        { group: "A", matchday: "MD1", date: "01 Nov 2026", time: "1:00 PM", pitch: "Turf 2", home: { name: "First Draft FC", crest: CREST.firstDraft }, away: { name: "GRVTY FC", crest: CREST.grvty }, score: null, status: "POSTPONED" },
+        { group: "A", matchday: "MD1", date: "01 Nov 2026", time: "1:30 PM", pitch: "Turf 1", home: { name: "United 4th Phase", crest: CREST.u4 }, away: { name: "WLWG FC", crest: CREST.wlwg }, score: { home: 3, away: 1 }, status: "FULL TIME", scorers: { home: ["AD 2", "Hakee Zyech"], away: ["Uthappa"] }, report: "news-matchday-1-recap.html" },
+        { group: "A", matchday: "MD1", date: "01 Nov 2026", time: "1:30 PM", pitch: "Turf 2", home: { name: "Bangalore Grafters FC", crest: CREST.blr }, away: { name: "Walkalone FC", crest: CREST.walkalone }, score: { home: 10, away: 2 }, status: "FULL TIME", scorers: { home: ["Adnan 4", "Fazil 3", "Abhinav", "Aju", "Mathai"], away: ["Shree 2"] }, report: "news-bangalore-grafters-10-2.html" },
+        { group: "B", matchday: "MD1", date: "01 Nov 2026", time: "4:00 PM", pitch: "Turf 1", home: { name: "United 5's", crest: CREST.u5 }, away: { name: "Falcons FC", crest: CREST.falcons }, score: { home: 4, away: 1 }, status: "FULL TIME", scorers: { home: ["Yashwanth 2", "Ankit", "Nitesh"], away: ["Own goal (Swapnil)"] }, report: "news-united-5s-4-1-falcons.html" },
+        { group: "B", matchday: "MD1", date: "01 Nov 2026", time: "4:00 PM", pitch: "Turf 2", home: { name: "Legacy FFA", crest: CREST.legacy }, away: { name: "NBFC", crest: CREST.nbfc }, score: { home: 7, away: 1 }, status: "FULL TIME", scorers: { home: ["Darshan 6", "Vishwa"], away: ["Avinash"] }, report: "news-darshan-eight-goals-legacy-ffa.html" },
+        { group: "B", matchday: "MD1", date: "01 Nov 2026", time: "4:30 PM", pitch: "Turf 1", home: { name: "Passion FC", crest: CREST.passion }, away: { name: "Crescents FC", crest: CREST.crescents }, score: { home: 4, away: 1 }, status: "FULL TIME", scorers: { home: ["Dhruv", "Shreyas", "Dilsher", "Wani"], away: ["Sanjay"] }, report: "news-passion-fc-two-wins.html" },
+        { group: "B", matchday: "MD1", date: "01 Nov 2026", time: "4:30 PM", pitch: "Turf 2", home: { name: "First Touch FC", crest: CREST.firstTouch }, away: { name: "Veltrix United", crest: CREST.veltrix }, score: { home: 3, away: 0 }, status: "FULL TIME", scorers: { home: ["Danish 2", "Muied"], away: [] }, report: "news-group-b-matchday-1-recap.html" },
+        { group: "B", matchday: "MD1", date: "01 Nov 2026", time: "5:00 PM", pitch: "Turf 1", home: { name: "Legacy FFA", crest: CREST.legacy }, away: { name: "United 5's", crest: CREST.u5 }, score: { home: 5, away: 1 }, status: "FULL TIME", scorers: { home: ["Darshan 2", "Vky 2", "Trippzy"], away: ["Ankit"] }, report: "news-darshan-eight-goals-legacy-ffa.html" },
+        { group: "B", matchday: "MD1", date: "01 Nov 2026", time: "5:00 PM", pitch: "Turf 2", home: { name: "NBFC", crest: CREST.nbfc }, away: { name: "Falcons FC", crest: CREST.falcons }, score: { home: 2, away: 1 }, status: "FULL TIME", scorers: { home: ["Sai", "Sam"], away: ["Alvin jr"] }, report: "news-group-b-matchday-1-recap.html" },
+        { group: "B", matchday: "MD1", date: "01 Nov 2026", time: "5:30 PM", pitch: "Turf 1", home: { name: "Passion FC", crest: CREST.passion }, away: { name: "Veltrix United", crest: CREST.veltrix }, score: { home: 4, away: 3 }, status: "FULL TIME", scorers: { home: ["Dilsher 3", "Wani"], away: ["Maaziee 2", "Chetan"] }, report: "news-passion-fc-two-wins.html" },
+        { group: "B", matchday: "MD1", date: "01 Nov 2026", time: "5:30 PM", pitch: "Turf 2", home: { name: "Crescents FC", crest: CREST.crescents }, away: { name: "First Touch FC", crest: CREST.firstTouch }, score: { home: 3, away: 2 }, status: "FULL TIME", scorers: { home: ["Sanjay 2", "Manoj"], away: ["Muied 2"] }, report: "news-crescents-first-touch-3-2.html" },
+        { group: "B", matchday: "MD2", date: "15 Nov 2026", time: "12:00 PM", pitch: "Turf 1", home: { name: "Falcons FC", crest: CREST.falcons }, away: { name: "Legacy FFA", crest: CREST.legacy }, score: null, status: "UPCOMING" },
+        { group: "B", matchday: "MD2", date: "15 Nov 2026", time: "12:00 PM", pitch: "Turf 2", home: { name: "Crescents FC", crest: CREST.crescents }, away: { name: "Veltrix United", crest: CREST.veltrix }, score: null, status: "UPCOMING" },
+        { group: "B", matchday: "MD2", date: "15 Nov 2026", time: "12:30 PM", pitch: "Turf 1", home: { name: "United 5's", crest: CREST.u5 }, away: { name: "NBFC", crest: CREST.nbfc }, score: null, status: "UPCOMING" },
+        { group: "B", matchday: "MD2", date: "15 Nov 2026", time: "12:30 PM", pitch: "Turf 2", home: { name: "Passion FC", crest: CREST.passion }, away: { name: "First Touch FC", crest: CREST.firstTouch }, score: null, status: "UPCOMING" },
+        { group: "B", matchday: "MD2", date: "15 Nov 2026", time: "1:00 PM", pitch: "Turf 1", home: { name: "Legacy FFA", crest: CREST.legacy }, away: { name: "Crescents FC", crest: CREST.crescents }, score: null, status: "UPCOMING" },
+        { group: "B", matchday: "MD2", date: "15 Nov 2026", time: "1:00 PM", pitch: "Turf 2", home: { name: "Falcons FC", crest: CREST.falcons }, away: { name: "Veltrix United", crest: CREST.veltrix }, score: null, status: "UPCOMING" },
+        { group: "B", matchday: "MD2", date: "15 Nov 2026", time: "1:30 PM", pitch: "Turf 1", home: { name: "NBFC", crest: CREST.nbfc }, away: { name: "Passion FC", crest: CREST.passion }, score: null, status: "UPCOMING" },
+        { group: "B", matchday: "MD2", date: "15 Nov 2026", time: "1:30 PM", pitch: "Turf 2", home: { name: "United 5's", crest: CREST.u5 }, away: { name: "First Touch FC", crest: CREST.firstTouch }, score: null, status: "UPCOMING" },
+        { group: "A", matchday: "MD2", date: "15 Nov 2026", time: "4:00 PM", pitch: "Turf 1", home: { name: "First Draft FC", crest: CREST.firstDraft }, away: { name: "NEXUS FC", crest: CREST.nexus }, score: null, status: "UPCOMING" },
+        { group: "A", matchday: "MD2", date: "15 Nov 2026", time: "4:00 PM", pitch: "Turf 2", home: { name: "Walkalone FC", crest: CREST.walkalone }, away: { name: "United 4th Phase", crest: CREST.u4 }, score: null, status: "UPCOMING" },
+        { group: "A", matchday: "MD2", date: "15 Nov 2026", time: "4:30 PM", pitch: "Turf 1", home: { name: "Velocity FC", crest: CREST.velocity }, away: { name: "GRVTY FC", crest: CREST.grvty }, score: null, status: "UPCOMING" },
+        { group: "A", matchday: "MD2", date: "15 Nov 2026", time: "4:30 PM", pitch: "Turf 2", home: { name: "WLWG FC", crest: CREST.wlwg }, away: { name: "Bangalore Grafters FC", crest: CREST.blr }, score: null, status: "UPCOMING" },
+        { group: "A", matchday: "MD2", date: "15 Nov 2026", time: "5:00 PM", pitch: "Turf 1", home: { name: "NEXUS FC", crest: CREST.nexus }, away: { name: "Walkalone FC", crest: CREST.walkalone }, score: null, status: "UPCOMING" },
+        { group: "A", matchday: "MD2", date: "15 Nov 2026", time: "5:00 PM", pitch: "Turf 2", home: { name: "First Draft FC", crest: CREST.firstDraft }, away: { name: "United 4th Phase", crest: CREST.u4 }, score: null, status: "UPCOMING" },
+        { group: "A", matchday: "MD2", date: "15 Nov 2026", time: "5:30 PM", pitch: "Turf 1", home: { name: "GRVTY FC", crest: CREST.grvty }, away: { name: "WLWG FC", crest: CREST.wlwg }, score: null, status: "UPCOMING" },
+        { group: "A", matchday: "MD2", date: "15 Nov 2026", time: "5:30 PM", pitch: "Turf 2", home: { name: "Velocity FC", crest: CREST.velocity }, away: { name: "Bangalore Grafters FC", crest: CREST.blr }, score: null, status: "UPCOMING" },
+        { group: "A", matchday: "MD3", date: "22 Nov 2026", time: "12:00 PM", pitch: "Turf 1", home: { name: "First Draft FC", crest: CREST.firstDraft }, away: { name: "Walkalone FC", crest: CREST.walkalone }, score: null, status: "UPCOMING" },
+        { group: "A", matchday: "MD3", date: "22 Nov 2026", time: "12:00 PM", pitch: "Turf 2", home: { name: "Velocity FC", crest: CREST.velocity }, away: { name: "WLWG FC", crest: CREST.wlwg }, score: null, status: "UPCOMING" },
+        { group: "A", matchday: "MD3", date: "22 Nov 2026", time: "12:30 PM", pitch: "Turf 1", home: { name: "NEXUS FC", crest: CREST.nexus }, away: { name: "United 4th Phase", crest: CREST.u4 }, score: null, status: "UPCOMING" },
+        { group: "A", matchday: "MD3", date: "22 Nov 2026", time: "12:30 PM", pitch: "Turf 2", home: { name: "GRVTY FC", crest: CREST.grvty }, away: { name: "Bangalore Grafters FC", crest: CREST.blr }, score: null, status: "UPCOMING" },
+        { group: "A", matchday: "MD3", date: "22 Nov 2026", time: "1:00 PM", pitch: "Turf 1", home: { name: "Velocity FC", crest: CREST.velocity }, away: { name: "Walkalone FC", crest: CREST.walkalone }, score: null, status: "UPCOMING" },
+        { group: "A", matchday: "MD3", date: "22 Nov 2026", time: "1:00 PM", pitch: "Turf 2", home: { name: "First Draft FC", crest: CREST.firstDraft }, away: { name: "WLWG FC", crest: CREST.wlwg }, score: null, status: "UPCOMING" },
+        { group: "A", matchday: "MD3", date: "22 Nov 2026", time: "1:30 PM", pitch: "Turf 1", home: { name: "United 4th Phase", crest: CREST.u4 }, away: { name: "GRVTY FC", crest: CREST.grvty }, score: null, status: "UPCOMING" },
+        { group: "A", matchday: "MD3", date: "22 Nov 2026", time: "1:30 PM", pitch: "Turf 2", home: { name: "Bangalore Grafters FC", crest: CREST.blr }, away: { name: "NEXUS FC", crest: CREST.nexus }, score: null, status: "UPCOMING" },
+        { group: "B", matchday: "MD3", date: "22 Nov 2026", time: "4:00 PM", pitch: "Turf 1", home: { name: "Falcons FC", crest: CREST.falcons }, away: { name: "Crescents FC", crest: CREST.crescents }, score: null, status: "UPCOMING" },
+        { group: "B", matchday: "MD3", date: "22 Nov 2026", time: "4:00 PM", pitch: "Turf 2", home: { name: "United 5's", crest: CREST.u5 }, away: { name: "Passion FC", crest: CREST.passion }, score: null, status: "UPCOMING" },
+        { group: "B", matchday: "MD3", date: "22 Nov 2026", time: "4:30 PM", pitch: "Turf 1", home: { name: "Legacy FFA", crest: CREST.legacy }, away: { name: "Veltrix United", crest: CREST.veltrix }, score: null, status: "UPCOMING" },
+        { group: "B", matchday: "MD3", date: "22 Nov 2026", time: "4:30 PM", pitch: "Turf 2", home: { name: "NBFC", crest: CREST.nbfc }, away: { name: "First Touch FC", crest: CREST.firstTouch }, score: null, status: "UPCOMING" },
+        { group: "B", matchday: "MD3", date: "22 Nov 2026", time: "5:00 PM", pitch: "Turf 1", home: { name: "United 5's", crest: CREST.u5 }, away: { name: "Crescents FC", crest: CREST.crescents }, score: null, status: "UPCOMING" },
+        { group: "B", matchday: "MD3", date: "22 Nov 2026", time: "5:00 PM", pitch: "Turf 2", home: { name: "Falcons FC", crest: CREST.falcons }, away: { name: "Passion FC", crest: CREST.passion }, score: null, status: "UPCOMING" },
+        { group: "B", matchday: "MD3", date: "22 Nov 2026", time: "5:30 PM", pitch: "Turf 1", home: { name: "Veltrix United", crest: CREST.veltrix }, away: { name: "NBFC", crest: CREST.nbfc }, score: null, status: "UPCOMING" },
+        { group: "B", matchday: "MD3", date: "22 Nov 2026", time: "5:30 PM", pitch: "Turf 2", home: { name: "First Touch FC", crest: CREST.firstTouch }, away: { name: "Legacy FFA", crest: CREST.legacy }, score: null, status: "UPCOMING" },
+        { group: "A", matchday: "MD4", date: "29 Nov 2026", time: "12:00 PM", pitch: "Turf 1", home: { name: "First Draft FC", crest: CREST.firstDraft }, away: { name: "Bangalore Grafters FC", crest: CREST.blr }, score: null, status: "UPCOMING" },
+        { group: "A", matchday: "MD4", date: "29 Nov 2026", time: "12:00 PM", pitch: "Turf 2", home: { name: "NEXUS FC", crest: CREST.nexus }, away: { name: "WLWG FC", crest: CREST.wlwg }, score: null, status: "UPCOMING" },
+        { group: "A", matchday: "MD4", date: "29 Nov 2026", time: "12:30 PM", pitch: "Turf 1", home: { name: "Velocity FC", crest: CREST.velocity }, away: { name: "United 4th Phase", crest: CREST.u4 }, score: null, status: "UPCOMING" },
+        { group: "A", matchday: "MD4", date: "29 Nov 2026", time: "12:30 PM", pitch: "Turf 2", home: { name: "GRVTY FC", crest: CREST.grvty }, away: { name: "Walkalone FC", crest: CREST.walkalone }, score: null, status: "UPCOMING" },
+        { group: "B", matchday: "MD4", date: "29 Nov 2026", time: "1:00 PM", pitch: "Turf 1", home: { name: "Falcons FC", crest: CREST.falcons }, away: { name: "First Touch FC", crest: CREST.firstTouch }, score: null, status: "UPCOMING" },
+        { group: "B", matchday: "MD4", date: "29 Nov 2026", time: "1:00 PM", pitch: "Turf 2", home: { name: "Legacy FFA", crest: CREST.legacy }, away: { name: "Passion FC", crest: CREST.passion }, score: null, status: "UPCOMING" },
+        { group: "B", matchday: "MD4", date: "29 Nov 2026", time: "1:30 PM", pitch: "Turf 1", home: { name: "United 5's", crest: CREST.u5 }, away: { name: "Veltrix United", crest: CREST.veltrix }, score: null, status: "UPCOMING" },
+        { group: "B", matchday: "MD4", date: "29 Nov 2026", time: "1:30 PM", pitch: "Turf 2", home: { name: "NBFC", crest: CREST.nbfc }, away: { name: "Crescents FC", crest: CREST.crescents }, score: null, status: "UPCOMING" },
       ],
       groups: {
         A: [
@@ -304,7 +343,7 @@
           { pos: 5, name: "GRVTY FC", crest: CREST.grvty, p: 1, w: 0, d: 0, l: 1, gd: "-3", pts: 0 },
           { pos: 6, name: "Walkalone FC", crest: CREST.walkalone, p: 2, w: 0, d: 0, l: 2, gd: "-10", pts: 0 },
           { pos: 7, name: "First Draft FC", crest: CREST.firstDraft, p: 0, w: 0, d: 0, l: 0, gd: "0", pts: 0 },
-          { pos: 8, name: "TBD", crest: CREST.tbd, p: 0, w: 0, d: 0, l: 0, gd: "0", pts: 0 }
+          { pos: 8, name: "Velocity FC", crest: CREST.velocity, p: 0, w: 0, d: 0, l: 0, gd: "0", pts: 0 }
         ],
         B: [
           { pos: 1, name: "Legacy FFA", crest: CREST.legacy, p: 2, w: 2, d: 0, l: 0, gd: "+10", pts: 6 },
@@ -317,45 +356,94 @@
           { pos: 8, name: "Falcons FC", crest: CREST.falcons, p: 2, w: 0, d: 0, l: 2, gd: "-4", pts: 0 }
         ]
       },
-      // Group A scorer data supplied after Matchday 1.
+      // Group A and Group B scorer data supplied after Matchday 1.
       scorers: [
-        { name: "Adnan", team: "Bangalore Grafters FC", goals: 4 },
-        { name: "Fazil", team: "Bangalore Grafters FC", goals: 3 },
+        { name: "Darshan", team: "Legacy FFA", goals: 8, profile: "lffa-darshan" },
+        { name: "Adnan", team: "Bangalore Grafters FC", goals: 4, profile: "bgfc-adnan" },
+        { name: "Dilsher", team: "Passion FC", goals: 4, profile: "pfc-dilsher" },
+        { name: "Fazil", team: "Bangalore Grafters FC", goals: 3, profile: "bgfc-fazil" },
+        { name: "Muied", team: "First Touch FC", goals: 3, profile: "ftfc-muied" },
+        { name: "Sanjay", team: "Crescents FC", goals: 3 },
+        { name: "Shree", team: "Walkalone FC", goals: 3 },
+        { name: "AD", team: "United 4th Phase", goals: 2 },
+        { name: "Aju", team: "Bangalore Grafters FC", goals: 2 },
+        { name: "Ankit", team: "United 5's", goals: 2 },
         { name: "Chethan", team: "NEXUS FC", goals: 2 },
         { name: "Daniel", team: "WLWG FC", goals: 2 },
-        { name: "Shree", team: "Walkalone FC", goals: 2 },
-        { name: "AD", team: "United 4th Phase", goals: 2 },
-        { name: "Hari", team: "United 4th Phase", goals: 1 },
-        { name: "Subbaiah", team: "United 4th Phase", goals: 1 },
-        { name: "Hakee Zyech", team: "United 4th Phase", goals: 1 },
-        { name: "Rishabh", team: "WLWG FC", goals: 1 },
-        { name: "Puneeth", team: "WLWG FC", goals: 1 },
-        { name: "Uthappa", team: "WLWG FC", goals: 1 },
-        { name: "Rohan", team: "Walkalone FC", goals: 1 },
+        { name: "Danish", team: "First Touch FC", goals: 2 },
+        { name: "Maaziee", team: "Veltrix United", goals: 2 },
+        { name: "Vky", team: "Legacy FFA", goals: 2 },
+        { name: "Wani", team: "Passion FC", goals: 2 },
+        { name: "Yashwanth", team: "United 5's", goals: 2 },
         { name: "Abhinav", team: "Bangalore Grafters FC", goals: 1 },
-        { name: "Aju", team: "Bangalore Grafters FC", goals: 1 },
-        { name: "Mathai", team: "Bangalore Grafters FC", goals: 1 }
+        { name: "Alvin jr", team: "Falcons FC", goals: 1 },
+        { name: "Avinash", team: "NBFC", goals: 1 },
+        { name: "Chetan", team: "Veltrix United", goals: 1 },
+        { name: "Dhruv", team: "Passion FC", goals: 1 },
+        { name: "Hakee Zyech", team: "United 4th Phase", goals: 1 },
+        { name: "Hari", team: "United 4th Phase", goals: 1 },
+        { name: "Manoj", team: "Crescents FC", goals: 1 },
+        { name: "Mathai", team: "Bangalore Grafters FC", goals: 1 },
+        { name: "Nitesh", team: "United 5's", goals: 1 },
+        { name: "Puneeth", team: "WLWG FC", goals: 1 },
+        { name: "Rishabh", team: "WLWG FC", goals: 1 },
+        { name: "Rohan", team: "Walkalone FC", goals: 1 },
+        { name: "Sai", team: "NBFC", goals: 1 },
+        { name: "Sam", team: "NBFC", goals: 1 },
+        { name: "Shreyas", team: "Passion FC", goals: 1 },
+        { name: "Subbaiah", team: "United 4th Phase", goals: 1 },
+        { name: "Trippzy", team: "Legacy FFA", goals: 1 },
+        { name: "Uthappa", team: "WLWG FC", goals: 1 },
+        { name: "Vishwa", team: "Legacy FFA", goals: 1 }
       ],
       events: [
-        { time: "FT", player: "Chethan", team: "NEXUS FC", label: "2 goals", type: "goal", score: "3 – 0" },
-        { time: "FT", player: "GRVTY FC", team: "Official result", label: "Walkover — 3-0 awarded", type: "announcement", score: "3 – 0" },
-        { time: "FT", player: "Hari", team: "United 4th Phase", label: "Goal", type: "goal", score: "1 – 2" },
-        { time: "FT", player: "Subbaiah", team: "United 4th Phase", label: "Goal", type: "goal", score: "1 – 2" },
-        { time: "FT", player: "Aju", team: "Bangalore Grafters FC", label: "Goal", type: "goal", score: "1 – 2" },
-        { time: "FT", player: "Daniel", team: "WLWG FC", label: "2 goals", type: "goal", score: "4 – 2" },
-        { time: "FT", player: "Rishabh", team: "WLWG FC", label: "Goal", type: "goal", score: "4 – 2" },
-        { time: "FT", player: "Puneeth", team: "WLWG FC", label: "Goal", type: "goal", score: "4 – 2" },
-        { time: "FT", player: "Shree", team: "Walkalone FC", label: "Goal", type: "goal", score: "4 – 2" },
-        { time: "FT", player: "Rohan", team: "Walkalone FC", label: "Goal", type: "goal", score: "4 – 2" },
-        { time: "FT", player: "Adnan", team: "Bangalore Grafters FC", label: "4 goals", type: "goal", score: "10 – 2" },
-        { time: "FT", player: "Fazil", team: "Bangalore Grafters FC", label: "3 goals", type: "goal", score: "10 – 2" },
-        { time: "FT", player: "Abhinav", team: "Bangalore Grafters FC", label: "Goal", type: "goal", score: "10 – 2" },
-        { time: "FT", player: "Aju", team: "Bangalore Grafters FC", label: "Goal", type: "goal", score: "10 – 2" },
-        { time: "FT", player: "Mathai", team: "Bangalore Grafters FC", label: "Goal", type: "goal", score: "10 – 2" },
-        { time: "FT", player: "Shree", team: "Walkalone FC", label: "2 goals", type: "goal", score: "10 – 2" },
-        { time: "FT", player: "AD", team: "United 4th Phase", label: "2 goals", type: "goal", score: "3 – 1" },
-        { time: "FT", player: "Hakee Zyech", team: "United 4th Phase", label: "Goal", type: "goal", score: "3 – 1" },
-        { time: "FT", player: "Uthappa", team: "WLWG FC", label: "Goal", type: "goal", score: "3 – 1" }
+        { time: "FT", player: "Chethan", team: "NEXUS FC", label: "2 goals", type: "goal", score: "3-0" },
+        { time: "FT", player: "GRVTY FC", team: "Official result", label: "Walkover: 3-0 awarded", type: "announcement", score: "3-0" },
+        { time: "FT", player: "Hari", team: "United 4th Phase", label: "Goal", type: "goal", score: "1-2" },
+        { time: "FT", player: "Subbaiah", team: "United 4th Phase", label: "Goal", type: "goal", score: "1-2" },
+        { time: "FT", player: "Aju", team: "Bangalore Grafters FC", label: "Goal", type: "goal", score: "1-2" },
+        { time: "FT", player: "Daniel", team: "WLWG FC", label: "2 goals", type: "goal", score: "4-2" },
+        { time: "FT", player: "Rishabh", team: "WLWG FC", label: "Goal", type: "goal", score: "4-2" },
+        { time: "FT", player: "Puneeth", team: "WLWG FC", label: "Goal", type: "goal", score: "4-2" },
+        { time: "FT", player: "Shree", team: "Walkalone FC", label: "Goal", type: "goal", score: "4-2" },
+        { time: "FT", player: "Rohan", team: "Walkalone FC", label: "Goal", type: "goal", score: "4-2" },
+        { time: "FT", player: "Adnan", team: "Bangalore Grafters FC", label: "4 goals", type: "goal", score: "10-2" },
+        { time: "FT", player: "Fazil", team: "Bangalore Grafters FC", label: "3 goals", type: "goal", score: "10-2" },
+        { time: "FT", player: "Abhinav", team: "Bangalore Grafters FC", label: "Goal", type: "goal", score: "10-2" },
+        { time: "FT", player: "Aju", team: "Bangalore Grafters FC", label: "Goal", type: "goal", score: "10-2" },
+        { time: "FT", player: "Mathai", team: "Bangalore Grafters FC", label: "Goal", type: "goal", score: "10-2" },
+        { time: "FT", player: "Shree", team: "Walkalone FC", label: "2 goals", type: "goal", score: "10-2" },
+        { time: "FT", player: "AD", team: "United 4th Phase", label: "2 goals", type: "goal", score: "3-1" },
+        { time: "FT", player: "Hakee Zyech", team: "United 4th Phase", label: "Goal", type: "goal", score: "3-1" },
+        { time: "FT", player: "Uthappa", team: "WLWG FC", label: "Goal", type: "goal", score: "3-1" },
+        { time: "FT", player: "Yashwanth", team: "United 5's", label: "2 goals", type: "goal", score: "4-1" },
+        { time: "FT", player: "Ankit", team: "United 5's", label: "Goal", type: "goal", score: "4-1" },
+        { time: "FT", player: "Nitesh", team: "United 5's", label: "Goal", type: "goal", score: "4-1" },
+        { time: "FT", player: "Swapnil", team: "United 5's", label: "Own goal (Falcons goal)", type: "goal", score: "4-1" },
+        { time: "FT", player: "Darshan", team: "Legacy FFA", label: "6 goals", type: "goal", score: "7-1" },
+        { time: "FT", player: "Vishwa", team: "Legacy FFA", label: "Goal", type: "goal", score: "7-1" },
+        { time: "FT", player: "Avinash", team: "NBFC", label: "Goal", type: "goal", score: "7-1" },
+        { time: "FT", player: "Dhruv", team: "Passion FC", label: "Goal", type: "goal", score: "4-1" },
+        { time: "FT", player: "Shreyas", team: "Passion FC", label: "Goal", type: "goal", score: "4-1" },
+        { time: "FT", player: "Dilsher", team: "Passion FC", label: "Goal", type: "goal", score: "4-1" },
+        { time: "FT", player: "Wani", team: "Passion FC", label: "Goal", type: "goal", score: "4-1" },
+        { time: "FT", player: "Sanjay", team: "Crescents FC", label: "Goal", type: "goal", score: "4-1" },
+        { time: "FT", player: "Danish", team: "First Touch FC", label: "2 goals", type: "goal", score: "3-0" },
+        { time: "FT", player: "Muied", team: "First Touch FC", label: "Goal", type: "goal", score: "3-0" },
+        { time: "FT", player: "Sai", team: "NBFC", label: "Goal", type: "goal", score: "2-1" },
+        { time: "FT", player: "Sam", team: "NBFC", label: "Goal", type: "goal", score: "2-1" },
+        { time: "FT", player: "Alvin jr", team: "Falcons FC", label: "Goal", type: "goal", score: "2-1" },
+        { time: "FT", player: "Darshan", team: "Legacy FFA", label: "2 goals", type: "goal", score: "5-1" },
+        { time: "FT", player: "Vky", team: "Legacy FFA", label: "2 goals", type: "goal", score: "5-1" },
+        { time: "FT", player: "Trippzy", team: "Legacy FFA", label: "Goal", type: "goal", score: "5-1" },
+        { time: "FT", player: "Ankit", team: "United 5's", label: "Goal", type: "goal", score: "5-1" },
+        { time: "FT", player: "Sanjay", team: "Crescents FC", label: "2 goals", type: "goal", score: "3-2" },
+        { time: "FT", player: "Manoj", team: "Crescents FC", label: "Goal", type: "goal", score: "3-2" },
+        { time: "FT", player: "Muied", team: "First Touch FC", label: "2 goals", type: "goal", score: "3-2" },
+        { time: "FT", player: "Dilsher", team: "Passion FC", label: "3 goals", type: "goal", score: "4-3" },
+        { time: "FT", player: "Wani", team: "Passion FC", label: "Goal", type: "goal", score: "4-3" },
+        { time: "FT", player: "Maaziee", team: "Veltrix United", label: "2 goals", type: "goal", score: "4-3" },
+        { time: "FT", player: "Chetan", team: "Veltrix United", label: "Goal", type: "goal", score: "4-3" }
       ],
       playerOfTheDay: null,
       nextUp: null
@@ -405,7 +493,7 @@
     }
 
     /* --------------------------------------------------------------
-       Section 02 — Live Match Centre
+       Section 02, Live Match Centre
        -------------------------------------------------------------- */
     function renderMatches(filter = "all") {
       const grid = document.getElementById("matchesGrid");
@@ -424,7 +512,7 @@
         grid.style.display = "none";
         empty.style.display = "block";
         empty.querySelector("p").textContent = competitionData.matches.length === 0
-          ? "NO MATCHES YET — THE SEASON 2 SCHEDULE PUBLISHES BEFORE MATCHDAY 1."
+          ? "NO MATCHES YET. THE SEASON 2 SCHEDULE PUBLISHES BEFORE MATCHDAY 1."
           : "NO MATCHES FOR THE SELECTED FILTER.";
         return;
       }
@@ -444,7 +532,7 @@
 
         card.innerHTML = `
           <div class="match-card-header">
-            <span class="match-pitch">Group ${match.group || "—"}</span>
+            <span class="match-pitch">Group ${match.group || "—"} · ${match.matchday || ""}</span>
             <span class="match-status-badge ${statusClass(match.status)}">${statusLabel(match.status)}</span>
           </div>
           <div class="match-score">
@@ -475,7 +563,7 @@
     }
 
     /* --------------------------------------------------------------
-       Section 03 — Matchday Fixtures
+       Section 03, Matchday Fixtures
        -------------------------------------------------------------- */
     function renderFixtures() {
       const list = document.getElementById("fixturesList");
@@ -494,8 +582,8 @@
 
         row.innerHTML = `
           <span class="fixture-id">M${index + 1}</span>
-          <span class="fixture-time">${match.time || "—"}</span>
-          <span class="fixture-pitch">Group ${match.group || "—"}</span>
+          <span class="fixture-time">${match.time || "—"}<span class="fixture-date">${match.date || ""}</span></span>
+          <span class="fixture-pitch">Group ${match.group || "—"} · ${match.pitch || ""}</span>
           <div class="fixture-teams">
             <div class="fixture-team">
               <img src="${match.home.crest}" alt="${match.home.name} crest" class="fixture-crest" loading="lazy" />
@@ -515,7 +603,7 @@
     }
 
     /* --------------------------------------------------------------
-       Section 04 — League Standings
+       Section 04, League Standings
        -------------------------------------------------------------- */
     function renderStandings() {
       const tbody = document.querySelector("#standingsTable tbody");
@@ -534,7 +622,7 @@
           tr.innerHTML = `
             <td class="standings-pos">${team.pos}</td>
             <td class="standings-team">
-              <img src="${team.crest}" alt="${team.name === "TBD" ? "Opponent to be confirmed" : team.name + " crest"}" class="standings-crest" loading="lazy" />
+              <img src="${team.crest}" alt="${team.name + " crest"}" class="standings-crest" loading="lazy" />
               <span class="standings-team-name">${team.name}</span>
             </td>
             <td class="standings-stat">${team.p}</td>
@@ -548,22 +636,24 @@
         });
       });
 
-      note.textContent = "Group A and Group B · 13 results in · First Draft FC and TBD yet to play.";
+      note.textContent = "Group A and Group B · 13 results in · 3 Group A fixtures to be rescheduled.";
     }
 
     /* --------------------------------------------------------------
-       Section 04b — Top Scorers
+       Section 04b, Top Scorers
        -------------------------------------------------------------- */
     function renderTopScorers() {
       const tbody = document.querySelector("#topScorersTable tbody");
       if (!tbody) return;
       tbody.innerHTML = "";
 
-      competitionData.scorers.forEach((scorer, index) => {
+      competitionData.scorers.slice(0, 5).forEach((scorer, index) => {
         const tr = document.createElement("tr");
         tr.innerHTML =
           '<td class="standings-pos">' + (index + 1) + '</td>' +
-          '<td class="top-scorer-name">' + scorer.name + '</td>' +
+          '<td class="top-scorer-name">' + (scorer.profile
+            ? '<a href="profile.html?player=' + scorer.profile + '">' + scorer.name + '</a>'
+            : scorer.name) + '</td>' +
           '<td class="top-scorer-team">' + scorer.team + '</td>' +
           '<td class="top-scorer-goals">' + scorer.goals + '</td>';
         tbody.appendChild(tr);
@@ -571,7 +661,7 @@
     }
 
     /* --------------------------------------------------------------
-       Section 05 — Matchday Event Feed
+       Section 05, Matchday Event Feed
        -------------------------------------------------------------- */
     function renderEvents(filter = "all") {
       const feed = document.getElementById("eventFeed");
@@ -581,7 +671,7 @@
       const filtered = competitionData.events.filter(e => {
         if (filter === "all") return true;
         return e.type === filter;
-      });
+      }).slice(0, 5);
 
       if (filtered.length === 0) {
         feed.style.display = "none";
@@ -608,7 +698,7 @@
     }
 
     /* --------------------------------------------------------------
-       Section 06 — Player of the Day
+       Section 06, Player of the Day
        -------------------------------------------------------------- */
     function renderPlayerOfTheDay() {
       const wrap = document.getElementById("playerPortraitWrap");
@@ -640,7 +730,7 @@
     }
 
     /* --------------------------------------------------------------
-       Section 07 — Next Up
+       Section 07, Next Up
        -------------------------------------------------------------- */
     function renderNextUp() {
       const upcoming = competitionData.matches.find(m => m.status.toUpperCase() === "UPCOMING");
@@ -725,19 +815,6 @@
       }
     }
 
-    // Reveal-on-scroll animation (reused pattern)
-    const observerOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-
     // Start when DOM ready
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", init);
@@ -753,7 +830,7 @@
       { "@type": "Organization", "@id": "https://www.theballerleague.in/#organization", "name": "Knuckleball", "legalName": "Knuckleball Global Pvt Ltd", "url": "https://www.theballerleague.in/", "logo": "https://www.theballerleague.in/assets/images/logos/main%20logo.webp", "sameAs": ["https://www.instagram.com/knuckleball.in/", "https://www.youtube.com/@knuckleball-in"] },
       { "@type": "SportsOrganization", "@id": "https://www.theballerleague.in/#baller-league", "name": "The Baller League", "url": "https://www.theballerleague.in/competition.html", "parentOrganization": { "@id": "https://www.theballerleague.in/#organization" }, "sport": "Football" },
       { "@type": "WebPage", "@id": "https://www.theballerleague.in/competition.html", "url": "https://www.theballerleague.in/competition.html", "name": "Baller League Competition: Results, Scorers and Standings", "isPartOf": { "@id": "https://www.theballerleague.in/#website" }, "about": { "@id": "https://www.theballerleague.in/#baller-league" }, "inLanguage": "en-IN", "datePublished": "2026-11-06" },
-      { "@type": "WebSite", "@id": "https://www.theballerleague.in/#website", "url": "https://www.theballerleague.in/", "name": "Knuckleball — The Baller League", "publisher": { "@id": "https://www.theballerleague.in/#organization" } },
+      { "@type": "WebSite", "@id": "https://www.theballerleague.in/#website", "url": "https://www.theballerleague.in/", "name": "The Baller League by Knuckleball", "publisher": { "@id": "https://www.theballerleague.in/#organization" } },
       { "@type": "BreadcrumbList", "@id": "https://www.theballerleague.in/competition.html#breadcrumb", "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.theballerleague.in/index.html" },
         { "@type": "ListItem", "position": 2, "name": "Competition", "item": "https://www.theballerleague.in/competition.html" }

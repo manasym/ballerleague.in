@@ -1,5 +1,5 @@
 /* --------------------------------------------------------------
-   Knuckleball Media — match archive, originals, photography
+   Knuckleball Media, match archive, originals, photography
    Black-dominant editorial. Neon yellow + magenta used sparingly.
    Reuses style.css (container, navbar, footer, buttons)
    and the same palette tokens as competition.css.
@@ -93,7 +93,7 @@
   margin-top: 0;
 }
 
-/* ---------- Section 01 — Cinematic hero ---------- */
+/* ---------- Section 01: Cinematic hero ---------- */
 .media-hero {
   position: relative;
   display: flex;
@@ -232,7 +232,7 @@
   outline-offset: 2px;
 }
 
-/* ---------- Section 02 — Featured ---------- */
+/* ---------- Section 02: Featured ---------- */
 .media-featured {
   padding: var(--space-6) 0;
   border-bottom: 1px solid var(--charcoal);
@@ -504,7 +504,7 @@
   margin: 0;
 }
 
-/* ---------- Section 03 — Full matches archive ---------- */
+/* ---------- Section 03: Full matches archive ---------- */
 .archive-toolbar {
   display: grid;
   grid-template-columns: 1fr;
@@ -614,7 +614,7 @@
   border-radius: 3px;
 }
 
-/* ---------- Section 06 — Player features ---------- */
+/* ---------- Section 06: Player features ---------- */
 .features-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -625,7 +625,7 @@
   aspect-ratio: 4 / 5;
 }
 
-/* Player-feature videos are landscape YouTube uploads — keep them rectangular. */
+/* Player-feature videos are landscape YouTube uploads: keep them rectangular. */
 #featuresGrid .media-card-thumb {
   aspect-ratio: 16 / 9;
 }
@@ -634,14 +634,14 @@
   padding: 1rem 1.1rem 1.2rem;
 }
 
-/* ---------- Section 07 — Behind the game (wide rows) ---------- */
+/* ---------- Section 07: Behind the game (wide rows) ---------- */
 .behind-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-/* ---------- Section 08 — Photo stories ---------- */
+/* ---------- Section 08: Photo stories ---------- */
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -677,7 +677,7 @@
   outline-offset: 2px;
 }
 
-/* ---------- Section 09 — Browse by competition ---------- */
+/* ---------- Section 09: Browse by competition ---------- */
 .competition-chips {
   display: flex;
   flex-wrap: wrap;
@@ -747,7 +747,7 @@
   padding: 1.5rem 1.25rem;
 }
 
-/* ---------- Section 10 — Closing ---------- */
+/* ---------- Section 10: Closing ---------- */
 .media-closing {
   padding: var(--space-8) 0;
   background: var(--media-surface);

@@ -1,5 +1,5 @@
 /* --------------------------------------------------------------
-   Player Album — visual replica of reference design
+   Player Album, visual replica of reference design
    Mobile-first responsive, rounded corners, hover aesthetics
    -------------------------------------------------------------- */
 
@@ -40,7 +40,7 @@
   /* Transitions */
   --transition: 0.25s ease;
 
-  /* Baller League Season 2 — Y2K neon identity */
+  /* Baller League Season 2: Y2K neon identity */
   --neon-yellow: #F7FF00;
   --neon-magenta: #FF00FF;
   --black: #000000;
@@ -170,7 +170,7 @@ a {
   background: #f8fafc;
 }
 
-/* ---------- Baller League Season 2 — Y2K navigation toolbar ---------- */
+/* ---------- Baller League Season 2: Y2K navigation toolbar ---------- */
 .navbar {
   position: relative;
   width: 100%;
@@ -592,7 +592,7 @@ a {
 
 /* ---------- Baller League Season 2 player card ---------- */
 
-/* Card grid — responsive, centred, consistent gaps */
+/* Card grid: responsive, centred, consistent gaps */
 .card-grid {
   display: grid;
   gap: 1.25rem;
@@ -612,7 +612,7 @@ a {
   background: #000;
 }
 
-/* Background layers — normal and hover graphics layered identically */
+/* Background layers: normal and hover graphics layered identically */
 .card-bg {
   position: absolute;
   inset: 0;
@@ -662,7 +662,7 @@ a {
   display: block;
 }
 
-/* Bottom name plate — solid neon-yellow, black typography */
+/* Bottom name plate: solid neon-yellow, black typography */
 .card-name-plate {
   position: absolute;
   left: 1rem;
@@ -709,7 +709,7 @@ a {
   font-stretch: condensed;
 }
 
-/* Hover state — only on hover-capable (pointer) devices */
+/* Hover state: only on hover-capable (pointer) devices */
 @media (hover: hover) and (pointer: fine) {
   /* Loaded only where a hover can actually reveal it. */
   .card-bg--hover,
@@ -784,7 +784,7 @@ a {
 
 /* ---------- Responsive: mobile first adjustments ---------- */
 
-/* Mobile: category player carousels — horizontal scroll per position group */
+/* Mobile: category player carousels: horizontal scroll per position group */
 @media (max-width: 640px) {
   .card-grid {
     display: flex;
@@ -997,7 +997,7 @@ a {
   gap: 1rem;
 }
 
-/* Blog article category carousels — horizontal scroll on mobile */
+/* Blog article category carousels: horizontal scroll on mobile */
 @media (max-width: 640px) {
   .article-grid,
   .article-scroll {
@@ -1026,7 +1026,7 @@ a {
   }
 }
 
-/* Article card — reusable */
+/* Article card: reusable */
 .article-card {
   position: relative;
   border-radius: var(--radius-card);
@@ -1180,6 +1180,7 @@ a {
 
 /* ---------- Breadcrumb navigation ---------- */
 .breadcrumb {
+  display: none;
   padding: 0.55rem 0;
   font-size: 0.75rem;
   color: var(--text-faint);
@@ -1303,7 +1304,7 @@ a {
   }
 }
 
-/* ---------- Team carousels — players.html ---------- */
+/* ---------- Team carousels: players.html ---------- */
 .team-carousel {
   position: relative;
   display: flex;
