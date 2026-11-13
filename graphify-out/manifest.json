@@ -24,9 +24,9 @@
     "semantic_hash": ""
   },
   "competition.html": {
-    "mtime": 1794483929.6230023,
-    "seen": 1794484528.6739187,
-    "ast_hash": "792b497dc6f898321232710617c9ee4e",
+    "mtime": 1794585842.0776358,
+    "seen": 1794586946.5211174,
+    "ast_hash": "3c2e16677cbe2baa5e74d40e65f4afb4",
     "semantic_hash": ""
   },
   "media.html": {
@@ -78,9 +78,9 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1794483929.6803782,
-    "seen": 1794484528.6739187,
-    "ast_hash": "33f1f6cad1d28aea4023b8e87047b6ba",
+    "mtime": 1794585792.9756973,
+    "seen": 1794586946.5211174,
+    "ast_hash": "47ce0ea72e41a337f9f8386a4de3d41f",
     "semantic_hash": ""
   },
   "robots.txt": {
@@ -855,6 +855,120 @@
     "mtime": 1794484489.0593798,
     "seen": 1794484528.674915,
     "ast_hash": "0cba687b9306907d3ae57427c0fa7dfe",
+    "semantic_hash": ""
+  },
+  "js/matchweek.js": {
+    "mtime": 1794585657.3978615,
+    "seen": 1794586946.5211174,
+    "ast_hash": "e08e2c574f66b8020c4c79d81d8ac8e4",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Match week Graphics/Group A mw2/1.webp": {
+    "mtime": 1794585533.8403423,
+    "seen": 1794586946.5211174,
+    "ast_hash": "3b78281fafe7f8a13e854c13a4822bee",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Match week Graphics/Group A mw2/2.webp": {
+    "mtime": 1794585534.185673,
+    "seen": 1794586946.5211174,
+    "ast_hash": "5c10c7cdb4a3b5266e5670c0c9e71f45",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Match week Graphics/Group A mw2/3.webp": {
+    "mtime": 1794585534.5156991,
+    "seen": 1794586946.5211174,
+    "ast_hash": "1380b8ffba10cb5f66d169450bded112",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Match week Graphics/Group A mw2/4.webp": {
+    "mtime": 1794585534.7852092,
+    "seen": 1794586946.5211174,
+    "ast_hash": "0beb9ff48d1fd39f3cf465e436b322f0",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Match week Graphics/Group A mw2/5.webp": {
+    "mtime": 1794585535.1503634,
+    "seen": 1794586946.5211174,
+    "ast_hash": "f71b4dc02fa5cc9e570e6c51b545e9f9",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Match week Graphics/Group A mw2/6.webp": {
+    "mtime": 1794585535.5156703,
+    "seen": 1794586946.5211174,
+    "ast_hash": "2590aa76a0b00564f811b7afa0a1c85e",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Match week Graphics/Group A mw2/7.webp": {
+    "mtime": 1794585535.818094,
+    "seen": 1794586946.5211174,
+    "ast_hash": "7b200aa1013742a5bd8bebc98a3ffd2f",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Match week Graphics/Group A mw2/8.webp": {
+    "mtime": 1794585536.1267736,
+    "seen": 1794586946.5211174,
+    "ast_hash": "145fbaf1bae2a8b0115eaba35262725f",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Match week Graphics/Group A mw2/9.webp": {
+    "mtime": 1794585536.4655683,
+    "seen": 1794586946.5211174,
+    "ast_hash": "d474f546857efcc823059ba4ad39c83e",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Match week Graphics/Group B mw2/1.webp": {
+    "mtime": 1794585536.713428,
+    "seen": 1794586946.5211174,
+    "ast_hash": "e75ede66c2d6b2a671b1e37f20bf0ae4",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Match week Graphics/Group B mw2/2.webp": {
+    "mtime": 1794585537.203518,
+    "seen": 1794586946.5211174,
+    "ast_hash": "8c042102386f1bf3d71ae6c29b21d8da",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Match week Graphics/Group B mw2/3.webp": {
+    "mtime": 1794585537.8794346,
+    "seen": 1794586946.5211174,
+    "ast_hash": "735ee45405f84d65327c128730f59201",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Match week Graphics/Group B mw2/4.webp": {
+    "mtime": 1794585538.625659,
+    "seen": 1794586946.5211174,
+    "ast_hash": "9b806ce34930fad3f3cad17adad816f8",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Match week Graphics/Group B mw2/5.webp": {
+    "mtime": 1794585539.3653998,
+    "seen": 1794586946.5211174,
+    "ast_hash": "c109983d32787501d7bd2a4b591e269c",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Match week Graphics/Group B mw2/6.webp": {
+    "mtime": 1794585539.9784915,
+    "seen": 1794586946.5211174,
+    "ast_hash": "2867d33323599ca42985eaa8e30a113e",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Match week Graphics/Group B mw2/7.webp": {
+    "mtime": 1794585540.6856213,
+    "seen": 1794586946.5211174,
+    "ast_hash": "09f1a15deb54b92c7f04eb656ab19a58",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Match week Graphics/Group B mw2/8.webp": {
+    "mtime": 1794585541.2965112,
+    "seen": 1794586946.5211174,
+    "ast_hash": "52dcd63ea0b1bb16b2d9d81fcc88c93f",
+    "semantic_hash": ""
+  },
+  "assets/images/graphics/Match week Graphics/Group B mw2/9.webp": {
+    "mtime": 1794585541.7934043,
+    "seen": 1794586946.5211174,
+    "ast_hash": "3a884da9373ae84bf22973a438ebe3a1",
     "semantic_hash": ""
   }
 }

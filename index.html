@@ -30,6 +30,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/matchweek.css" />
   <!-- Swiper.js (browser CDN, pinned version) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -166,6 +167,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="swiper-button-next hero-button-next"></div>
       </div>
     </header>
+
+    <!-- Matchweek 2 fixture posters -->
+    <section class="mw-section" aria-labelledby="mwHomeTitle">
+      <div class="mw-head">
+        <div>
+          <span class="mw-eyebrow">Matchweek 2 &middot; 15 November</span>
+          <h2 class="mw-title" id="mwHomeTitle">Upcoming Fixtures</h2>
+        </div>
+        <a href="competition.html#mwFixtures" class="mw-view-all">All 16 fixtures ↗</a>
+      </div>
+      <div class="mw-carousel">
+        <button class="carousel-btn carousel-btn--prev" aria-label="Previous fixtures">‹</button>
+        <div class="mw-track" data-matchweek></div>
+        <button class="carousel-btn carousel-btn--next" aria-label="Next fixtures">›</button>
+      </div>
+    </section>
 
     <!-- 2. Competition dashboard -->
     <section class="dashboard">
@@ -464,6 +481,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </footer>
 
+  <!-- Motion (motion.dev, pinned) drives the fixture card animation; cards stay static without it -->
+  <script src="https://cdn.jsdelivr.net/npm/motion@14.14.0/dist/motion.js" defer></script>
+  <script src="js/matchweek.js" defer></script>
+
   <script>
     // Mobile menu toggle (reused behaviour from players.html)
     const toggle = document.querySelector('.navbar-toggle');
@@ -484,7 +505,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       let scrollAmount = 0;
       const getCardWidth = () => {
-        const firstCard = track.querySelector('.team-card, .player-card');
+        const firstCard = track.querySelector('.team-card, .player-card, .mw-card');
         return firstCard ? firstCard.getBoundingClientRect().width + 16 : 300;
       };
 
@@ -502,6 +523,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     initCarousel('.teams-track', '.teams-carousel .carousel-btn--prev', '.teams-carousel .carousel-btn--next');
     initCarousel('.featured-players-track', '.featured-players .carousel-btn--prev', '.featured-players .carousel-btn--next');
+    initCarousel('.mw-track', '.mw-carousel .carousel-btn--prev', '.mw-carousel .carousel-btn--next');
 
     // Swiper hero carousel initialization.
     // If the CDN is blocked or fails, fall back to a single static slide

@@ -29,6 +29,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/competition.css" />
+  <link rel="stylesheet" href="css/matchweek.css" />
   <!-- Preload shared navigation assets -->
   <link rel="preload" as="image" href="assets/images/logos/main%20logo.webp" />
   <link rel="preload" as="image" href="assets/images/graphics/Navigation/navigation%20background.webp" />
@@ -88,6 +89,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="comp-venue">Play365 Vidyaranyapura · Bengaluru</p>
       </div>
     </header>
+
+    <!-- Matchweek 2 fixture posters -->
+    <section class="mw-section" id="mwFixtures" aria-labelledby="mwCompTitle">
+      <div class="mw-head">
+        <div>
+          <span class="mw-eyebrow">Matchweek 2 &middot; 15 November &middot; 16 fixtures</span>
+          <h2 class="mw-title" id="mwCompTitle">Upcoming Fixtures</h2>
+        </div>
+      </div>
+      <div class="mw-grid" data-matchweek></div>
+    </section>
 
     <!-- Section 02 - Match Centre -->
     <section class="match-centre">
@@ -254,6 +266,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
   </footer>
+
+  <!-- Motion (motion.dev, pinned) drives the fixture card animation; cards stay static without it -->
+  <script src="https://cdn.jsdelivr.net/npm/motion@14.14.0/dist/motion.js" defer></script>
+  <script src="js/matchweek.js" defer></script>
 
   <script>
     /* --------------------------------------------------------------
