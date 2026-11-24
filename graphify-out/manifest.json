@@ -18,15 +18,15 @@
     "semantic_hash": ""
   },
   "blog.html": {
-    "mtime": 1794483929.553727,
-    "seen": 1794484528.6739187,
-    "ast_hash": "14e7e8eff4e3787e958901ab7c372a24",
+    "mtime": 1795289929.785819,
+    "seen": 1795531321.7993317,
+    "ast_hash": "62de34e8062d01d7b9bae124b3cca59b",
     "semantic_hash": ""
   },
   "competition.html": {
-    "mtime": 1794585842.0776358,
-    "seen": 1794586946.5211174,
-    "ast_hash": "3c2e16677cbe2baa5e74d40e65f4afb4",
+    "mtime": 1795531151.983138,
+    "seen": 1795531321.7993317,
+    "ast_hash": "cc05de9f4cb602be1f2352c6a7b8e9c2",
     "semantic_hash": ""
   },
   "media.html": {
@@ -36,15 +36,15 @@
     "semantic_hash": ""
   },
   "players.html": {
-    "mtime": 1795287853.0385854,
-    "seen": 1795287857.4067833,
-    "ast_hash": "395c348b6383f8bcf5d1e1646e490708",
+    "mtime": 1795531070.1098912,
+    "seen": 1795531321.7993317,
+    "ast_hash": "1423755d357e695edabaf13c8209a798",
     "semantic_hash": ""
   },
   "profile.html": {
-    "mtime": 1795287853.0641778,
-    "seen": 1795287857.4067833,
-    "ast_hash": "49909a8e823867f4b0cc7754d7b7c859",
+    "mtime": 1795531277.7834146,
+    "seen": 1795531321.7993317,
+    "ast_hash": "a4a5f47bea5b7c425f005cb2d74b21d1",
     "semantic_hash": ""
   },
   "shop.html": {
@@ -78,9 +78,9 @@
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1795282746.668373,
-    "seen": 1795283245.0131905,
-    "ast_hash": "3b27d8d4a19ef4085925e628afa20eba",
+    "mtime": 1795531080.9767437,
+    "seen": 1795531321.7993317,
+    "ast_hash": "5c2ba7d1a7cd063f8b3d61de123627f3",
     "semantic_hash": ""
   },
   "robots.txt": {
@@ -858,9 +858,9 @@
     "semantic_hash": ""
   },
   "js/matchweek.js": {
-    "mtime": 1794585657.3978615,
-    "seen": 1794586946.5211174,
-    "ast_hash": "e08e2c574f66b8020c4c79d81d8ac8e4",
+    "mtime": 1795317781.9163861,
+    "seen": 1795531321.7993317,
+    "ast_hash": "b13906a763f9403d2cdd8b3612b0cb08",
     "semantic_hash": ""
   },
   "assets/images/graphics/Match week Graphics/Group A mw2/1.webp": {
@@ -1203,6 +1203,90 @@
     "mtime": 1795287839.6015086,
     "seen": 1795287857.4067833,
     "ast_hash": "719e2c3cb6c93edad4f0f82b66f4513b",
+    "semantic_hash": ""
+  },
+  "assets/data/baller_league_s2_week2_matchday2_results.txt": {
+    "mtime": 1795288507.9453728,
+    "seen": 1795531321.7993317,
+    "ast_hash": "f2e012999cd65838eea46b311bb31c14",
+    "semantic_hash": ""
+  },
+  "currentTrack.txt": {
+    "mtime": 1795289615.0524151,
+    "seen": 1795531321.7993317,
+    "ast_hash": "9fd8142ad5a598064bb7abf13374dac2",
+    "semantic_hash": ""
+  },
+  "md2-results.txt": {
+    "mtime": 1795288648.838547,
+    "seen": 1795531321.7993317,
+    "ast_hash": "f2e012999cd65838eea46b311bb31c14",
+    "semantic_hash": ""
+  },
+  "newA.txt": {
+    "mtime": 1795289051.5973501,
+    "seen": 1795531321.7993317,
+    "ast_hash": "62d08b3ac6eaa6305671e1c751e14fef",
+    "semantic_hash": ""
+  },
+  "newB.txt": {
+    "mtime": 1795289051.5973501,
+    "seen": 1795531321.7993317,
+    "ast_hash": "95427c6dc829a07c6a65468f06d1a0f2",
+    "semantic_hash": ""
+  },
+  "newEvents.txt": {
+    "mtime": 1795289161.5240543,
+    "seen": 1795531321.7993317,
+    "ast_hash": "38846791903c56e758da6aef36322822",
+    "semantic_hash": ""
+  },
+  "newScorers.txt": {
+    "mtime": 1795289161.5169494,
+    "seen": 1795531321.7993317,
+    "ast_hash": "9c85473c6ce1d578d08802308a6491f2",
+    "semantic_hash": ""
+  },
+  "newTrack.txt": {
+    "mtime": 1795289615.0203001,
+    "seen": 1795531321.7993317,
+    "ast_hash": "589d3a10aee8ffcfd32668a9a7f604ab",
+    "semantic_hash": ""
+  },
+  "oldA.txt": {
+    "mtime": 1795289051.5958028,
+    "seen": 1795531321.7993317,
+    "ast_hash": "5e88ee538253983fd0c52eb329cf6253",
+    "semantic_hash": ""
+  },
+  "oldB.txt": {
+    "mtime": 1795289051.5973501,
+    "seen": 1795531321.7993317,
+    "ast_hash": "69573d9bb2cf09830caa654415c9586e",
+    "semantic_hash": ""
+  },
+  "oldEvents.txt": {
+    "mtime": 1795289167.6218276,
+    "seen": 1795531321.7993317,
+    "ast_hash": "723b3d36450f15aa83328d35e63ed458",
+    "semantic_hash": ""
+  },
+  "oldScorers.txt": {
+    "mtime": 1795289167.6120014,
+    "seen": 1795531321.7993317,
+    "ast_hash": "ab96523117e1e598a12a673e4743e86e",
+    "semantic_hash": ""
+  },
+  "oldTrack.txt": {
+    "mtime": 1795289387.3716311,
+    "seen": 1795531321.7993317,
+    "ast_hash": "ad4176178716cebbb1aa8222773687ec",
+    "semantic_hash": ""
+  },
+  "old_md2b.txt": {
+    "mtime": 1795288844.7174377,
+    "seen": 1795531321.7993317,
+    "ast_hash": "220ed33e6a0e15b6b4076f4c83a2f1b1",
     "semantic_hash": ""
   }
 }

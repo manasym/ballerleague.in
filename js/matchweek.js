@@ -12,38 +12,38 @@
   var DATE = "15 Nov";
   var POSTER_DIR = "assets/images/graphics/Match%20week%20Graphics/Group%20";
 
-  // [home, away, kick-off, turf]
+  // [home, away, kick-off, turf, full-time score]
   var FIXTURES = [
     [
       "B",
       [
-        ["Falcons FC", "Legacy FFA", "12:00 PM", "Turf 1"],
-        ["Crescents FC", "Veltrix United", "12:00 PM", "Turf 2"],
-        ["United 5's", "NBFC", "12:30 PM", "Turf 1"],
-        ["Passion FC", "First Touch FC", "12:30 PM", "Turf 2"],
-        ["Legacy FFA", "Crescents FC", "1:00 PM", "Turf 1"],
-        ["Falcons FC", "Veltrix United", "1:00 PM", "Turf 2"],
-        ["NBFC", "Passion FC", "1:30 PM", "Turf 1"],
-        ["United 5's", "First Touch FC", "1:30 PM", "Turf 2"]
+        ["Falcons FC", "Legacy FFA", "12:00 PM", "Turf 1", "1-3"],
+        ["Crescents FC", "Veltrix United", "12:00 PM", "Turf 2", "2-1"],
+        ["United 5's", "NBFC", "12:30 PM", "Turf 1", "4-0"],
+        ["Passion FC", "First Touch FC", "12:30 PM", "Turf 2", "4-0"],
+        ["Legacy FFA", "Crescents FC", "1:00 PM", "Turf 1", "2-1"],
+        ["Falcons FC", "Veltrix United", "1:00 PM", "Turf 2", "0-5"],
+        ["NBFC", "Passion FC", "1:30 PM", "Turf 1", "1-7"],
+        ["United 5's", "First Touch FC", "1:30 PM", "Turf 2", "3-1"]
       ]
     ],
     [
       "A",
       [
-        ["First Draft FC", "NEXUS FC", "4:00 PM", "Turf 1"],
-        ["Walkalone FC", "United 4th Phase", "4:00 PM", "Turf 2"],
-        ["Velocity FC", "GRVTY FC", "4:30 PM", "Turf 1"],
-        ["WLWG FC", "Bangalore Grafters FC", "4:30 PM", "Turf 2"],
-        ["NEXUS FC", "Walkalone FC", "5:00 PM", "Turf 1"],
-        ["First Draft FC", "United 4th Phase", "5:00 PM", "Turf 2"],
-        ["GRVTY FC", "WLWG FC", "5:30 PM", "Turf 1"],
-        ["Velocity FC", "Bangalore Grafters FC", "5:30 PM", "Turf 2"]
+        ["First Draft FC", "NEXUS FC", "4:00 PM", "Turf 1", "4-1"],
+        ["Walkalone FC", "United 4th Phase", "4:00 PM", "Turf 2", "1-5"],
+        ["Velocity FC", "GRVTY FC", "4:30 PM", "Turf 1", "0-0"],
+        ["WLWG FC", "Bangalore Grafters FC", "4:30 PM", "Turf 2", "0-8"],
+        ["NEXUS FC", "Walkalone FC", "5:00 PM", "Turf 1", "1-2"],
+        ["First Draft FC", "United 4th Phase", "5:00 PM", "Turf 2", "1-3"],
+        ["GRVTY FC", "WLWG FC", "5:30 PM", "Turf 1", ""],
+        ["Velocity FC", "Bangalore Grafters FC", "5:30 PM", "Turf 2", ""]
       ]
     ]
   ];
 
   function card([group, list]) {
-    return list.map(function ([home, away, time, turf], i) {
+    return list.map(function ([home, away, time, turf, score], i) {
       return (
         '<article class="mw-card">' +
         '<div class="mw-media">' +
@@ -51,7 +51,7 @@
         '<span class="mw-shine" aria-hidden="true"></span>' +
         "</div>" +
         '<div class="mw-foot">' +
-        '<span class="mw-tag">Group ' + group + " · MD2</span>" +
+        '<span class="mw-tag">Group ' + group + " · MD2 · " + (score ? "FT " + score : "PP") + "</span>" +
         '<span class="mw-fixture">' + home + ' <span class="mw-vs">vs</span> ' + away + "</span>" +
         '<span class="mw-meta">' + DATE + " · " + time + " · " + turf + "</span>" +
         "</div>" +
